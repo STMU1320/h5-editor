@@ -1,0 +1,76 @@
+const path = require('path')
+const webpack = require('webpack')
+const merge = require('webpack-merge')
+const common = require('./common')
+const cssOptions = {
+  modules: true,
+  localIdentName: '[local]-[hash:base64:5]',
+  importLoaders: 1,
+}
+
+const postcssOptions = {
+  plugins: loader => [
+    require('autoprefixer')({ browsers: ['last 3 versions'] }),
+  ],
+}
+
+const dev = {
+  entry: {
+    index: ['babel-polyfill',
+      'react-hot-loader/patch',
+      path.join(__dirname, '../src/main.tsx')],
+    vendor: ['react', 'react-router-dom', 'react-dom']
+  },
+  output: {
+    path: path.join(__dirname, '../dist'),
+    filename: '[name].[hash:5].js',
+    chunkFilename: "[name].[chunkHash:5].js",
+  },
+  mode: 'development',
+  devtool: 'inline-source-map',
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        exclude: /node_modules/,
+        use: [
+          "style-loader",
+          { loader: 'css-loader', options: cssOptions },
+          { loader: 'postcss-loader', options: postcssOptions },
+        ]
+      },
+      {
+        test: /\.less$/i,
+        exclude: /node_modules/,
+        use: [
+          "style-loader",
+          { loader: 'css-loader', options: cssOptions },
+          { loader: 'postcss-loader', options: postcssOptions },
+          'less-loader',
+        ]
+      },
+    ],
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+          'NODE_ENV': JSON.stringify('development')
+      }
+    }),
+  ],
+
+  devServer: {
+    contentBase: path.join(__dirname, '../dist'),
+    historyApiFallback: true,
+    host: '0.0.0.0',
+    proxy : {
+      "/api/*": {
+        "target": "http://localhost:3000",
+        "changeOrigin": false,
+        "secure": false
+      }
+    }
+  },
+}
+
+module.exports = merge(common, dev)
