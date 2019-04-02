@@ -1,0 +1,36 @@
+.formItem {
+  display: flex;
+  align-items: center;
+  .label {
+    display: inline-block;
+  }
+}
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.inputCol {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+  .colLabel {
+    display: inline-block;
+    margin-right: 3px;
+  }
+  .colContent {
+    flex: 1;
+  }
+}

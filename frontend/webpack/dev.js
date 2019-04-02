@@ -32,7 +32,7 @@ const dev = {
     rules: [
       {
         test: /\.css$/i,
-        exclude: /node_modules/,
+        exclude: [/node_modules/, /assets/],
         use: [
           "style-loader",
           { loader: 'css-loader', options: cssOptions },

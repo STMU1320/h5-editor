@@ -1,0 +1,41 @@
+@import '../../theme/var.less';
+
+.button {
+  padding: @size-small @size-large;
+  text-align: center;
+  color: @text-primary;
+  background-color: @btn-bg;
+  border-radius: @size-small;
+  border: @border-1px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  &:hover {
+    background-color: lighten(@btn-bg, 10%);
+  }
+  &:global(.primary)
+   {
+    background-color: @primary;
+    border-color: lighten(@primary, 10%);
+    color: white;
+
+    &:hover {
+      background-color: lighten(@primary, 10%);
+    }
+  }
+  &:global(.danger) {
+    background-color: @red;
+    border-color: lighten(@red, 10%);
+    color: white;
+    &:hover {
+      background-color: lighten(@red, 10%);
+    }
+  }
+  &:global(.success) {
+    background-color: @green;
+    border-color: lighten(@green, 10%);
+    color: white;
+    &:hover {
+      background-color: lighten(@green, 10%);
+    }
+  }
+}

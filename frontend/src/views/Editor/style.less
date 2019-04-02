@@ -1,3 +1,171 @@
-.red {
-  color: red;
+@import '../../theme/var.less';
+
+.layoutWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: @text-primary;
+  overflow: hidden;
+}
+
+.header {
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  width: 100%;
+  padding: 0 @spacing-small;
+  background-color: @box-bg;
+  border-bottom: @border-1px;
+  .logo {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-weight: bold;
+    width: 30px;
+    border-radius: 15px;
+    background-color: lighten(@box-bg, 20%);
+  }
+  .rightItem {
+    margin-right: @spacing-small;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+.toolsBar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  background-color: @box-bg;
+  border-bottom: @border-1px;
+
+  .toolsGroup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    padding: 0 @spacing-small;
+    border-right: @border-1px;
+
+    &:last-child {
+      border-right: none;
+    }
+    &.undoGroup {
+      :global {
+        .fa {
+          margin-right: @size-large;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .iconBtn {
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: @size-small;
+    margin-right: @size;
+    font-size: 26px;
+    cursor: pointer;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    &.checked {
+      background-color: darken(@box-bg, 8%);
+    }
+  }
+}
+
+.main {
+  flex: 1;
+  position: relative;
+
+  .pagePanel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 100%;
+    padding-top: @spacing-large;
+    overflow-y: auto;
+    background-color: darken(@box-bg, 3%);
+    border-right: @border-1px;
+    z-index: 2;
+    .pageItem {
+      margin-bottom: @spacing-large;
+    }
+    .addPageBtn {
+      width: 160px;
+      height: 60px;
+      border-radius: @size;
+      color: @text-light;
+      border: 1px dashed @text-light;
+      cursor: pointer;
+      .ease-out;
+      &:hover {
+        background: @box-bg;
+      }
+    }
+  }
+
+  .stage {
+    position: relative;
+    height: 100%;
+    margin-left: 200px;
+    box-sizing: border-box;
+    padding: @spacing-large;
+  }
+
+  .attrForm {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 300px;
+    z-index: 9;
+    background-color: darken(@box-bg, 3%);
+    transition: transform 0.3s ease-in;
+    border-left: @border-1px;
+
+    &.collapse {
+      transform: translateX(280px);
+    }
+
+    .formToolsBar {
+      height: 20px;
+      line-height: 20px;
+      padding:0 5px;
+      border-bottom: @border-1px;
+      margin-bottom: @spacing-small;
+      i {
+        cursor: pointer;
+      }
+    }
+
+    .formContent {
+      padding: 0 20px;
+    }
+  }
 }

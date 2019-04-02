@@ -1,0 +1,60 @@
+@import '~antd/dist/antd.css';
+
+.element-editor-form .ant-form-item {
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.06);
+  color: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+}
+
+.element-editor-form .ant-form-item-label > label {
+  display: inline-block;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  color: rgba(255, 255, 255, 0.8);
+  text-indent: 5px;
+}
+
+.element-editor-form .ant-input,.ant-input-number-input,.ant-input-number, .ant-select-selection {
+  background-color: #26262a;
+  color: #3aa5f2;
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
+.element-editor-form .ant-input-number-handler-wrap, .ant-input-number-handler-down {
+  background-color: #404042;
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.element-editor-form input::-webkit-input-placeholder, .ant-select-selection__placeholder{
+  color:rgba(255, 255, 255, 0.3);
+}
+
+.element-editor-form .ant-input-number-handler .ant-input-number-handler-down-inner, .ant-input-number-handler-up-inner, .ant-select-arrow {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.element-editor-form .ant-input-number-disabled {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.element-editor-form .ant-input-number-disabled .ant-input-number-input {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.editor-select {
+  background-color: #69696d;
+}
+
+.editor-select .ant-select-dropdown-menu-item-selected, .ant-select-dropdown-menu-item-selected:hover {
+  background-color: #838386;
+}
+
+.editor-select .ant-select-dropdown-menu-item {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.editor-select .ant-select-dropdown-menu-item:hover, .ant-select-dropdown-menu-item-active {
+  background-color: #7c7c7d;
+}
+

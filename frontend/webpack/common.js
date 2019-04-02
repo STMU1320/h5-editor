@@ -6,12 +6,18 @@ const common = {
   resolve: {
     modules: ['./node_modules', './src'],
     alias: {
+      '@c': '../../common'
     },
     extensions: ['.js', '.json', '.css', '.less', '.jsx', '.ts', '.tsx'],
   },
 
   module: {
     rules: [
+      {
+        test: /\.css$/i,
+        include: path.join(__dirname, '../src/assets'),
+        use: ['style-loader', 'css-loader'],
+      },
       {
         test: /\.jsx?$/i,
         exclude: /node_modules/,
@@ -20,7 +26,7 @@ const common = {
       },
       {
         test: /\.tsx?$/,
-        include: path.join(__dirname, '../src'),
+        include: [path.join(__dirname, '../src'), path.join(__dirname, '../../common/components')],
         use: { loader: 'awesome-typescript-loader' }
       },
       {

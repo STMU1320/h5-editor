@@ -23,6 +23,8 @@
     "paths": {
       "components": ["./src/components"],
       "components/*": ["./src/components/*"],
+      "@c": ["../common"],
+      "@c/*": ["../common/*"],
       "utils": ["./src/utils"],
       "utils/*": ["./src/utils/*"]
     }
