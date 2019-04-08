@@ -16,12 +16,11 @@ export interface TextProps {
   backgroundColor?: string;
   color?: string;
   fontSize?: number;
-  showBox?: boolean;
 }
 export default function Text (props: TextProps) {
-  let { content = '', showBox, ...style } = props;
+  let { content = '', ...style } = props;
   let renderContent = {
     __html: content.replace(/\n|\\n/g, '<br>')
   }
-  return <div className={classnames(styles.textWrap, { [styles.showBorder]: showBox })} dangerouslySetInnerHTML={renderContent} style={style}></div>
+  return <div className={classnames(styles.textWrap)} dangerouslySetInnerHTML={renderContent} style={style}></div>
 }

@@ -24,25 +24,25 @@ function IconBtn ({ type, checked, onClick, value }: IconBtnProps) {
 
 export interface ToolsBarProps {
   onElementTypeChange?: Function;
-  checkedEle?: String;
+  checkedEleType?: String;
   dispatch?: Function;
 }
 
 class Tools extends React.Component<ToolsBarProps, {}> {
 
   handleIconClick = (value: String) => {
-    if (this.props.checkedEle !== value) {
+    if (this.props.checkedEleType !== value) {
       const { dispatch } = this.props;
-      dispatch({ type: 'editor/save', payload: { checkedEle: value } });
+      dispatch({ type: 'editor/save', payload: { checkedEleType: value } });
     }
   }
   render () {
-    const { checkedEle } = this.props;
+    const { checkedEleType } = this.props;
     return <div className={styles.toolsBar}>
           <div className={classnames(styles.toolsGroup, styles.eleGroup)}>
             {
-              Object.values(ICON_BTNS).map((item: string) => (
-                <IconBtn type={item} onClick={this.handleIconClick} key={item} value={item} checked={checkedEle === item} />
+              Object.keys(ICON_BTNS).map((item: 'img' | 'text' | 'input') => (
+                <IconBtn type={ICON_BTNS[item]} onClick={this.handleIconClick} key={item} value={item} checked={checkedEleType === item} />
               ))
             }
           </div>

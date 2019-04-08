@@ -8,8 +8,7 @@ import Header from './Header';
 import ToolsBar from './ToolsBar';
 import PageThumbnail from './PageThumbnail';
 
-import Page from 'components/Page';
-import Text from 'components/Text';
+import Page, { ElementProps } from 'components/Page';
 import ElementForm from 'components/ElementForm';
 
 import * as styles from './style.less';
@@ -28,7 +27,7 @@ function generateList (length: number) {
 export interface H5EditorProps {
   pageList?: Array<any>;
   selectedPage: any;
-  selectedEle: any;
+  selectedElement: any;
   children: JSX.Element | string;
   dispatch?: Function;
 }
@@ -39,10 +38,6 @@ export interface H5EditorState {
 class H5Editor extends React.Component<H5EditorProps, {}> {
 
   state = {
-    mockList: generateList(80),
-    selectedElement: {
-      type: 'img',
-    },
     formCollapse: false
   }
 
@@ -61,7 +56,14 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
     dispatch({type: 'editor/addPage'});
   }
   handleSelectPage = (page: object) => {
-    this.props.dispatch({ type: 'editor/save', payload: { selectedPage: page } });
+    this.props.dispatch({ type: 'editor/selectPage', payload: { page } });
+  }
+  handleAddElement = (pageId: string, eleData?: ElementProps) => {
+    this.props.dispatch({ type: 'editor/addElement', payload: { pageId, eleData } });
+  };
+  handleDeleteElement = () => {
+    const { selectedElement, dispatch } = this.props;
+    dispatch({ type: 'editor/deleteElement', payload: { element: { ...selectedElement } } });
   }
   handleToggleFormVisible =  () => {
     this.setState({
@@ -69,16 +71,21 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
     });
   }
   handleElementDataChange = (data: any) => {
-    this.setState({ selectedElement: data })
+    if (data.type === 'page') {
+      this.props.dispatch({ type: 'editor/pageAttrChange', payload: { page: data } });
+    } else {
+      this.props.dispatch({ type: 'editor/eleAttrChange', payload: { eleData: data } });
+    }
   }
   render () {
     const {
       children,
       pageList,
-      selectedPage
+      selectedPage,
+      selectedElement
     } = this.props;
 
-    const { mockList, selectedElement, formCollapse }: any = this.state;
+    const { formCollapse }: any = this.state;
     return <div className={styles.layoutWrap}>
       <Header onPreview={this.handlePreview} onPublish={this.handlePublish} />
       <ToolsBar onElementTypeChange={this.handleCheckedElementChange} />
@@ -87,9 +94,7 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
             {
               pageList.map((page: any, index: number) => <PageThumbnail name={page.name} onClick={this.handleSelectPage.bind(this, page)} checked={selectedPage.uuid === page.uuid} className={styles.pageItem} key={page.name || `${index}`}>
                 <PhoneModel title={page.name} zoom={160 / 750}>
-                  {
-                    mockList.map((item: any) => <p key={item.text}>{item.text}</p>)
-                  }
+                  <Page {...page}></Page>
                 </PhoneModel>
               </PageThumbnail>
               )}
@@ -99,16 +104,22 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
               </button>
             </div>
         </div>
-        <div className={styles.stage}>
-          <PhoneModel title="test" zoom={0.5}>
-            <Page>
-              <Text {...selectedElement}   />
-            </Page>
-          </PhoneModel>
-          <div className={classnames(styles.attrForm, { [styles.collapse]: formCollapse })}>
-            <div className={styles.formToolsBar}><i className={`fa ${formCollapse ? 'fa-angle-double-left' : 'fa-angle-double-right'}`} onClick={this.handleToggleFormVisible}></i></div>
+        <div className={styles.mainContent}>
+          <div className={styles.stage}>
+            {
+              selectedPage
+              && <PhoneModel title={selectedPage.name} zoom={0.5} showHeader >
+                <Page {...selectedPage} painting selectedElement={selectedElement && selectedElement.uuid} onAddElement={this.handleAddElement}></Page>
+              </PhoneModel>
+            }
+          </div>
+          <div className={classnames(styles.elePanel, { [styles.collapse]: formCollapse })}>
+            <div className={styles.eleToolsBar}><i className={`fa ${formCollapse ? 'fa-angle-double-left' : 'fa-angle-double-right'}`} onClick={this.handleToggleFormVisible}></i></div>
             <div className={styles.formContent}>
               <ElementForm data={selectedElement} onChange={this.handleElementDataChange}></ElementForm>
+            </div>
+            <div className={styles.elePanelFooter}>
+              <Icon type="trash" disabled={!selectedElement} onClick={this.handleDeleteElement}></Icon>
             </div>
           </div>
         </div>

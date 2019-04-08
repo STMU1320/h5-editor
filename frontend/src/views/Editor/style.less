@@ -98,6 +98,7 @@
 .main {
   flex: 1;
   position: relative;
+  overflow: hidden;
 
   .pagePanel {
     position: absolute;
@@ -130,7 +131,7 @@
     }
   }
 
-  .stage {
+  .mainContent {
     position: relative;
     height: 100%;
     margin-left: 200px;
@@ -138,7 +139,15 @@
     padding: @spacing-large;
   }
 
-  .attrForm {
+  .stage {
+    position: relative;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .elePanel {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     right: 0;
     top: 0;
@@ -153,19 +162,30 @@
       transform: translateX(280px);
     }
 
-    .formToolsBar {
+    .eleToolsBar {
       height: 20px;
       line-height: 20px;
       padding:0 5px;
       border-bottom: @border-1px;
-      margin-bottom: @spacing-small;
       i {
         cursor: pointer;
       }
     }
 
     .formContent {
+      margin: @spacing-small 0;
       padding: 0 20px;
+      flex: 1;
+      overflow-y: auto;
+    }
+
+    .elePanelFooter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 30px;
+      width: 100%;
+      border-top: @border-1px;
     }
   }
 }

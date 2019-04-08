@@ -15,5 +15,5 @@ export default function Icon ({ type, className, disabled, onClick }: IconProps)
       onClick && onClick(e);
     }
   }
-  return <i onClick={handleClick} className={classnames('fa',`fa-${type}`, className, { [styles.disabled]: disabled })} aria-hidden="true"></i>
+  return <i onClick={handleClick} className={classnames('fa',`fa-${type}`, className, styles.icon, { [styles.disabled]: disabled })} aria-hidden="true"></i>
 }

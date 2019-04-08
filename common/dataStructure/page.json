@@ -1,7 +1,9 @@
 {
+  "type": "page",
+  "uuid":"",
   "name": "",
   "elements": [],
-  "modals": [],
-  "width": null,
-  "height": null
+  "backgroundColor": "",
+  "color": "",
+  "bgImg": ""
 }
