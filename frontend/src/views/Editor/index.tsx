@@ -109,7 +109,7 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
             {
               selectedPage
               && <PhoneModel title={selectedPage.name} zoom={0.5} showHeader >
-                <Page {...selectedPage} painting selectedElement={selectedElement && selectedElement.uuid} onAddElement={this.handleAddElement}></Page>
+                <Page {...selectedPage} zoom={0.5} painting selectedElement={selectedElement && selectedElement.uuid} onAddElement={this.handleAddElement}></Page>
               </PhoneModel>
             }
           </div>

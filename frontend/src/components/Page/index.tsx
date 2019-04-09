@@ -19,6 +19,7 @@ export interface PageProps {
   painting?: boolean;
   onAddElement?: Function;
   selectedElement?: string;
+  zoom?: number;
 }
 
 const renderElement = (eleData: ElementProps, painting: boolean, selectedElement: string): React.ReactNode => {
@@ -41,35 +42,134 @@ const renderElement = (eleData: ElementProps, painting: boolean, selectedElement
   return Ele;
 }
 
-export default function Page (props: PageProps) {
-  let {
-    backgroundColor = 'white',
-    color = '#666',
-    bgImg,
-    elements,
-    painting,
-    onAddElement,
-    uuid,
-    selectedElement
-  } = props;
-  let style: React.CSSProperties = { backgroundColor, color };
-  if (bgImg) {
-    style.backgroundImage = `url(${bgImg})`;
+export default class Page extends React.PureComponent<PageProps, {}> {
+
+  static defaultProps = {
+    backgroundColor: 'white',
+    color: '#666'
   }
 
-  const pageClick = () => {};
-  const pageDbClick = () => {
-    onAddElement && onAddElement(uuid)
-  };
+  state = {
+    draw: false,
+    startPoint: { x: 0, y: 0 },
+    currentPoint: { x: 0, y: 0 },
+    pageX: 0,
+    pageY: 0
+  }
 
-  return <div
-    className={classnames(styles.pageWrap, { [styles.noSelect]: painting })} 
-    style={style}
-    onClick={painting && pageClick}
-    onDoubleClick={painting && pageDbClick}
-    >
-      {
-        elements && elements.map((item) => renderElement(item, painting, selectedElement))
-      }
-  </div>
+  getDrawBoxStyle = () => {
+    const { zoom = 1 } = this.props;
+    const { startPoint, currentPoint, pageX, pageY } = this.state;
+    const x1 = startPoint.x, x2 = currentPoint.x;
+    const y1 = startPoint.y, y2 = currentPoint.y;
+    const width = Math.abs(x1 - x2);
+    const height = Math.abs(y1 - y2);
+    const left = Math.min(x1, x2) - pageX;
+    const top = Math.min(y1, y2) - pageY;
+
+    const translate = (num: number) => Math.round(num / zoom);
+    return {
+      width: translate(width),
+      height: translate(height), 
+      left: translate(left), 
+      top: translate(top), 
+    };
+  }
+
+  handleMouseDown = (e: React.MouseEvent) => {
+    const { painting } = this.props;
+    if (!painting) {
+      return
+    }
+    const { draw } = this.state;
+    const pageBox = (e.target as HTMLDivElement).getBoundingClientRect();
+    let point = {
+      x: e.clientX,
+      y: e.clientY
+    }
+    if (!draw) {
+      this.setState({
+        draw: true,
+        startPoint: {
+          ...point
+        },
+        currentPoint: {
+          ...point
+        },
+        pageX: pageBox.left,
+        pageY: pageBox.top
+      })
+    }
+  }
+
+  handleMouseMove = (e: React.MouseEvent) => {
+    const { painting } = this.props;
+    if (!painting) {
+      return
+    }
+    const { draw, startPoint } = this.state;
+    if (draw) {
+      this.setState({
+        currentPoint: {
+          x: e.clientX,
+          y: e.clientY
+        }
+      });
+    }
+  }
+
+  handleMouseUp = (e: React.MouseEvent) => {
+    const { painting, uuid, onAddElement } = this.props;
+    if (painting) {
+      this.setState({ 
+        draw: false,
+      });
+      const style = {  ...this.getDrawBoxStyle(), position: 'absolute' };
+      onAddElement && onAddElement(uuid, style);
+    }
+  }
+
+  handlePageDbClick = () => {
+    const {  onAddElement, uuid, painting } = this.props;
+    if (painting && onAddElement) {
+      onAddElement(uuid);
+    }
+  }
+
+  render () {
+    let {
+      backgroundColor,
+      color,
+      bgImg,
+      elements,
+      painting,
+      selectedElement,
+    } = this.props;
+    const { draw, startPoint, currentPoint, pageX, pageY } = this.state;
+    let style: React.CSSProperties = { backgroundColor, color };
+    if (bgImg) {
+      style.backgroundImage = `url(${bgImg})`;
+    }
+
+    let drawBoxStyle = { left: 0, top: 0, width: 0, height: 0 };
+    if (draw) {
+      drawBoxStyle = this.getDrawBoxStyle();
+    }
+
+    return <div
+      className={classnames(styles.pageWrap, { [styles.noSelect]: painting })} 
+      style={style}
+      onMouseDown={this.handleMouseDown}
+      onMouseMove={this.handleMouseMove}
+      onMouseUp={this.handleMouseUp}
+      onDoubleClick={this.handlePageDbClick}
+      >
+        {
+          draw && <div className={styles.drawBox} style={drawBoxStyle}></div>
+        }
+        {
+          elements && elements.map((item) => renderElement(item, painting, selectedElement))
+        }
+    </div>
+  }
 }
