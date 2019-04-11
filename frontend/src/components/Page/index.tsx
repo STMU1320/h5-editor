@@ -18,11 +18,12 @@ export interface PageProps {
   name?: string;
   painting?: boolean;
   onAddElement?: Function;
+  onEditElement?: Function;
   selectedElement?: string;
   zoom?: number;
 }
 
-const renderElement = (eleData: ElementProps, painting: boolean, selectedElement: string): React.ReactNode => {
+const renderElement = (eleData: ElementProps, painting: boolean, selectedElement: string, zoom: number, onEditElement: Function): React.ReactNode => {
   let type = eleData && eleData.type;
   let Ele: React.ReactElement = null;
   switch (type) {
@@ -35,7 +36,7 @@ const renderElement = (eleData: ElementProps, painting: boolean, selectedElement
   }
 
   if (painting) {
-    return <AssistBox key={eleData.uuid} eleData={eleData} showBox={eleData.uuid === selectedElement}>
+    return <AssistBox zoom={zoom} onEditElement={onEditElement} key={eleData.uuid} eleData={eleData} showBox={eleData.uuid === selectedElement}>
       {Ele}
     </AssistBox>
   }
@@ -120,12 +121,15 @@ export default class Page extends React.PureComponent<PageProps, {}> {
 
   handleMouseUp = (e: React.MouseEvent) => {
     const { painting, uuid, onAddElement } = this.props;
-    if (painting) {
+    const { draw } = this.state;
+    if (painting && draw) {
       this.setState({ 
         draw: false,
       });
       const style = {  ...this.getDrawBoxStyle(), position: 'absolute' };
-      onAddElement && onAddElement(uuid, style);
+      if (style.width && style.height) {
+        onAddElement && onAddElement(uuid, style);
+      }
     }
   }
 
@@ -144,6 +148,8 @@ export default class Page extends React.PureComponent<PageProps, {}> {
       elements,
       painting,
       selectedElement,
+      onEditElement,
+      zoom
     } = this.props;
     const { draw, startPoint, currentPoint, pageX, pageY } = this.state;
     let style: React.CSSProperties = { backgroundColor, color };
@@ -162,13 +168,14 @@ export default class Page extends React.PureComponent<PageProps, {}> {
       onMouseDown={this.handleMouseDown}
       onMouseMove={this.handleMouseMove}
       onMouseUp={this.handleMouseUp}
+      onMouseLeave={this.handleMouseUp}
       onDoubleClick={this.handlePageDbClick}
       >
         {
-          draw && <div className={styles.drawBox} style={drawBoxStyle}></div>
+          draw && drawBoxStyle.width && drawBoxStyle.height ? <div className={styles.drawBox} style={drawBoxStyle}></div> : ''
         }
         {
-          elements && elements.map((item) => renderElement(item, painting, selectedElement))
+          elements && elements.map((item) => renderElement(item, painting, selectedElement, zoom, onEditElement))
         }
     </div>
   }

@@ -82,6 +82,11 @@ export default function TextForm ({
         </Col>
       </Row>
       <Row>
+        <Col label="Z">
+          <InputNumber disabled={positionDisabled} onChange={handleFieldChange.bind(this, 'zIndex')} style={{ width: '220px' }} value={data.zIndex} placeholder="显示层级"></InputNumber>
+        </Col>
+      </Row>
+      <Row>
         <Col labelWidth={15} label="X">
           <InputNumber disabled={positionDisabled} onChange={handleFieldChange.bind(this, 'left')} value={data.left} placeholder="px"></InputNumber>
         </Col>

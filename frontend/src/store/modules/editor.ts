@@ -52,6 +52,17 @@ export default {
         selectedElement: newPage
       }
     },
+    deletePage (state: editorState, { payload: { page } }: any) {
+      const uuid = page.uuid;
+      const pages = cloneDeep(state.pageList);
+      const nextPages = pages.filter((item: any) => item.uuid !== uuid);
+      return {
+        ...state,
+        pageList: nextPages,
+        selectedPage: null,
+        selectedElement: null,
+      } as editorState
+    },
     pageAttrChange (state: editorState, { payload: { page } }: any) {
       let pageIndex = state.pageList.findIndex((item) => item.uuid === page.uuid);
       const newPageList = [...state.pageList];
@@ -114,12 +125,15 @@ export default {
       }
     },
     eleAttrChange (state: editorState, { payload: { eleData } }: any) {
-      const type = state.checkedEleType;
       const pageId = eleData.pid;
       const pageIndex = state.pageList.findIndex((item) => item.uuid === pageId);
       const page = cloneDeep(state.pageList[pageIndex]);
       const eleIndex = page.elements.findIndex((item: any) => item.uuid === eleData.uuid);
       const nextEle = {...page.elements[eleIndex], ...eleData};
+      if (nextEle.position === 'static') {
+        nextEle.left = 0;
+        nextEle.top = 0;
+      }
       page.elements[eleIndex] = nextEle;
       const newPageList = [...state.pageList];
       newPageList[pageIndex] = page;
@@ -127,7 +141,7 @@ export default {
         ...state,
         pageList: newPageList,
         selectedPage: page,
-        selectedElement: eleData
+        selectedElement: nextEle
       }
     }
   }

@@ -63,7 +63,11 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
   };
   handleDeleteElement = () => {
     const { selectedElement, dispatch } = this.props;
-    dispatch({ type: 'editor/deleteElement', payload: { element: { ...selectedElement } } });
+    if (selectedElement.type === 'page') {
+      dispatch({ type: 'editor/deletePage', payload: { page: { ...selectedElement } } });
+    } else {
+      dispatch({ type: 'editor/deleteElement', payload: { element: { ...selectedElement } } });
+    }
   }
   handleToggleFormVisible =  () => {
     this.setState({
@@ -92,7 +96,7 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
       <div className={styles.main}>
         <div className={styles.pagePanel}>
             {
-              pageList.map((page: any, index: number) => <PageThumbnail name={page.name} onClick={this.handleSelectPage.bind(this, page)} checked={selectedPage.uuid === page.uuid} className={styles.pageItem} key={page.name || `${index}`}>
+              pageList.map((page: any, index: number) => <PageThumbnail name={page.name} onClick={this.handleSelectPage.bind(this, page)} checked={selectedPage && selectedPage.uuid === page.uuid} className={styles.pageItem} key={page.name || `${index}`}>
                 <PhoneModel title={page.name} zoom={160 / 750}>
                   <Page {...page}></Page>
                 </PhoneModel>
@@ -109,7 +113,7 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
             {
               selectedPage
               && <PhoneModel title={selectedPage.name} zoom={0.5} showHeader >
-                <Page {...selectedPage} zoom={0.5} painting selectedElement={selectedElement && selectedElement.uuid} onAddElement={this.handleAddElement}></Page>
+                <Page {...selectedPage} zoom={0.5} painting selectedElement={selectedElement && selectedElement.uuid} onEditElement={this.handleElementDataChange} onAddElement={this.handleAddElement}></Page>
               </PhoneModel>
             }
           </div>

@@ -16,6 +16,7 @@ export interface TextProps {
   backgroundColor?: string;
   color?: string;
   fontSize?: number;
+  zIndex?:number;
 }
 export default function Text (props: TextProps) {
   let { content = '', ...style } = props;
