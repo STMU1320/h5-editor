@@ -1,10 +1,11 @@
 import * as React from 'react';
-import { TextProps } from '../Text';
-import { ImgProps } from '../Img';
 import TextForm from './TextForm';
 import ImgForm from './ImgForm';
 import PageForm from './PageForm';
-import { PageProps } from 'components/Page';
+
+import { TextProps } from '../../../../common/components/Text';
+import { ImgProps } from '../../../../common/components/Img';
+import { PageProps } from '../../../../common/components/Page';
 
 interface DataProps extends TextProps, ImgProps, PageProps {
   type: string

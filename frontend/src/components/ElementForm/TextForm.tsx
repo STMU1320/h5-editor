@@ -7,8 +7,7 @@ import Form from 'antd/lib/form';
 import Select from 'antd/lib/select';
 import Row from './Row';
 import Col from './Col';
-
-import { TextProps } from '../Text'
+import { TextProps } from '../../../../common/components/Text';
 
 const Item = Form.Item;
 const TextArea = Input.TextArea;

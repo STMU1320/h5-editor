@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import classnames from 'classnames';
 import * as styles from './style.less';
 
-import { ElementProps } from '../Page';
+import { ElementProps } from '../../../../common/components/Page';
 
 export interface AssistBoxProps {
   dispatch?: Function;

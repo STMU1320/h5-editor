@@ -8,9 +8,7 @@ import Select from 'antd/lib/select';
 import FileUploader from '../FileUploader';
 import Row from './Row';
 import Col from './Col';
-
-import { ImgProps } from '../Img'
-
+import { ImgProps } from '../../../../common/components/Img';
 const Item = Form.Item;
 const TextArea = Input.TextArea;
 const Option = Select.Option;
@@ -21,7 +19,7 @@ export interface ImgFormProps {
   onChange?: Function;
 }
 
-export default function TextForm ({
+export default function ImgForm ({
   data = { src: '' },
   onChange,
   }: ImgFormProps) {

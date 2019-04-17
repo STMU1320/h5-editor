@@ -7,8 +7,7 @@ import Form from 'antd/lib/form';
 import FileUploader from '../FileUploader';
 import Row from './Row';
 import Col from './Col';
-
-import { PageProps } from '../Page'
+import { PageProps } from '../../../../common/components/Page';
 
 const Item = Form.Item;
 
