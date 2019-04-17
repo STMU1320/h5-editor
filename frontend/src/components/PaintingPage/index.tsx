@@ -1,54 +1,22 @@
-import  * as React from 'react';
+import React from 'react';
 import classnames from 'classnames';
+
+
+
 import * as styles from './style.less';
-import Img, { ImgProps } from '../Img';
-import Text, { TextProps } from '../Text';
+import Img from '../../../../common/components/Img';
+import Text from '../../../../common/components/Text';
+import Page, { PageProps, ElementProps } from '../../../../common/components/Page';
 import AssistBox from '../AssistBox';
 
-export interface ElementProps extends TextProps, ImgProps {
-  type: string;
-  uuid: string;
-};
-export interface PageProps {
-  uuid: string;
-  elements?: Array<ElementProps>;
-  backgroundColor?: string;
-  bgImg?: string;
-  color?: string;
-  name?: string;
-  painting?: boolean;
-  onAddElement?: Function;
-  onEditElement?: Function;
-  selectedElement?: string;
-  zoom?: number;
+export interface PaintingPageProps extends PageProps {
+  onAddElement: Function;
+  onEditElement: Function;
+  selectedElement: string;
+  zoom: number;
 }
 
-const renderElement = (eleData: ElementProps, painting: boolean, selectedElement: string, zoom: number, onEditElement: Function): React.ReactNode => {
-  let type = eleData && eleData.type;
-  let Ele: React.ReactElement = null;
-  switch (type) {
-    case 'img':
-      Ele = <Img key={eleData.uuid} {...eleData}></Img>
-      break;
-    case 'text':
-      Ele = <Text key={eleData.uuid} {...eleData}></Text>
-      break;
-  }
-
-  if (painting) {
-    return <AssistBox zoom={zoom} onEditElement={onEditElement} key={eleData.uuid} eleData={eleData} showBox={eleData.uuid === selectedElement}>
-      {Ele}
-    </AssistBox>
-  }
-  return Ele;
-}
-
-export default class Page extends React.PureComponent<PageProps, {}> {
-
-  static defaultProps = {
-    backgroundColor: 'white',
-    color: '#666'
-  }
+export default class PaintingPage extends React.PureComponent<PaintingPageProps, {}> {
 
   state = {
     draw: false,
@@ -78,10 +46,6 @@ export default class Page extends React.PureComponent<PageProps, {}> {
   }
 
   handleMouseDown = (e: React.MouseEvent) => {
-    const { painting } = this.props;
-    if (!painting) {
-      return
-    }
     const { draw } = this.state;
     const pageBox = (e.target as HTMLDivElement).getBoundingClientRect();
     let point = {
@@ -104,10 +68,6 @@ export default class Page extends React.PureComponent<PageProps, {}> {
   }
 
   handleMouseMove = (e: React.MouseEvent) => {
-    const { painting } = this.props;
-    if (!painting) {
-      return
-    }
     const { draw, startPoint } = this.state;
     if (draw) {
       this.setState({
@@ -120,9 +80,9 @@ export default class Page extends React.PureComponent<PageProps, {}> {
   }
 
   handleMouseUp = (e: React.MouseEvent) => {
-    const { painting, uuid, onAddElement } = this.props;
+    const { uuid, onAddElement } = this.props;
     const { draw } = this.state;
-    if (painting && draw) {
+    if (draw) {
       this.setState({ 
         draw: false,
       });
@@ -134,37 +94,43 @@ export default class Page extends React.PureComponent<PageProps, {}> {
   }
 
   handlePageDbClick = () => {
-    const {  onAddElement, uuid, painting } = this.props;
-    if (painting && onAddElement) {
-      onAddElement(uuid);
+    const {  onAddElement, uuid } = this.props;
+    onAddElement && onAddElement(uuid);
+  }
+
+  renderElement = (eleData: ElementProps): React.ReactNode => {
+    const { selectedElement, zoom, onEditElement } = this.props;
+    let type = eleData && eleData.type;
+    let Ele: React.ReactElement = null;
+    switch (type) {
+      case 'img':
+        Ele = <Img key={eleData.uuid} {...eleData}></Img>
+        break;
+      case 'text':
+        Ele = <Text key={eleData.uuid} {...eleData}></Text>
+        break;
     }
+  
+    return <AssistBox zoom={zoom} onEditElement={onEditElement} key={eleData.uuid} eleData={eleData} showBox={eleData.uuid === selectedElement}>
+      {Ele}
+    </AssistBox>
   }
 
   render () {
     let {
-      backgroundColor,
-      color,
-      bgImg,
-      elements,
-      painting,
       selectedElement,
       onEditElement,
-      zoom
+      zoom,
+      ...pageProps
     } = this.props;
-    const { draw, startPoint, currentPoint, pageX, pageY } = this.state;
-    let style: React.CSSProperties = { backgroundColor, color };
-    if (bgImg) {
-      style.backgroundImage = `url(${bgImg})`;
-    }
-
+    const { draw } = this.state;
     let drawBoxStyle = { left: 0, top: 0, width: 0, height: 0 };
     if (draw) {
       drawBoxStyle = this.getDrawBoxStyle();
     }
 
     return <div
-      className={classnames(styles.pageWrap, { [styles.noSelect]: painting })} 
-      style={style}
+      className={classnames(styles.paintingWrap, styles.noSelect)} 
       onMouseDown={this.handleMouseDown}
       onMouseMove={this.handleMouseMove}
       onMouseUp={this.handleMouseUp}
@@ -174,9 +140,7 @@ export default class Page extends React.PureComponent<PageProps, {}> {
         {
           draw && drawBoxStyle.width && drawBoxStyle.height ? <div className={styles.drawBox} style={drawBoxStyle}></div> : ''
         }
-        {
-          elements && elements.map((item) => renderElement(item, painting, selectedElement, zoom, onEditElement))
-        }
+        <Page {...pageProps} renderElement={this.renderElement}></Page>
     </div>
   }
 }

@@ -1,5 +1,4 @@
 {
-  "extends": "../tsconfig.json",
   "compileOnSave": false,
   "compilerOptions": {
     "module": "esnext",
@@ -17,27 +16,20 @@
     "noLib": false,
     "allowSyntheticDefaultImports": true,
     "lib": ["dom", "esnext"],
-    "typeRoots": [
-      "./node_modules/@types"
-    ],
     "baseUrl": ".",
-    "paths": {
-      "components": ["./src/components"],
-      "components/*": ["./src/components/*"],
-      "utils": ["./src/utils"],
-      "utils/*": ["./src/utils/*"]
-    }
   },
   "filesGlob": [
     "**/*.ts",
     "**/*.tsx"
   ],
+  "path": {
+    "@c": ["../common"],
+    "@c/*": ["../common/*"],
+  },
   "files": [
-    "../typings/custom.d.ts",
     "./typings/custom.d.ts",
   ],
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx"
-  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

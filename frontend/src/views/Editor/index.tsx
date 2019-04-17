@@ -8,7 +8,8 @@ import Header from './Header';
 import ToolsBar from './ToolsBar';
 import PageThumbnail from './PageThumbnail';
 
-import Page, { ElementProps } from 'components/Page';
+import Page, { ElementProps } from '../../../../common/components/Page';
+import PaintingPage from 'components/PaintingPage';
 import ElementForm from 'components/ElementForm';
 
 import * as styles from './style.less';
@@ -113,7 +114,7 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
             {
               selectedPage
               && <PhoneModel title={selectedPage.name} zoom={0.5} showHeader >
-                <Page {...selectedPage} zoom={0.5} painting selectedElement={selectedElement && selectedElement.uuid} onEditElement={this.handleElementDataChange} onAddElement={this.handleAddElement}></Page>
+                <PaintingPage {...selectedPage} zoom={0.5} selectedElement={selectedElement && selectedElement.uuid} onEditElement={this.handleElementDataChange} onAddElement={this.handleAddElement}></PaintingPage>
               </PhoneModel>
             }
           </div>
