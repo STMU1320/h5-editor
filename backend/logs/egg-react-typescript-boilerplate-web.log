@@ -1,0 +1,200 @@
+2019-04-11 10:58:59,334 ERROR 15301 [-/127.0.0.1/-/220ms GET /] nodejs.ReferenceError: window is not defined
+    at eval (webpack:///./node_modules/style-loader/lib/addStyles.js?:23:2)
+    at eval (webpack:///./node_modules/style-loader/lib/addStyles.js?:12:46)
+    at module.exports (webpack:///./node_modules/style-loader/lib/addStyles.js?:57:46)
+    at eval (webpack:///./app/web/component/Page/style.less?./node_modules/style-loader??ref--7-1!./node_modules/css-loader??ref--7-2!./node_modules/postcss-loader/src??ref--7-3!./node_modules/postcss-loader/src??ref--7-4!./node_modules/less-loader/dist/cjs.js??ref--7-5:12:143)
+    at Object../node_modules/style-loader/index.js?!./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/less-loader/dist/cjs.js?!./app/web/component/Page/style.less (evalmachine.<anonymous>:955:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at eval (webpack:///./app/web/component/Page/style.less?:2:19)
+    at Object../app/web/component/Page/style.less (evalmachine.<anonymous>:154:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at eval (webpack:///./app/web/component/Page/index.tsx?:8:69)
+
+pid: 15301
+hostname: SimondeMacBook-Pro-2.local
+
+2019-04-17 20:19:49,641 WARN 41934 [-/172.30.53.229/-/19ms POST /add_act] missing csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2019-04-17 20:19:49,650 WARN 41934 [-/172.30.53.229/-/25ms POST /add_act] nodejs.ForbiddenError: missing csrf token
+    at Object.throw (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/node_modules/koa/lib/context.js:97:11)
+    at Object.assertCsrf (/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/app/extend/context.js:148:17)
+    at csrf (/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/lib/middlewares/csrf.js:31:9)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/admin/stmu/h5Editor/backend/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at overrideMethod (/Users/admin/stmu/h5Editor/backend/node_modules/koa-override/index.js:38:12)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+message: "missing csrf token"
+pid: 41934
+hostname: bogon
+
+2019-04-17 20:23:08,206 WARN 42020 [-/172.30.53.229/-/23ms POST /add_act] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2019-04-17 20:23:08,211 WARN 42020 [-/172.30.53.229/-/25ms POST /add_act] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/node_modules/koa/lib/context.js:97:11)
+    at Object.assertCsrf (/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/app/extend/context.js:157:17)
+    at csrf (/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/lib/middlewares/csrf.js:31:9)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/admin/stmu/h5Editor/backend/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at overrideMethod (/Users/admin/stmu/h5Editor/backend/node_modules/koa-override/index.js:38:12)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+message: "invalid csrf token"
+pid: 42020
+hostname: bogon
+
+2019-04-17 20:24:57,264 WARN 42121 [-/172.30.53.229/-/25ms POST /add_act] invalid csrf token. See https://eggjs.org/zh-cn/core/security.html#安全威胁csrf的防范
+2019-04-17 20:24:57,270 WARN 42121 [-/172.30.53.229/-/27ms POST /add_act] nodejs.ForbiddenError: invalid csrf token
+    at Object.throw (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/node_modules/koa/lib/context.js:97:11)
+    at Object.assertCsrf (/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/app/extend/context.js:157:17)
+    at csrf (/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/lib/middlewares/csrf.js:31:9)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/admin/stmu/h5Editor/backend/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at overrideMethod (/Users/admin/stmu/h5Editor/backend/node_modules/koa-override/index.js:38:12)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+message: "invalid csrf token"
+pid: 42121
+hostname: bogon
+
+2019-04-19 16:26:19,663 ERROR 55307 [-/172.30.53.229/-/30ms POST /act_add] nodejs.TypeError: Cannot read property 'find' of undefined
+    at ActController.add (/Users/admin/stmu/h5Editor/backend/app/controller/act.ts:6:37)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:45:18)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at createGenerator (/Users/admin/stmu/h5Editor/backend/node_modules/koa-convert/index.js:24:16)
+    at createGenerator.next (<anonymous>)
+
+pid: 55307
+hostname: bogon
+
+2019-04-19 16:27:52,064 ERROR 55345 [-/172.30.53.229/-/24ms POST /act_add] nodejs.TypeError: Cannot read property 'find' of undefined
+    at ActController.add (/Users/admin/stmu/h5Editor/backend/app/controller/act.ts:6:37)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:45:18)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at createGenerator (/Users/admin/stmu/h5Editor/backend/node_modules/koa-convert/index.js:24:16)
+    at createGenerator.next (<anonymous>)
+
+pid: 55345
+hostname: bogon
+
+2019-04-19 16:32:50,570 ERROR 55431 [-/172.30.53.229/-/25ms POST /act_add] nodejs.TypeError: Cannot read property 'find' of undefined
+    at ActController.add (/Users/admin/stmu/h5Editor/backend/app/controller/act.ts:5:37)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:45:18)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at createGenerator (/Users/admin/stmu/h5Editor/backend/node_modules/koa-convert/index.js:24:16)
+    at createGenerator.next (<anonymous>)
+
+pid: 55431
+hostname: bogon
+
+2019-04-19 16:43:48,260 ERROR 55518 [-/172.30.53.229/-/27ms POST /act_add] nodejs.TypeError: ctx.model.Page.insert is not a function
+    at ActController.add (/Users/admin/stmu/h5Editor/backend/app/controller/act.ts:5:37)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:45:18)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at createGenerator (/Users/admin/stmu/h5Editor/backend/node_modules/koa-convert/index.js:24:16)
+    at createGenerator.next (<anonymous>)
+
+pid: 55518
+hostname: bogon
+
+2019-04-19 16:45:36,382 ERROR 55563 [-/172.30.53.229/-/26ms POST /act_add] nodejs.TypeError: ctx.model.Page.insert is not a function
+    at ActController.add (/Users/admin/stmu/h5Editor/backend/app/controller/act.ts:5:37)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:45:18)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at createGenerator (/Users/admin/stmu/h5Editor/backend/node_modules/koa-convert/index.js:24:16)
+    at createGenerator.next (<anonymous>)
+
+pid: 55563
+hostname: bogon
+
+2019-04-19 16:50:19,630 ERROR 55628 [-/172.30.53.229/-/38ms POST /act_add] nodejs.TypeError: ctx.model.Page.save is not a function
+    at ActController.add (/Users/admin/stmu/h5Editor/backend/app/controller/act.ts:5:37)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:45:18)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at createGenerator (/Users/admin/stmu/h5Editor/backend/node_modules/koa-convert/index.js:24:16)
+    at createGenerator.next (<anonymous>)
+
+pid: 55628
+hostname: bogon
+
+2019-04-20 11:07:07,155 WARN 57947 [-/192.168.0.106/-/24ms POST /act_add] nodejs.SyntaxError: Unexpected token ' in JSON at position 10
+    at JSON.parse (<anonymous>)
+    at parse (/Users/admin/stmu/h5Editor/backend/node_modules/co-body/lib/json.js:57:17)
+    at AsyncFunction.module.exports [as json] (/Users/admin/stmu/h5Editor/backend/node_modules/co-body/lib/json.js:41:20)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+status: 400
+body: "{\n\t\"uid\": 'kdjkd',\n\tpageList: [{ type: 'page', uid: 'iienk' }]\n}"
+pid: 57947
+hostname: SimondeMacBook-Pro-2.local
+

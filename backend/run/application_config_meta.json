@@ -1,0 +1,363 @@
+{
+  "siteFile": {
+    "/favicon.ico": "/Users/admin/stmu/h5Editor/backend/config/config.default.ts"
+  },
+  "logger": {
+    "consoleLevel": "/Users/admin/stmu/h5Editor/backend/config/config.default.ts",
+    "dir": "/Users/admin/stmu/h5Editor/backend/config/config.default.ts",
+    "encoding": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "env": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "level": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "disableConsoleAfterReady": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "outputJSON": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "buffer": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "appLogName": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "coreLogName": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "agentLogName": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "errorLogName": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "coreLogger": {
+      "consoleLevel": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.local.js"
+    },
+    "allowDebugAtProd": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js"
+  },
+  "static": {
+    "prefix": "/Users/admin/stmu/h5Editor/backend/config/config.default.ts",
+    "dir": "/Users/admin/stmu/h5Editor/backend/config/config.default.ts",
+    "maxAge": "/Users/admin/stmu/h5Editor/backend/config/config.local.ts",
+    "dynamic": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-static/config/config.default.js",
+    "preload": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-static/config/config.default.js",
+    "buffer": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-static/config/config.default.js",
+    "maxFiles": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-static/config/config.default.js"
+  },
+  "keys": "/Users/admin/stmu/h5Editor/backend/config/config.default.ts",
+  "middleware": "/Users/admin/stmu/h5Editor/backend/config/config.default.ts",
+  "reactssr": {
+    "layout": "/Users/admin/stmu/h5Editor/backend/config/config.default.ts",
+    "injectCss": "/Users/admin/stmu/h5Editor/backend/config/config.local.ts",
+    "doctype": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-view-react-ssr/config/config.default.js",
+    "manifest": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-view-react-ssr/config/config.default.js",
+    "injectHeadRegex": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-view-react-ssr/config/config.default.js",
+    "injectBodyRegex": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-view-react-ssr/config/config.default.js",
+    "injectJs": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-view-react-ssr/config/config.default.js",
+    "crossorigin": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-view-react-ssr/config/config.default.js",
+    "injectRes": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-view-react-ssr/config/config.default.js",
+    "mergeLocals": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-view-react-ssr/config/config.default.js",
+    "fallbackToClient": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-view-react-ssr/config/config.default.js",
+    "afterRender": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-view-react-ssr/config/config.default.js"
+  },
+  "mongoose": {
+    "client": {
+      "url": "/Users/admin/stmu/h5Editor/backend/config/config.default.ts",
+      "options": "/Users/admin/stmu/h5Editor/backend/config/config.default.ts"
+    },
+    "url": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-mongoose/config/config.default.js",
+    "options": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-mongoose/config/config.default.js",
+    "loadModel": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-mongoose/config/config.default.js",
+    "app": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-mongoose/config/config.default.js",
+    "agent": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-mongoose/config/config.default.js"
+  },
+  "view": {
+    "cache": "/Users/admin/stmu/h5Editor/backend/config/config.local.ts",
+    "root": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-view/config/config.default.js",
+    "defaultExtension": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-view/config/config.default.js",
+    "defaultViewEngine": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-view/config/config.default.js",
+    "mapping": {
+      ".js": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-view-react-ssr/config/config.default.js",
+      ".jsx": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-view-react-ssr/config/config.default.js"
+    }
+  },
+  "development": {
+    "watchDirs": "/Users/admin/stmu/h5Editor/backend/config/config.local.ts",
+    "ignoreDirs": "/Users/admin/stmu/h5Editor/backend/config/config.local.ts",
+    "fastReady": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-development/config/config.default.js",
+    "reloadOnDebug": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-development/config/config.default.js",
+    "overrideDefault": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-development/config/config.default.js"
+  },
+  "logview": {
+    "dir": "/Users/admin/stmu/h5Editor/backend/config/config.local.ts"
+  },
+  "security": {
+    "csrf": {
+      "enable": "/Users/admin/stmu/h5Editor/backend/config/config.local.ts",
+      "ignoreJSON": "/Users/admin/stmu/h5Editor/backend/config/config.local.ts",
+      "useSession": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js",
+      "cookieName": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js",
+      "sessionName": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js",
+      "headerName": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js",
+      "bodyName": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js",
+      "queryName": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js"
+    },
+    "domainWhiteList": "/Users/admin/stmu/h5Editor/backend/config/config.local.ts",
+    "protocolWhiteList": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js",
+    "defaultMiddleware": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js",
+    "xframe": {
+      "enable": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js"
+    },
+    "hsts": {
+      "enable": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.local.js",
+      "maxAge": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js",
+      "includeSubdomains": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js"
+    },
+    "dta": {
+      "enable": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js"
+    },
+    "noopen": {
+      "enable": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js"
+    },
+    "nosniff": {
+      "enable": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js"
+    },
+    "xssProtection": {
+      "enable": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js"
+    },
+    "csp": {
+      "enable": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js",
+      "policy": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js",
+      "checkAddress": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js"
+    }
+  },
+  "cors": {
+    "origin": "/Users/admin/stmu/h5Editor/backend/config/config.local.ts",
+    "allowMethods": "/Users/admin/stmu/h5Editor/backend/config/config.local.ts"
+  },
+  "session": {
+    "maxAge": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-session/config/config.default.js",
+    "key": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-session/config/config.default.js",
+    "httpOnly": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-session/config/config.default.js",
+    "encrypt": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-session/config/config.default.js"
+  },
+  "helper": {
+    "shtml": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-security/config/config.default.js"
+  },
+  "jsonp": {
+    "limit": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-jsonp/config/config.default.js",
+    "callback": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-jsonp/config/config.default.js",
+    "csrf": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-jsonp/config/config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-onerror/config/config.default.js",
+    "appErrorFilter": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-onerror/config/config.default.js",
+    "templatePath": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-onerror/config/config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-i18n/config/config.default.js",
+    "dirs": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-i18n/config/config.default.js",
+    "queryField": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-i18n/config/config.default.js",
+    "cookieField": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-i18n/config/config.default.js",
+    "cookieMaxAge": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-i18n/config/config.default.js"
+  },
+  "watcher": {
+    "type": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-watcher/config/config.local.js",
+    "eventSources": {
+      "default": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-watcher/config/config.default.js",
+      "development": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-watcher/config/config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-schedule/config/config.default.js",
+      "file": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-schedule/config/config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-schedule/config/config.default.js"
+  },
+  "multipart": {
+    "mode": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-multipart/config/config.default.js",
+    "autoFields": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-multipart/config/config.default.js",
+    "defaultCharset": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-multipart/config/config.default.js",
+    "fieldNameSize": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-multipart/config/config.default.js",
+    "fieldSize": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-multipart/config/config.default.js",
+    "fields": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-multipart/config/config.default.js",
+    "fileSize": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-multipart/config/config.default.js",
+    "files": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-multipart/config/config.default.js",
+    "fileExtensions": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-multipart/config/config.default.js",
+    "whitelist": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-multipart/config/config.default.js",
+    "tmpdir": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-multipart/config/config.default.js",
+    "cleanSchedule": {
+      "cron": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-multipart/config/config.default.js"
+    }
+  },
+  "logrotator": {
+    "filesRotateByHour": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-logrotator/config/config.default.js",
+    "hourDelimiter": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-logrotator/config/config.default.js",
+    "filesRotateBySize": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-logrotator/config/config.default.js",
+    "maxFileSize": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-logrotator/config/config.default.js",
+    "maxFiles": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-logrotator/config/config.default.js",
+    "rotateDuration": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-logrotator/config/config.default.js",
+    "maxDays": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-logrotator/config/config.default.js"
+  },
+  "webpack": {
+    "port": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack/config/config.default.js",
+    "proxy": {
+      "host": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack/config/config.default.js",
+      "match": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack/config/config.default.js"
+    },
+    "webpackConfigList": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack/config/config.default.js"
+  },
+  "webpackreact": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack-react/config/config.default.js",
+  "env": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+  "name": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+  "proxy": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+  "maxProxyCount": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+  "protocolHeaders": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+  "ipHeaders": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+  "hostHeaders": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+  "pkg": {
+    "name": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "version": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "description": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "scripts": {
+      "start": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "dev": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "debug": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "build": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "tsc": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "clean": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "kill": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "lint": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "fix": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "ii": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js"
+    },
+    "dependencies": {
+      "cross-env": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "egg": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "egg-cors": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "egg-logger": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "egg-mongoose": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "egg-scripts": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "egg-validate": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "egg-view-react-ssr": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "extend": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "history": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "lodash": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "mockjs": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "moment": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "react": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "react-dom": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "react-redux": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "react-router": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "react-router-config": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "react-router-dom": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "react-router-redux": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "redux": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js"
+    },
+    "devDependencies": {
+      "@types/react": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "@types/react-dom": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "antd": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "autod-egg": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "easywebpack-cli": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "easywebpack-react": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "egg-bin": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "egg-ts-helper": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "egg-webpack": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "egg-webpack-react": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "eslint": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "eslint-config-egg": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "eslint-plugin-react": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "ip": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "less": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "less-loader": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "ts-loader": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "tslint": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "tslint-loader": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "typescript": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js"
+    },
+    "egg": {
+      "typescript": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js"
+    },
+    "engines": {
+      "node": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js"
+    },
+    "ci": {
+      "version": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js"
+    },
+    "repository": {
+      "type": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "url": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js"
+    },
+    "author": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "license": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "homepage": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js"
+  },
+  "baseDir": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+  "HOME": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+  "rundir": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+  "dump": {
+    "ignore": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "notFound": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "sitefile": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "middlewares": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "httpClient": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js"
+  },
+  "bodyParser": {
+    "enable": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "encoding": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "formLimit": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "jsonLimit": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "strict": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "queryString": {
+      "arrayLimit": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "depth": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "parameterLimit": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js"
+    }
+  },
+  "httpclient": {
+    "enableDNSCache": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "dnsCacheLookupInterval": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "dnsCacheMaxLength": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "request": {
+      "timeout": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "freeSocketTimeout": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "maxSockets": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "freeSocketTimeout": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "maxSockets": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "logging": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js"
+  },
+  "coreMiddleware": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+  "workerStartTimeout": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+  "serverTimeout": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "port": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "hostname": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "responseTimeout": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js"
+  },
+  "onClientError": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js"
+}

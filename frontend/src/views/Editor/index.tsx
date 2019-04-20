@@ -12,6 +12,8 @@ import Page, { ElementProps } from '../../../../common/components/Page';
 import PaintingPage from 'components/PaintingPage';
 import ElementForm from 'components/ElementForm';
 
+import request from '../../utils/request';
+
 import * as styles from './style.less';
 
 function generateList (length: number) {
@@ -46,7 +48,15 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
     console.log(e);
   }
   handlePublish = (e: React.MouseEvent) => {
-    console.log(e);
+    const { pageList } = this.props;
+    console.log(pageList);
+    // request.post('http://172.30.53.229:7002/act_add', { pageList })
+    // .then((res: any) => {
+    //   console.log(res);
+    // })
+    // .catch((err: any) => {
+    //   console.log(err);
+    // })
   }
 
   handleCheckedElementChange = (e: React.MouseEvent) => {

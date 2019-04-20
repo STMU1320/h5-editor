@@ -1,0 +1,258 @@
+2019-04-10 13:28:00,404 ERROR 10349 nodejs.ClusterClientNoResponseError: client no response in 3142028ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/admin/stmu/egg-react-typescript-boilerplate/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+name: "ClusterClientNoResponseError"
+pid: 10349
+hostname: SimondeMacBook-Pro-2.local
+
+2019-04-11 10:58:59,332 ERROR 15301 [-/127.0.0.1/-/220ms GET /] nodejs.ReferenceError: window is not defined
+    at eval (webpack:///./node_modules/style-loader/lib/addStyles.js?:23:2)
+    at eval (webpack:///./node_modules/style-loader/lib/addStyles.js?:12:46)
+    at module.exports (webpack:///./node_modules/style-loader/lib/addStyles.js?:57:46)
+    at eval (webpack:///./app/web/component/Page/style.less?./node_modules/style-loader??ref--7-1!./node_modules/css-loader??ref--7-2!./node_modules/postcss-loader/src??ref--7-3!./node_modules/postcss-loader/src??ref--7-4!./node_modules/less-loader/dist/cjs.js??ref--7-5:12:143)
+    at Object../node_modules/style-loader/index.js?!./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/less-loader/dist/cjs.js?!./app/web/component/Page/style.less (evalmachine.<anonymous>:955:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at eval (webpack:///./app/web/component/Page/style.less?:2:19)
+    at Object../app/web/component/Page/style.less (evalmachine.<anonymous>:154:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at eval (webpack:///./app/web/component/Page/index.tsx?:8:69)
+
+pid: 15301
+hostname: SimondeMacBook-Pro-2.local
+
+2019-04-18 20:50:23,564 ERROR 50936 nodejs.ClusterClientNoResponseError: client no response in 574402ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/admin/stmu/h5Editor/backend/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+name: "ClusterClientNoResponseError"
+pid: 50936
+hostname: bogon
+
+2019-04-18 21:25:17,055 ERROR 50936 nodejs.ClusterClientNoResponseError: client no response in 2073445ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/admin/stmu/h5Editor/backend/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+name: "ClusterClientNoResponseError"
+pid: 50936
+hostname: bogon
+
+2019-04-19 01:35:00,344 ERROR 50936 nodejs.ClusterClientNoResponseError: client no response in 14943270ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/admin/stmu/h5Editor/backend/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+name: "ClusterClientNoResponseError"
+pid: 50936
+hostname: bogon
+
+2019-04-19 01:44:56,004 ERROR 50936 nodejs.ClusterClientNoResponseError: client no response in 575635ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/admin/stmu/h5Editor/backend/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+name: "ClusterClientNoResponseError"
+pid: 50936
+hostname: bogon
+
+2019-04-19 08:15:32,742 ERROR 50936 nodejs.ClusterClientNoResponseError: client no response in 23396707ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/admin/stmu/h5Editor/backend/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+name: "ClusterClientNoResponseError"
+pid: 50936
+hostname: bogon
+
+2019-04-19 08:25:49,531 ERROR 50936 nodejs.ClusterClientNoResponseError: client no response in 576772ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/admin/stmu/h5Editor/backend/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+name: "ClusterClientNoResponseError"
+pid: 50936
+hostname: bogon
+
+2019-04-19 09:02:22,773 ERROR 50936 nodejs.ClusterClientNoResponseError: client no response in 2173225ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/admin/stmu/h5Editor/backend/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+name: "ClusterClientNoResponseError"
+pid: 50936
+hostname: bogon
+
+2019-04-19 09:15:14,683 ERROR 50936 nodejs.ClusterClientNoResponseError: client no response in 731888ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/admin/stmu/h5Editor/backend/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+name: "ClusterClientNoResponseError"
+pid: 50936
+hostname: bogon
+
+2019-04-19 10:44:44,878 ERROR 50936 nodejs.ClusterClientNoResponseError: client no response in 1028561ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/admin/stmu/h5Editor/backend/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+name: "ClusterClientNoResponseError"
+pid: 50936
+hostname: bogon
+
+2019-04-19 12:56:40,004 ERROR 50936 nodejs.ClusterClientNoResponseError: client no response in 3874344ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/admin/stmu/h5Editor/backend/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+name: "ClusterClientNoResponseError"
+pid: 50936
+hostname: bogon
+
+2019-04-19 13:30:11,410 ERROR 50936 nodejs.ClusterClientNoResponseError: client no response in 1311217ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/admin/stmu/h5Editor/backend/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+name: "ClusterClientNoResponseError"
+pid: 50936
+hostname: bogon
+
+2019-04-19 16:15:01,452 ERROR 54936 nodejs.ClusterClientNoResponseError: client no response in 3979869ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/admin/stmu/h5Editor/backend/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+name: "ClusterClientNoResponseError"
+pid: 54936
+hostname: bogon
+
+2019-04-19 16:26:19,662 ERROR 55307 [-/172.30.53.229/-/30ms POST /act_add] nodejs.TypeError: Cannot read property 'find' of undefined
+    at ActController.add (/Users/admin/stmu/h5Editor/backend/app/controller/act.ts:6:37)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:45:18)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at createGenerator (/Users/admin/stmu/h5Editor/backend/node_modules/koa-convert/index.js:24:16)
+    at createGenerator.next (<anonymous>)
+
+pid: 55307
+hostname: bogon
+
+2019-04-19 16:27:52,063 ERROR 55345 [-/172.30.53.229/-/24ms POST /act_add] nodejs.TypeError: Cannot read property 'find' of undefined
+    at ActController.add (/Users/admin/stmu/h5Editor/backend/app/controller/act.ts:6:37)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:45:18)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at createGenerator (/Users/admin/stmu/h5Editor/backend/node_modules/koa-convert/index.js:24:16)
+    at createGenerator.next (<anonymous>)
+
+pid: 55345
+hostname: bogon
+
+2019-04-19 16:32:50,570 ERROR 55431 [-/172.30.53.229/-/25ms POST /act_add] nodejs.TypeError: Cannot read property 'find' of undefined
+    at ActController.add (/Users/admin/stmu/h5Editor/backend/app/controller/act.ts:5:37)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:45:18)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at createGenerator (/Users/admin/stmu/h5Editor/backend/node_modules/koa-convert/index.js:24:16)
+    at createGenerator.next (<anonymous>)
+
+pid: 55431
+hostname: bogon
+
+2019-04-19 16:43:48,259 ERROR 55518 [-/172.30.53.229/-/27ms POST /act_add] nodejs.TypeError: ctx.model.Page.insert is not a function
+    at ActController.add (/Users/admin/stmu/h5Editor/backend/app/controller/act.ts:5:37)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:45:18)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at createGenerator (/Users/admin/stmu/h5Editor/backend/node_modules/koa-convert/index.js:24:16)
+    at createGenerator.next (<anonymous>)
+
+pid: 55518
+hostname: bogon
+
+2019-04-19 16:45:36,381 ERROR 55563 [-/172.30.53.229/-/26ms POST /act_add] nodejs.TypeError: ctx.model.Page.insert is not a function
+    at ActController.add (/Users/admin/stmu/h5Editor/backend/app/controller/act.ts:5:37)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:45:18)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at createGenerator (/Users/admin/stmu/h5Editor/backend/node_modules/koa-convert/index.js:24:16)
+    at createGenerator.next (<anonymous>)
+
+pid: 55563
+hostname: bogon
+
+2019-04-19 16:50:19,628 ERROR 55628 [-/172.30.53.229/-/38ms POST /act_add] nodejs.TypeError: ctx.model.Page.save is not a function
+    at ActController.add (/Users/admin/stmu/h5Editor/backend/app/controller/act.ts:5:37)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/admin/stmu/h5Editor/backend/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:45:18)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:44:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:56
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at createGenerator (/Users/admin/stmu/h5Editor/backend/node_modules/koa-convert/index.js:24:16)
+    at createGenerator.next (<anonymous>)
+
+pid: 55628
+hostname: bogon
+
