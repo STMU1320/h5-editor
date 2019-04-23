@@ -18,6 +18,11 @@ export default function(app: EggAppConfig) {
     dir: path.join(app.baseDir, 'public')
   };
 
+  exports.bodyParser = {
+    jsonLimit: '5mb',
+    formLimit: '6mb',
+  };
+
   exports.keys = '123456';
 
   exports.middleware = [

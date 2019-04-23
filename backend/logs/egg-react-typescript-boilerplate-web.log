@@ -198,3 +198,623 @@ body: "{\n\t\"uid\": 'kdjkd',\n\tpageList: [{ type: 'page', uid: 'iienk' }]\n}"
 pid: 57947
 hostname: SimondeMacBook-Pro-2.local
 
+2019-04-20 11:40:28,742 WARN 58322 [-/127.0.0.1/-/5ms POST /] nodejs.PayloadTooLargeError: request entity too large
+    at readStream (/Users/admin/stmu/h5Editor/backend/node_modules/raw-body/index.js:155:17)
+    at executor (/Users/admin/stmu/h5Editor/backend/node_modules/raw-body/index.js:112:5)
+    at new Promise (<anonymous>)
+    at getRawBody (/Users/admin/stmu/h5Editor/backend/node_modules/raw-body/index.js:111:10)
+    at AsyncFunction.module.exports [as json] (/Users/admin/stmu/h5Editor/backend/node_modules/co-body/lib/json.js:39:21)
+    at parseBody (/Users/admin/stmu/h5Editor/backend/node_modules/koa-bodyparser/index.js:91:26)
+    at bodyParser (/Users/admin/stmu/h5Editor/backend/node_modules/koa-bodyparser/index.js:76:25)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/koa-static-cache/index.js:51:69
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at rangeMiddleware (/Users/admin/stmu/h5Editor/backend/node_modules/egg-static/app/middleware/static.js:23:12)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at notfound (/Users/admin/stmu/h5Editor/backend/node_modules/egg/app/middleware/notfound.js:5:11)
+message: "request entity too large"
+expected: 198493
+length: 198493
+limit: 102400
+type: "entity.too.large"
+headers: {"Access-Control-Allow-Origin":"*","vary":"Origin"}
+pid: 58322
+hostname: SimondeMacBook-Pro-2.local
+
+2019-04-20 11:43:07,548 WARN 58322 [-/127.0.0.1/-/1ms POST /] nodejs.PayloadTooLargeError: request entity too large
+    at readStream (/Users/admin/stmu/h5Editor/backend/node_modules/raw-body/index.js:155:17)
+    at executor (/Users/admin/stmu/h5Editor/backend/node_modules/raw-body/index.js:112:5)
+    at new Promise (<anonymous>)
+    at getRawBody (/Users/admin/stmu/h5Editor/backend/node_modules/raw-body/index.js:111:10)
+    at AsyncFunction.module.exports [as json] (/Users/admin/stmu/h5Editor/backend/node_modules/co-body/lib/json.js:39:21)
+    at parseBody (/Users/admin/stmu/h5Editor/backend/node_modules/koa-bodyparser/index.js:91:26)
+    at bodyParser (/Users/admin/stmu/h5Editor/backend/node_modules/koa-bodyparser/index.js:76:25)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/koa-static-cache/index.js:51:69
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at rangeMiddleware (/Users/admin/stmu/h5Editor/backend/node_modules/egg-static/app/middleware/static.js:23:12)
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/admin/stmu/h5Editor/backend/node_modules/koa-compose/index.js:42:32)
+    at notfound (/Users/admin/stmu/h5Editor/backend/node_modules/egg/app/middleware/notfound.js:5:11)
+message: "request entity too large"
+expected: 198493
+length: 198493
+limit: 102400
+type: "entity.too.large"
+headers: {"Access-Control-Allow-Origin":"*","vary":"Origin"}
+pid: 58322
+hostname: SimondeMacBook-Pro-2.local
+
+2019-04-22 15:47:58,121 ERROR 62936 [-/127.0.0.1/-/7ms GET /h5] nodejs.Error: read webpack memory file[/Users/admin/stmu/h5Editor/backend/app/view/h5.js] content is empty, please check if the file exists
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack-react/app.js:20:17
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/admin/stmu/h5Editor/backend/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+pid: 62936
+hostname: bogon
+
+2019-04-22 15:48:57,854 ERROR 62978 [-/127.0.0.1/-/5ms GET /h5] nodejs.Error: read webpack memory file[/Users/admin/stmu/h5Editor/backend/app/view/h5.js] content is empty, please check if the file exists
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack-react/app.js:20:17
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/admin/stmu/h5Editor/backend/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+pid: 62978
+hostname: bogon
+
+2019-04-22 15:49:00,290 ERROR 62978 [-/127.0.0.1/-/3ms GET /h5] nodejs.Error: read webpack memory file[/Users/admin/stmu/h5Editor/backend/app/view/h5.js] content is empty, please check if the file exists
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack-react/app.js:20:17
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/admin/stmu/h5Editor/backend/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+pid: 62978
+hostname: bogon
+
+2019-04-22 15:49:59,852 ERROR 62978 [-/127.0.0.1/-/4ms GET /h5] nodejs.Error: read webpack memory file[/Users/admin/stmu/h5Editor/backend/app/view/h5.js] content is empty, please check if the file exists
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack-react/app.js:20:17
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/admin/stmu/h5Editor/backend/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+pid: 62978
+hostname: bogon
+
+2019-04-22 15:52:37,127 ERROR 62978 [-/127.0.0.1/-/2ms GET /h5?aid=kdlskda&pid=skdlgids] nodejs.Error: read webpack memory file[/Users/admin/stmu/h5Editor/backend/app/view/h5.js] content is empty, please check if the file exists
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack-react/app.js:20:17
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/admin/stmu/h5Editor/backend/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+pid: 62978
+hostname: bogon
+
+2019-04-22 15:54:24,666 ERROR 63074 [-/127.0.0.1/-/14ms GET /h5?aid=kdlskda&pid=skdlgids&mode=preview] nodejs.Error: read webpack memory file[/Users/admin/stmu/h5Editor/backend/app/view/h5.js] content is empty, please check if the file exists
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack-react/app.js:20:17
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/admin/stmu/h5Editor/backend/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+pid: 63074
+hostname: bogon
+
+2019-04-22 17:28:55,553 ERROR 64550 [-/127.0.0.1/-/24ms GET /h5?aid=3226109a-cc76-4a4f-8e7c-120c0d6063ae] nodejs.Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+ReferenceError: Unknown plugin "transform-object-assign" specified in "base" at 0, attempted to resolve relative to "/Users/admin/stmu/h5Editor/common/components/Page"
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:180:17
+    at Array.map (<anonymous>)
+    at Function.normalisePlugins (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:158:20)
+    at OptionManager.mergeOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:234:36)
+    at OptionManager.init (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)
+    at File.initOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:212:65)
+    at new File (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:135:24)
+    at Pipeline.transform (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/pipeline.js:46:16)
+    at transpile (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/index.js:50:20)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:118:18
+    at ReadFileContext.callback (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:31:21)
+    at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:420:13)
+ReferenceError: Unknown plugin "transform-object-assign" specified in "base" at 0, attempted to resolve relative to "/Users/admin/stmu/h5Editor/common/components/Page"
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:180:17
+    at Array.map (<anonymous>)
+    at Function.normalisePlugins (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:158:20)
+    at OptionManager.mergeOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:234:36)
+    at OptionManager.init (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)
+    at File.initOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:212:65)
+    at new File (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:135:24)
+    at Pipeline.transform (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/pipeline.js:46:16)
+    at transpile (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/index.js:50:20)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:118:18
+    at ReadFileContext.callback (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:31:21)
+    at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:420:13)
+    at eval (webpack:///../common/components/Page/index.tsx?:1:7)
+    at Object.../common/components/Page/index.tsx (evalmachine.<anonymous>:96:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at Module.eval (webpack:///./app/web/page/home/h5.tsx?:11:81)
+    at eval (webpack:///./app/web/page/home/h5.tsx?:79:30)
+    at Module../app/web/page/home/h5.tsx (evalmachine.<anonymous>:120:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at evalmachine.<anonymous>:84:18
+    at evalmachine.<anonymous>:87:10
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack-react/app.js:23:37
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/admin/stmu/h5Editor/backend/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+pid: 64550
+hostname: bogon
+
+2019-04-22 17:36:09,740 ERROR 64778 [-/172.30.53.229/-/37ms GET /] nodejs.Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+ReferenceError: Unknown plugin "@babel/plugin-syntax-dynamic-import" specified in "/Users/admin/stmu/h5Editor/backend/.babelrc" at 0, attempted to resolve relative to "/Users/admin/stmu/h5Editor/backend"
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:180:17
+    at Array.map (<anonymous>)
+    at Function.normalisePlugins (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:158:20)
+    at OptionManager.mergeOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:234:36)
+    at OptionManager.init (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)
+    at File.initOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:212:65)
+    at new File (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:135:24)
+    at Pipeline.transform (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/pipeline.js:46:16)
+    at transpile (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/index.js:50:20)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:118:18
+    at ReadFileContext.callback (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:31:21)
+    at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:420:13)
+ReferenceError: Unknown plugin "@babel/plugin-syntax-dynamic-import" specified in "/Users/admin/stmu/h5Editor/backend/.babelrc" at 0, attempted to resolve relative to "/Users/admin/stmu/h5Editor/backend"
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:180:17
+    at Array.map (<anonymous>)
+    at Function.normalisePlugins (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:158:20)
+    at OptionManager.mergeOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:234:36)
+    at OptionManager.init (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)
+    at File.initOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:212:65)
+    at new File (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:135:24)
+    at Pipeline.transform (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/pipeline.js:46:16)
+    at transpile (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/index.js:50:20)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:118:18
+    at ReadFileContext.callback (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:31:21)
+    at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:420:13)
+    at eval (webpack:///./app/web/page/home/index.tsx?:1:7)
+    at Object../app/web/page/home/index.tsx (evalmachine.<anonymous>:96:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at evalmachine.<anonymous>:84:18
+    at evalmachine.<anonymous>:87:10
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack-react/app.js:23:37
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/admin/stmu/h5Editor/backend/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+pid: 64778
+hostname: bogon
+
+2019-04-22 17:38:50,182 ERROR 64856 [-/172.30.53.229/-/16ms GET /] nodejs.Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: Unexpected token (12:15)
+
+[0m [90m 10 | [39m    }
+ [90m 11 | [39m    [33mApp[39m[33m.[39mprototype[33m.[39mrender [33m=[39m [36mfunction[39m () {
+[31m[1m>[22m[39m[90m 12 | [39m        [36mreturn[39m [33m<[39m[33mLayout[39m {[33m...[39m[36mthis[39m[33m.[39mprops}[33m>[39m
+ [90m    | [39m               [31m[1m^[22m[39m
+ [90m 13 | [39m      react    
+ [90m 14 | [39m    [33m<[39m[33m/[39m[33mLayout[39m[33m>[39m[33m;[39m
+ [90m 15 | [39m    }[33m;[39m[0m
+
+SyntaxError: Unexpected token (12:15)
+
+[0m [90m 10 | [39m    }
+ [90m 11 | [39m    [33mApp[39m[33m.[39mprototype[33m.[39mrender [33m=[39m [36mfunction[39m () {
+[31m[1m>[22m[39m[90m 12 | [39m        [36mreturn[39m [33m<[39m[33mLayout[39m {[33m...[39m[36mthis[39m[33m.[39mprops}[33m>[39m
+ [90m    | [39m               [31m[1m^[22m[39m
+ [90m 13 | [39m      react    
+ [90m 14 | [39m    [33m<[39m[33m/[39m[33mLayout[39m[33m>[39m[33m;[39m
+ [90m 15 | [39m    }[33m;[39m[0m
+
+    at eval (webpack:///./app/web/page/home/index.tsx?:1:7)
+    at Object../app/web/page/home/index.tsx (evalmachine.<anonymous>:96:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at evalmachine.<anonymous>:84:18
+    at evalmachine.<anonymous>:87:10
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack-react/app.js:23:37
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/admin/stmu/h5Editor/backend/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+pid: 64856
+hostname: bogon
+
+2019-04-22 17:44:52,797 ERROR 64997 [-/172.30.53.229/-/34ms GET /] nodejs.Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Requires Babel "^7.0.0-0", but was loaded with "6.26.3". If you are sure you have a compatible version of @babel/core, it is likely that something in your build process is loading the wrong version. Inspect the stack trace of this error to look for the first entry that doesn't mention "@babel/core" or "babel-core" to see what is calling Babel.
+    at throwVersionError (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:65:11)
+    at Object.assertVersion (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:13:11)
+    at api (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js:19:7)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:19:12
+    at Function.memoisePluginContainer (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:113:13)
+    at Function.normalisePlugin (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:146:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:184:30
+    at Array.map (<anonymous>)
+    at Function.normalisePlugins (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:158:20)
+    at OptionManager.mergeOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:234:36)
+    at OptionManager.init (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)
+    at File.initOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:212:65)
+    at new File (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:135:24)
+    at Pipeline.transform (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/pipeline.js:46:16)
+    at transpile (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/index.js:50:20)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:118:18
+    at ReadFileContext.callback (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:31:21)
+    at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:420:13)
+Error: Requires Babel "^7.0.0-0", but was loaded with "6.26.3". If you are sure you have a compatible version of @babel/core, it is likely that something in your build process is loading the wrong version. Inspect the stack trace of this error to look for the first entry that doesn't mention "@babel/core" or "babel-core" to see what is calling Babel.
+    at throwVersionError (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:65:11)
+    at Object.assertVersion (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:13:11)
+    at api (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js:19:7)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:19:12
+    at Function.memoisePluginContainer (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:113:13)
+    at Function.normalisePlugin (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:146:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:184:30
+    at Array.map (<anonymous>)
+    at Function.normalisePlugins (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:158:20)
+    at OptionManager.mergeOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:234:36)
+    at OptionManager.init (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)
+    at File.initOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:212:65)
+    at new File (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:135:24)
+    at Pipeline.transform (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/pipeline.js:46:16)
+    at transpile (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/index.js:50:20)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:118:18
+    at ReadFileContext.callback (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:31:21)
+    at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:420:13)
+    at eval (webpack:///./app/web/page/home/index.tsx?:1:7)
+    at Object../app/web/page/home/index.tsx (evalmachine.<anonymous>:96:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at evalmachine.<anonymous>:84:18
+    at evalmachine.<anonymous>:87:10
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack-react/app.js:23:37
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/admin/stmu/h5Editor/backend/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+pid: 64997
+hostname: bogon
+
+2019-04-22 17:46:28,856 ERROR 65078 [-/172.30.53.229/-/56ms GET /] nodejs.Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Requires Babel "^7.0.0-0", but was loaded with "6.26.3". If you are sure you have a compatible version of @babel/core, it is likely that something in your build process is loading the wrong version. Inspect the stack trace of this error to look for the first entry that doesn't mention "@babel/core" or "babel-core" to see what is calling Babel.
+    at throwVersionError (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:65:11)
+    at Object.assertVersion (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:13:11)
+    at api (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js:19:7)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:19:12
+    at Function.memoisePluginContainer (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:113:13)
+    at Function.normalisePlugin (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:146:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:184:30
+    at Array.map (<anonymous>)
+    at Function.normalisePlugins (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:158:20)
+    at OptionManager.mergeOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:234:36)
+    at OptionManager.init (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)
+    at File.initOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:212:65)
+    at new File (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:135:24)
+    at Pipeline.transform (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/pipeline.js:46:16)
+    at transpile (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/index.js:50:20)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:118:18
+    at ReadFileContext.callback (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:31:21)
+    at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:420:13)
+Error: Requires Babel "^7.0.0-0", but was loaded with "6.26.3". If you are sure you have a compatible version of @babel/core, it is likely that something in your build process is loading the wrong version. Inspect the stack trace of this error to look for the first entry that doesn't mention "@babel/core" or "babel-core" to see what is calling Babel.
+    at throwVersionError (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:65:11)
+    at Object.assertVersion (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:13:11)
+    at api (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js:19:7)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:19:12
+    at Function.memoisePluginContainer (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:113:13)
+    at Function.normalisePlugin (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:146:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:184:30
+    at Array.map (<anonymous>)
+    at Function.normalisePlugins (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:158:20)
+    at OptionManager.mergeOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:234:36)
+    at OptionManager.init (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)
+    at File.initOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:212:65)
+    at new File (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:135:24)
+    at Pipeline.transform (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/pipeline.js:46:16)
+    at transpile (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/index.js:50:20)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:118:18
+    at ReadFileContext.callback (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:31:21)
+    at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:420:13)
+    at eval (webpack:///./app/web/page/home/index.tsx?:1:7)
+    at Object../app/web/page/home/index.tsx (evalmachine.<anonymous>:96:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at evalmachine.<anonymous>:84:18
+    at evalmachine.<anonymous>:87:10
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack-react/app.js:23:37
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/admin/stmu/h5Editor/backend/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+pid: 65078
+hostname: bogon
+
+2019-04-22 17:46:52,687 ERROR 65078 [-/172.30.53.229/-/4ms GET /] nodejs.Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Requires Babel "^7.0.0-0", but was loaded with "6.26.3". If you are sure you have a compatible version of @babel/core, it is likely that something in your build process is loading the wrong version. Inspect the stack trace of this error to look for the first entry that doesn't mention "@babel/core" or "babel-core" to see what is calling Babel.
+    at throwVersionError (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:65:11)
+    at Object.assertVersion (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:13:11)
+    at api (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js:19:7)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:19:12
+    at Function.memoisePluginContainer (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:113:13)
+    at Function.normalisePlugin (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:146:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:184:30
+    at Array.map (<anonymous>)
+    at Function.normalisePlugins (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:158:20)
+    at OptionManager.mergeOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:234:36)
+    at OptionManager.init (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)
+    at File.initOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:212:65)
+    at new File (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:135:24)
+    at Pipeline.transform (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/pipeline.js:46:16)
+    at transpile (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/index.js:50:20)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:118:18
+    at ReadFileContext.callback (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:31:21)
+    at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:420:13)
+Error: Requires Babel "^7.0.0-0", but was loaded with "6.26.3". If you are sure you have a compatible version of @babel/core, it is likely that something in your build process is loading the wrong version. Inspect the stack trace of this error to look for the first entry that doesn't mention "@babel/core" or "babel-core" to see what is calling Babel.
+    at throwVersionError (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:65:11)
+    at Object.assertVersion (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:13:11)
+    at api (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js:19:7)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:19:12
+    at Function.memoisePluginContainer (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:113:13)
+    at Function.normalisePlugin (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:146:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:184:30
+    at Array.map (<anonymous>)
+    at Function.normalisePlugins (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:158:20)
+    at OptionManager.mergeOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:234:36)
+    at OptionManager.init (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)
+    at File.initOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:212:65)
+    at new File (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:135:24)
+    at Pipeline.transform (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/pipeline.js:46:16)
+    at transpile (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/index.js:50:20)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:118:18
+    at ReadFileContext.callback (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:31:21)
+    at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:420:13)
+    at eval (webpack:///./app/web/page/home/index.tsx?:1:7)
+    at Object../app/web/page/home/index.tsx (evalmachine.<anonymous>:96:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at evalmachine.<anonymous>:84:18
+    at evalmachine.<anonymous>:87:10
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack-react/app.js:23:37
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/admin/stmu/h5Editor/backend/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+pid: 65078
+hostname: bogon
+
+2019-04-22 17:46:54,842 ERROR 65078 [-/172.30.53.229/-/3ms GET /] nodejs.Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+Error: Requires Babel "^7.0.0-0", but was loaded with "6.26.3". If you are sure you have a compatible version of @babel/core, it is likely that something in your build process is loading the wrong version. Inspect the stack trace of this error to look for the first entry that doesn't mention "@babel/core" or "babel-core" to see what is calling Babel.
+    at throwVersionError (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:65:11)
+    at Object.assertVersion (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:13:11)
+    at api (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js:19:7)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:19:12
+    at Function.memoisePluginContainer (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:113:13)
+    at Function.normalisePlugin (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:146:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:184:30
+    at Array.map (<anonymous>)
+    at Function.normalisePlugins (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:158:20)
+    at OptionManager.mergeOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:234:36)
+    at OptionManager.init (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)
+    at File.initOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:212:65)
+    at new File (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:135:24)
+    at Pipeline.transform (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/pipeline.js:46:16)
+    at transpile (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/index.js:50:20)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:118:18
+    at ReadFileContext.callback (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:31:21)
+    at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:420:13)
+Error: Requires Babel "^7.0.0-0", but was loaded with "6.26.3". If you are sure you have a compatible version of @babel/core, it is likely that something in your build process is loading the wrong version. Inspect the stack trace of this error to look for the first entry that doesn't mention "@babel/core" or "babel-core" to see what is calling Babel.
+    at throwVersionError (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:65:11)
+    at Object.assertVersion (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:13:11)
+    at api (/Users/admin/stmu/h5Editor/backend/node_modules/@babel/plugin-syntax-dynamic-import/lib/index.js:19:7)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/@babel/helper-plugin-utils/lib/index.js:19:12
+    at Function.memoisePluginContainer (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:113:13)
+    at Function.normalisePlugin (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:146:32)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:184:30
+    at Array.map (<anonymous>)
+    at Function.normalisePlugins (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:158:20)
+    at OptionManager.mergeOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:234:36)
+    at OptionManager.init (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)
+    at File.initOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:212:65)
+    at new File (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:135:24)
+    at Pipeline.transform (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/pipeline.js:46:16)
+    at transpile (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/index.js:50:20)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:118:18
+    at ReadFileContext.callback (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:31:21)
+    at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:420:13)
+    at eval (webpack:///./app/web/page/home/index.tsx?:1:7)
+    at Object../app/web/page/home/index.tsx (evalmachine.<anonymous>:96:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at evalmachine.<anonymous>:84:18
+    at evalmachine.<anonymous>:87:10
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack-react/app.js:23:37
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/admin/stmu/h5Editor/backend/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+pid: 65078
+hostname: bogon
+
+2019-04-22 17:51:07,499 ERROR 65198 [-/172.30.53.229/-/15ms GET /] nodejs.Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+ReferenceError: Unknown plugin "@babel/plugin-syntax-dynamic-import" specified in "/Users/admin/stmu/h5Editor/backend/.babelrc" at 0, attempted to resolve relative to "/Users/admin/stmu/h5Editor/backend"
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:180:17
+    at Array.map (<anonymous>)
+    at Function.normalisePlugins (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:158:20)
+    at OptionManager.mergeOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:234:36)
+    at OptionManager.init (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)
+    at File.initOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:212:65)
+    at new File (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:135:24)
+    at Pipeline.transform (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/pipeline.js:46:16)
+    at transpile (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/index.js:50:20)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:118:18
+    at ReadFileContext.callback (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:31:21)
+    at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:420:13)
+ReferenceError: Unknown plugin "@babel/plugin-syntax-dynamic-import" specified in "/Users/admin/stmu/h5Editor/backend/.babelrc" at 0, attempted to resolve relative to "/Users/admin/stmu/h5Editor/backend"
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:180:17
+    at Array.map (<anonymous>)
+    at Function.normalisePlugins (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:158:20)
+    at OptionManager.mergeOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:234:36)
+    at OptionManager.init (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/options/option-manager.js:368:12)
+    at File.initOptions (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:212:65)
+    at new File (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/file/index.js:135:24)
+    at Pipeline.transform (/Users/admin/stmu/h5Editor/backend/node_modules/babel-core/lib/transformation/pipeline.js:46:16)
+    at transpile (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/index.js:50:20)
+    at /Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:118:18
+    at ReadFileContext.callback (/Users/admin/stmu/h5Editor/backend/node_modules/babel-loader/lib/fs-cache.js:31:21)
+    at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:420:13)
+    at eval (webpack:///./app/web/page/home/index.tsx?:1:7)
+    at Object../app/web/page/home/index.tsx (evalmachine.<anonymous>:96:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at evalmachine.<anonymous>:84:18
+    at evalmachine.<anonymous>:87:10
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack-react/app.js:23:37
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/admin/stmu/h5Editor/backend/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+pid: 65198
+hostname: bogon
+
+2019-04-22 17:55:42,441 ERROR 65384 [-/172.30.53.229/-/37ms GET /] nodejs.Error: Module build failed (from ./node_modules/babel-loader/lib/index.js):
+SyntaxError: Unexpected token (12:15)
+
+[0m [90m 10 | [39m    }
+ [90m 11 | [39m    [33mApp[39m[33m.[39mprototype[33m.[39mrender [33m=[39m [36mfunction[39m () {
+[31m[1m>[22m[39m[90m 12 | [39m        [36mreturn[39m [33m<[39m[33mLayout[39m {[33m...[39m[36mthis[39m[33m.[39mprops}[33m>[39m
+ [90m    | [39m               [31m[1m^[22m[39m
+ [90m 13 | [39m      react    
+ [90m 14 | [39m    [33m<[39m[33m/[39m[33mLayout[39m[33m>[39m[33m;[39m
+ [90m 15 | [39m    }[33m;[39m[0m
+
+SyntaxError: Unexpected token (12:15)
+
+[0m [90m 10 | [39m    }
+ [90m 11 | [39m    [33mApp[39m[33m.[39mprototype[33m.[39mrender [33m=[39m [36mfunction[39m () {
+[31m[1m>[22m[39m[90m 12 | [39m        [36mreturn[39m [33m<[39m[33mLayout[39m {[33m...[39m[36mthis[39m[33m.[39mprops}[33m>[39m
+ [90m    | [39m               [31m[1m^[22m[39m
+ [90m 13 | [39m      react    
+ [90m 14 | [39m    [33m<[39m[33m/[39m[33mLayout[39m[33m>[39m[33m;[39m
+ [90m 15 | [39m    }[33m;[39m[0m
+
+    at eval (webpack:///./app/web/page/home/index.tsx?:1:7)
+    at Object../app/web/page/home/index.tsx (evalmachine.<anonymous>:96:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at evalmachine.<anonymous>:84:18
+    at evalmachine.<anonymous>:87:10
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack-react/app.js:23:37
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/admin/stmu/h5Editor/backend/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+pid: 65384
+hostname: bogon
+
+2019-04-22 19:40:38,448 ERROR 67668 [-/127.0.0.1/-/35ms GET /h5?aid=3226109a-cc76-4a4f-8e7c-120c0d6063ae] nodejs.ReferenceError: window is not defined
+    at eval (webpack:///./app/web/asset/js/flexible.js?:116:4)
+    at Object../app/web/asset/js/flexible.js (evalmachine.<anonymous>:607:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at Module.eval (webpack:///./app/web/page/home/h5.tsx?:14:79)
+    at eval (webpack:///./app/web/page/home/h5.tsx?:84:30)
+    at Module../app/web/page/home/h5.tsx (evalmachine.<anonymous>:631:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at evalmachine.<anonymous>:84:18
+    at evalmachine.<anonymous>:87:10
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack-react/app.js:23:37
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/admin/stmu/h5Editor/backend/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+pid: 67668
+hostname: bogon
+
+2019-04-22 19:45:16,951 ERROR 67668 [-/127.0.0.1/-/34ms GET /h5?aid=3226109a-cc76-4a4f-8e7c-120c0d6063ae] nodejs.ReferenceError: window is not defined
+    at eval (webpack:///./app/web/asset/js/flexible.js?:116:4)
+    at Object../app/web/asset/js/flexible.js (evalmachine.<anonymous>:607:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at Module.eval (webpack:///./app/web/page/home/h5.tsx?:14:76)
+    at eval (webpack:///./app/web/page/home/h5.tsx?:84:30)
+    at Module../app/web/page/home/h5.tsx (evalmachine.<anonymous>:631:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at evalmachine.<anonymous>:84:18
+    at evalmachine.<anonymous>:87:10
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack-react/app.js:23:37
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/admin/stmu/h5Editor/backend/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+pid: 67668
+hostname: bogon
+
+2019-04-22 19:46:48,455 ERROR 67668 [-/127.0.0.1/-/117ms GET /h5?aid=3226109a-cc76-4a4f-8e7c-120c0d6063ae] nodejs.ReferenceError: window is not defined
+    at Object.eval (webpack:///./app/web/asset/js/flexible.js?:6:15)
+    at eval (webpack:///./app/web/asset/js/flexible.js?:142:30)
+    at Object../app/web/asset/js/flexible.js (evalmachine.<anonymous>:607:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at Module.eval (webpack:///./app/web/page/home/h5.tsx?:14:76)
+    at eval (webpack:///./app/web/page/home/h5.tsx?:84:30)
+    at Module../app/web/page/home/h5.tsx (evalmachine.<anonymous>:631:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at evalmachine.<anonymous>:84:18
+    at evalmachine.<anonymous>:87:10
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack-react/app.js:23:37
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/admin/stmu/h5Editor/backend/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+pid: 67668
+hostname: bogon
+
+2019-04-22 19:46:56,658 ERROR 67668 [-/127.0.0.1/-/29ms GET /h5?aid=3226109a-cc76-4a4f-8e7c-120c0d6063ae] nodejs.ReferenceError: window is not defined
+    at Object.eval (webpack:///./app/web/asset/js/flexible.js?:6:15)
+    at eval (webpack:///./app/web/asset/js/flexible.js?:142:30)
+    at Object../app/web/asset/js/flexible.js (evalmachine.<anonymous>:607:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at Module.eval (webpack:///./app/web/page/home/h5.tsx?:14:76)
+    at eval (webpack:///./app/web/page/home/h5.tsx?:84:30)
+    at Module../app/web/page/home/h5.tsx (evalmachine.<anonymous>:631:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at evalmachine.<anonymous>:84:18
+    at evalmachine.<anonymous>:87:10
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack-react/app.js:23:37
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/admin/stmu/h5Editor/backend/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+pid: 67668
+hostname: bogon
+
+2019-04-22 19:49:45,336 ERROR 67668 [-/127.0.0.1/-/32ms GET /h5?aid=3226109a-cc76-4a4f-8e7c-120c0d6063ae] nodejs.TypeError: Cannot read property 'documentElement' of undefined
+    at __WIN__.FB.__WIN__.FB (webpack:///./app/web/asset/js/flexible.js?:10:21)
+    at Object.eval (webpack:///./app/web/asset/js/flexible.js?:123:3)
+    at eval (webpack:///./app/web/asset/js/flexible.js?:142:30)
+    at Object../app/web/asset/js/flexible.js (evalmachine.<anonymous>:607:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at Module.eval (webpack:///./app/web/page/home/h5.tsx?:14:76)
+    at eval (webpack:///./app/web/page/home/h5.tsx?:84:30)
+    at Module../app/web/page/home/h5.tsx (evalmachine.<anonymous>:631:1)
+    at __webpack_require__ (evalmachine.<anonymous>:20:30)
+    at evalmachine.<anonymous>:84:18
+    at evalmachine.<anonymous>:87:10
+    at /Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack-react/app.js:23:37
+    at Generator.next (<anonymous>)
+    at onFulfilled (/Users/admin/stmu/h5Editor/backend/node_modules/co/index.js:65:19)
+    at <anonymous>
+    at process._tickCallback (internal/process/next_tick.js:189:7)
+
+pid: 67668
+hostname: bogon
+

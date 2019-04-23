@@ -3,7 +3,7 @@ module.exports = app => {
   const Schema = mongoose.Schema;
 
   const PageSchema = new Schema({
-    uid: { type: String  },
+    uuid: { type: String  },
     pageList: { type: Array  },
   });
 

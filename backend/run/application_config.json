@@ -16,16 +16,16 @@
       "domainWhiteList": [
         "http://localhost:7001",
         "http://127.0.0.1:7001",
-        "http://192.168.0.106:7001",
+        "http://172.20.52.234:7001",
         "http://localhost:9000",
         "http://127.0.0.1:9000",
-        "http://192.168.0.106:9000",
+        "http://172.20.52.234:9000",
         "http://localhost:9001",
         "http://127.0.0.1:9001",
-        "http://192.168.0.106:9001",
+        "http://172.20.52.234:9001",
         "http://localhost:8080",
         "http://127.0.0.1:8080",
-        "http://192.168.0.106:8080"
+        "http://172.20.52.234:8080"
       ],
       "protocolWhiteList": [],
       "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
@@ -295,6 +295,7 @@
         "@types/react-dom": "^16.0.3",
         "antd": "^3.0.3",
         "autod-egg": "^1.0.0",
+        "babel-plugin-transform-object-assign": "^6.22.0",
         "easywebpack-cli": "^4.0.0",
         "easywebpack-react": "^4.0.0",
         "egg-bin": "^4.7.1",
@@ -351,8 +352,8 @@
     "bodyParser": {
       "enable": true,
       "encoding": "utf8",
-      "formLimit": "100kb",
-      "jsonLimit": "100kb",
+      "formLimit": "6mb",
+      "jsonLimit": "5mb",
       "strict": true,
       "queryString": {
         "arrayLimit": 100,

@@ -6,7 +6,7 @@ export interface route {
 
 const routes: Array<route> = [
   {
-    path: '/',
+    path: '/editor/:uuid?',
     name: 'Editor',
     exact: true
   },

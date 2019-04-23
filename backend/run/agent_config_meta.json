@@ -29,6 +29,18 @@
     "buffer": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-static/config/config.default.js",
     "maxFiles": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-static/config/config.default.js"
   },
+  "bodyParser": {
+    "jsonLimit": "/Users/admin/stmu/h5Editor/backend/config/config.default.ts",
+    "formLimit": "/Users/admin/stmu/h5Editor/backend/config/config.default.ts",
+    "enable": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "encoding": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "strict": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+    "queryString": {
+      "arrayLimit": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "depth": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "parameterLimit": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js"
+    }
+  },
   "keys": "/Users/admin/stmu/h5Editor/backend/config/config.default.ts",
   "middleware": "/Users/admin/stmu/h5Editor/backend/config/config.default.ts",
   "reactssr": {
@@ -259,6 +271,7 @@
       "@types/react-dom": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
       "antd": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
       "autod-egg": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
+      "babel-plugin-transform-object-assign": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
       "easywebpack-cli": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
       "easywebpack-react": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
       "egg-bin": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
@@ -308,18 +321,6 @@
   },
   "notfound": {
     "pageUrl": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js"
-  },
-  "bodyParser": {
-    "enable": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
-    "encoding": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
-    "formLimit": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
-    "jsonLimit": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
-    "strict": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
-    "queryString": {
-      "arrayLimit": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
-      "depth": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",
-      "parameterLimit": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js"
-    }
   },
   "httpclient": {
     "enableDNSCache": "/Users/admin/stmu/h5Editor/backend/node_modules/egg/config/config.default.js",

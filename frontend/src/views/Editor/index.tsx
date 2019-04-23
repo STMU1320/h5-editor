@@ -31,6 +31,8 @@ export interface H5EditorProps {
   pageList?: Array<any>;
   selectedPage: any;
   selectedElement: any;
+  uuid: string;
+  match: any;
   children: JSX.Element | string;
   dispatch?: Function;
 }
@@ -44,19 +46,27 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
     formCollapse: false
   }
 
+  componentWillMount () {
+    const { dispatch, match } = this.props;
+    if (match.params.uuid) {
+
+    } else {
+      dispatch({ type: 'editor/generateUUID', payload: {} });
+    }
+  }
+
   handlePreview = (e: React.MouseEvent) => {
     console.log(e);
   }
   handlePublish = (e: React.MouseEvent) => {
-    const { pageList } = this.props;
-    console.log(pageList);
-    // request.post('http://172.30.53.229:7002/act_add', { pageList })
-    // .then((res: any) => {
-    //   console.log(res);
-    // })
-    // .catch((err: any) => {
-    //   console.log(err);
-    // })
+    const { pageList, uuid } = this.props;
+    request.post('/page_add', { pageList, uuid })
+    .then((res: any) => {
+      console.log(res);
+    })
+    .catch((err: any) => {
+      console.log(err);
+    })
   }
 
   handleCheckedElementChange = (e: React.MouseEvent) => {

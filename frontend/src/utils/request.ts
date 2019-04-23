@@ -3,7 +3,8 @@ import {isUrl } from './reg';
 
 export function getApiOrigin (path: string): string {
   // to do
-  return '/'
+  let origin = 'http://127.0.0.1:7002';
+  return `${origin}${path}`
 }
 
 export function objToFormData (obj: any): FormData {

@@ -10,12 +10,14 @@ interface editorState {
   pageList: Array<any>;
   selectedElement: any;
   selectedPage: any;
+  uuid: string;
 }
 
 const defaultState: editorState = {
   checkedEleType: 'img',
   editHistory: [],
   pageList: [],
+  uuid: '',
   selectedElement: null,
   selectedPage: null
 }
@@ -29,6 +31,12 @@ export default {
       return {
         ...state,
         ...payload
+      };
+    },
+    generateUUID (state: editorState) {
+      return {
+        ...state,
+        uuid: uuid()
       };
     },
     selectPage (state: editorState, { payload }: any) {
