@@ -1,0 +1,14 @@
+{
+  "type": "btn",
+  "uuid":"",
+  "position": "static",
+  "left": null,
+  "top": null,
+  "width": null,
+  "height": null,
+  "radius": 0,
+  "bgImg": "",
+  "backgroundColor": "",
+  "actionType": 0,
+  "action": ""
+}

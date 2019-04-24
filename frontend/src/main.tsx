@@ -2,8 +2,8 @@ import * as React from 'react';
 import { Provider } from 'react-redux';
 import { render } from 'react-dom';
 import App from './views';
+import '../src/assets/icons/iconfont.css';
 import '../src/assets/antd.css';
-import '../src/assets/icons/css/font-awesome.min.css';
 import '../src/theme/base.less';
 
 import configerStore from './store';

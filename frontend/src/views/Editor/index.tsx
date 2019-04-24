@@ -144,7 +144,7 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
               <ElementForm data={selectedElement} onChange={this.handleElementDataChange}></ElementForm>
             </div>
             <div className={styles.elePanelFooter}>
-              <Icon type="trash" disabled={!selectedElement} onClick={this.handleDeleteElement}></Icon>
+              <Icon type="delete-fill" disabled={!selectedElement} onClick={this.handleDeleteElement}></Icon>
             </div>
           </div>
         </div>

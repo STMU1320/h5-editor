@@ -41,7 +41,7 @@ class Tools extends React.Component<ToolsBarProps, {}> {
     return <div className={styles.toolsBar}>
           <div className={classnames(styles.toolsGroup, styles.eleGroup)}>
             {
-              Object.keys(ICON_BTNS).map((item: 'img' | 'text' | 'input') => (
+              Object.keys(ICON_BTNS).map((item: 'img' | 'text' | 'btn') => (
                 <IconBtn type={ICON_BTNS[item]} onClick={this.handleIconClick} key={item} value={item} checked={checkedEleType === item} />
               ))
             }
