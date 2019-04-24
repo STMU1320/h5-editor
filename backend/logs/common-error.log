@@ -1157,3 +1157,30 @@ name: "ClusterClientNoResponseError"
 pid: 72067
 hostname: SimondeMacBook-Pro-2.local
 
+2019-04-24 12:29:03,020 ERROR 80861 nodejs.ClusterClientNoResponseError: client no response in 2227287ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/admin/stmu/h5Editor/backend/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+name: "ClusterClientNoResponseError"
+pid: 80861
+hostname: SimondeMacBook-Pro-2.local
+
+2019-04-24 13:07:02,378 ERROR 80861 nodejs.ClusterClientNoResponseError: client no response in 2239348ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/admin/stmu/h5Editor/backend/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+name: "ClusterClientNoResponseError"
+pid: 80861
+hostname: SimondeMacBook-Pro-2.local
+
+2019-04-24 13:31:04,848 ERROR 80861 nodejs.ClusterClientNoResponseError: client no response in 1422431ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/admin/stmu/h5Editor/backend/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+name: "ClusterClientNoResponseError"
+pid: 80861
+hostname: SimondeMacBook-Pro-2.local
+

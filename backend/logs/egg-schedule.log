@@ -314,3 +314,15 @@
 2019-04-23 14:47:36,340 INFO 72068 [egg-schedule]: register schedule /Users/admin/stmu/h5Editor/backend/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
 2019-04-23 14:47:36,888 INFO 72067 [Timer] /Users/admin/stmu/h5Editor/backend/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 33143115ms at 2019-04-24 00:00:00.002
 2019-04-23 14:47:36,888 INFO 72067 [Timer] /Users/admin/stmu/h5Editor/backend/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 33144112ms at 2019-04-24 00:00:01.000
+2019-04-24 11:37:35,749 INFO 80718 [Timer] /Users/admin/stmu/h5Editor/backend/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 44544254ms at 2019-04-25 00:00:00.003
+2019-04-24 11:37:35,749 INFO 80718 [Timer] /Users/admin/stmu/h5Editor/backend/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 44545251ms at 2019-04-25 00:00:01.000
+2019-04-24 11:37:35,165 INFO 80719 [egg-schedule]: register schedule /Users/admin/stmu/h5Editor/backend/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-04-24 11:37:35,165 INFO 80719 [egg-schedule]: register schedule /Users/admin/stmu/h5Editor/backend/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-04-24 11:45:55,627 INFO 80861 [Timer] /Users/admin/stmu/h5Editor/backend/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 44044375ms at 2019-04-25 00:00:00.002
+2019-04-24 11:45:55,628 INFO 80861 [Timer] /Users/admin/stmu/h5Editor/backend/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 44045373ms at 2019-04-25 00:00:01.001
+2019-04-24 11:45:55,029 INFO 80862 [egg-schedule]: register schedule /Users/admin/stmu/h5Editor/backend/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-04-24 11:45:55,029 INFO 80862 [egg-schedule]: register schedule /Users/admin/stmu/h5Editor/backend/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-04-24 13:46:31,223 INFO 81363 [egg-schedule]: register schedule /Users/admin/stmu/h5Editor/backend/node_modules/egg-logrotator/app/schedule/clean_log.js
+2019-04-24 13:46:31,223 INFO 81363 [egg-schedule]: register schedule /Users/admin/stmu/h5Editor/backend/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2019-04-24 13:46:31,859 INFO 81362 [Timer] /Users/admin/stmu/h5Editor/backend/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 36808143ms at 2019-04-25 00:00:00.002
+2019-04-24 13:46:31,860 INFO 81362 [Timer] /Users/admin/stmu/h5Editor/backend/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 36809141ms at 2019-04-25 00:00:01.001

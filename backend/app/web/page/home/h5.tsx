@@ -5,12 +5,10 @@ import { AppContainer } from 'react-hot-loader';
 import Layout from '../../framework/layout';
 import Page from '../../../../../common/components/Page';
 import '../../asset/css/app.css';
-import '../../asset/js/flexible';
-
 class App extends Component<any, any> {
   render() {
     const data: any = {...this.props};
-    return <Layout title={this.props.title}>
+    return <Layout title={this.props.name}>
       <Page {...data}></Page>    
     </Layout>;
   }

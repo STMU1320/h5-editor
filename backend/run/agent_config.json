@@ -182,6 +182,17 @@
       "fallbackToClient": true,
       "afterRender": "<Function afterRender>"
     },
+    "mongoose": {
+      "url": "",
+      "options": {},
+      "loadModel": true,
+      "app": true,
+      "agent": false,
+      "client": {
+        "url": "mongodb://127.0.0.1/pages",
+        "options": {}
+      }
+    },
     "cors": {
       "origin": "*",
       "allowMethods": "GET,HEAD,PUT,POST,DELETE,PATCH"
@@ -195,20 +206,9 @@
       "webpackConfigList": []
     },
     "webpackreact": {},
-    "mongoose": {
-      "url": "",
-      "options": {},
-      "loadModel": true,
-      "app": true,
-      "agent": false,
-      "client": {
-        "url": "mongodb://127.0.0.1/pages",
-        "options": {}
-      }
-    },
     "env": "local",
     "name": "egg-react-typescript-boilerplate",
-    "keys": "<String len: 6>",
+    "keys": "<String len: 18>",
     "proxy": false,
     "maxProxyCount": 0,
     "protocolHeaders": "x-forwarded-proto",
@@ -310,7 +310,8 @@
       "pageUrl": ""
     },
     "siteFile": {
-      "/favicon.ico": "<Buffer len: 4286>"
+      "/favicon.ico": "<Buffer len: 4286>",
+      "/flexible.js": "<Buffer len: 1630>"
     },
     "bodyParser": {
       "enable": true,
@@ -554,6 +555,17 @@
       "path": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-view-react-ssr",
       "version": "2.4.1"
     },
+    "mongoose": {
+      "enable": true,
+      "name": "mongoose",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/admin/stmu/h5Editor/backend/config/plugin.local.ts",
+      "package": "egg-mongoose",
+      "path": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-mongoose",
+      "version": "3.1.1"
+    },
     "cors": {
       "enable": true,
       "package": "egg-cors",
@@ -590,17 +602,6 @@
       "from": "/Users/admin/stmu/h5Editor/backend/config/plugin.local.ts",
       "path": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-webpack-react",
       "version": "2.0.2"
-    },
-    "mongoose": {
-      "enable": true,
-      "package": "egg-mongoose",
-      "name": "mongoose",
-      "dependencies": [],
-      "optionalDependencies": [],
-      "env": [],
-      "from": "/Users/admin/stmu/h5Editor/backend/config/plugin.local.ts",
-      "path": "/Users/admin/stmu/h5Editor/backend/node_modules/egg-mongoose",
-      "version": "3.1.1"
     }
   }
 }

@@ -1736,3 +1736,57 @@
 2019-04-23 14:47:36,874 INFO 72068 [egg-watcher:application] watcher start success
 2019-04-23 14:47:36,881 INFO 72068 [egg:core] dump config after ready, 4ms
 2019-04-23 15:02:17,361 WARN 72068 [ClusterClient:Watcher] follower closed, and try to init it again
+2019-04-24 11:37:35,135 INFO 80719 [egg:logger] init all loggers with options: {"dir":"/Users/admin/stmu/h5Editor/backend/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"DEBUG","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-react-typescript-boilerplate-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2019-04-24 11:37:35,166 INFO 80719 [egg-multipart] stream mode enable
+2019-04-24 11:37:35,577 INFO 80719 [egg-mongoose] connecting mongodb://127.0.0.1/pages
+2019-04-24 11:37:35,685 INFO 80719 [egg-static] starting static serve /public/ -> /Users/admin/stmu/h5Editor/backend/public
+2019-04-24 11:37:35,688 INFO 80719 [egg-security] use methodnoallow middleware
+2019-04-24 11:37:35,688 INFO 80719 [egg-security] use noopen middleware
+2019-04-24 11:37:35,689 INFO 80719 [egg-security] use nosniff middleware
+2019-04-24 11:37:35,690 INFO 80719 [egg-security] use xssProtection middleware
+2019-04-24 11:37:35,691 INFO 80719 [egg-security] use xframe middleware
+2019-04-24 11:37:35,692 INFO 80719 [egg-security] use dta middleware
+2019-04-24 11:37:35,692 INFO 80719 [egg-security] compose 6 middlewares into one security middleware
+2019-04-24 11:37:35,704 INFO 80719 [egg:core] dump config after load, 5ms
+2019-04-24 11:37:35,706 INFO 80719 [egg-mongoose] starting...
+2019-04-24 11:37:35,731 INFO 80719 [egg-mongoose] mongodb://127.0.0.1/pages connected successfully
+2019-04-24 11:37:35,731 INFO 80719 [egg-mongoose] instance[0] start successfully
+2019-04-24 11:37:35,733 INFO 80719 [egg-watcher:application] watcher start success
+2019-04-24 11:37:35,742 INFO 80719 [egg:core] dump config after ready, 7ms
+2019-04-24 11:45:54,991 INFO 80862 [egg:logger] init all loggers with options: {"dir":"/Users/admin/stmu/h5Editor/backend/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"DEBUG","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-react-typescript-boilerplate-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2019-04-24 11:45:55,029 INFO 80862 [egg-multipart] stream mode enable
+2019-04-24 11:45:55,457 INFO 80862 [egg-mongoose] connecting mongodb://127.0.0.1/pages
+2019-04-24 11:45:55,571 INFO 80862 [egg-static] starting static serve /public/ -> /Users/admin/stmu/h5Editor/backend/public
+2019-04-24 11:45:55,573 INFO 80862 [egg-security] use methodnoallow middleware
+2019-04-24 11:45:55,574 INFO 80862 [egg-security] use noopen middleware
+2019-04-24 11:45:55,575 INFO 80862 [egg-security] use nosniff middleware
+2019-04-24 11:45:55,576 INFO 80862 [egg-security] use xssProtection middleware
+2019-04-24 11:45:55,576 INFO 80862 [egg-security] use xframe middleware
+2019-04-24 11:45:55,577 INFO 80862 [egg-security] use dta middleware
+2019-04-24 11:45:55,577 INFO 80862 [egg-security] compose 6 middlewares into one security middleware
+2019-04-24 11:45:55,589 INFO 80862 [egg:core] dump config after load, 4ms
+2019-04-24 11:45:55,591 INFO 80862 [egg-mongoose] starting...
+2019-04-24 11:45:55,611 INFO 80862 [egg-mongoose] mongodb://127.0.0.1/pages connected successfully
+2019-04-24 11:45:55,612 INFO 80862 [egg-mongoose] instance[0] start successfully
+2019-04-24 11:45:55,614 INFO 80862 [egg-watcher:application] watcher start success
+2019-04-24 11:45:55,622 INFO 80862 [egg:core] dump config after ready, 6ms
+2019-04-24 12:29:02,998 WARN 80862 [ClusterClient:Watcher] follower closed, and try to init it again
+2019-04-24 13:07:02,376 WARN 80862 [ClusterClient:Watcher] follower closed, and try to init it again
+2019-04-24 13:31:04,848 WARN 80862 [ClusterClient:Watcher] follower closed, and try to init it again
+2019-04-24 13:46:31,186 INFO 81363 [egg:logger] init all loggers with options: {"dir":"/Users/admin/stmu/h5Editor/backend/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"DEBUG","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-react-typescript-boilerplate-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2019-04-24 13:46:31,223 INFO 81363 [egg-multipart] stream mode enable
+2019-04-24 13:46:31,675 INFO 81363 [egg-mongoose] connecting mongodb://127.0.0.1/pages
+2019-04-24 13:46:31,798 INFO 81363 [egg-static] starting static serve /public/ -> /Users/admin/stmu/h5Editor/backend/public
+2019-04-24 13:46:31,801 INFO 81363 [egg-security] use methodnoallow middleware
+2019-04-24 13:46:31,802 INFO 81363 [egg-security] use noopen middleware
+2019-04-24 13:46:31,803 INFO 81363 [egg-security] use nosniff middleware
+2019-04-24 13:46:31,804 INFO 81363 [egg-security] use xssProtection middleware
+2019-04-24 13:46:31,805 INFO 81363 [egg-security] use xframe middleware
+2019-04-24 13:46:31,806 INFO 81363 [egg-security] use dta middleware
+2019-04-24 13:46:31,806 INFO 81363 [egg-security] compose 6 middlewares into one security middleware
+2019-04-24 13:46:31,822 INFO 81363 [egg:core] dump config after load, 5ms
+2019-04-24 13:46:31,824 INFO 81363 [egg-mongoose] starting...
+2019-04-24 13:46:31,845 INFO 81363 [egg-mongoose] mongodb://127.0.0.1/pages connected successfully
+2019-04-24 13:46:31,846 INFO 81363 [egg-mongoose] instance[0] start successfully
+2019-04-24 13:46:31,848 INFO 81363 [egg-watcher:application] watcher start success
+2019-04-24 13:46:31,854 INFO 81363 [egg:core] dump config after ready, 4ms

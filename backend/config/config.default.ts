@@ -5,7 +5,8 @@ export default function(app: EggAppConfig) {
   const exports: any = {};
 
   exports.siteFile = {
-    '/favicon.ico': fs.readFileSync(path.join(app.baseDir, 'app/web/asset/images/favicon.ico'))
+    '/favicon.ico': fs.readFileSync(path.join(app.baseDir, 'app/web/asset/images/favicon.ico')),
+    '/flexible.js': fs.readFileSync(path.join(app.baseDir, 'app/web/asset/js/flexible.js')),
   };
 
   exports.logger = {
@@ -23,7 +24,7 @@ export default function(app: EggAppConfig) {
     formLimit: '6mb',
   };
 
-  exports.keys = '123456';
+  exports.keys = 'stmu-h5-editor-ayo';
 
   exports.middleware = [
     // 'access'

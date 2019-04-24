@@ -1,6 +1,7 @@
 {
   "siteFile": {
-    "/favicon.ico": "/Users/admin/stmu/h5Editor/backend/config/config.default.ts"
+    "/favicon.ico": "/Users/admin/stmu/h5Editor/backend/config/config.default.ts",
+    "/flexible.js": "/Users/admin/stmu/h5Editor/backend/config/config.default.ts"
   },
   "logger": {
     "consoleLevel": "/Users/admin/stmu/h5Editor/backend/config/config.default.ts",
