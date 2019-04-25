@@ -3,7 +3,7 @@ import {isUrl } from './reg';
 
 export function getApiOrigin (path: string): string {
   // to do
-  let origin = 'http://127.0.0.1:7002';
+  let origin = 'http://127.0.0.1:7001';
   return `${origin}${path}`
 }
 

@@ -818,3 +818,21 @@ hostname: bogon
 pid: 67668
 hostname: bogon
 
+2019-04-25 09:32:49,222 WARN 85979 A client (::ffff:192.168.100.201:56314) error [HPE_INVALID_METHOD] occurred: Parse Error
+2019-04-25 09:32:49,523 WARN 85979 A client (::ffff:192.168.100.201:56424) error [HPE_INVALID_METHOD] occurred: Parse Error
+2019-04-25 09:32:49,824 WARN 85979 A client (::ffff:192.168.100.201:56908) error [HPE_INVALID_METHOD] occurred: Parse Error
+2019-04-25 09:32:50,125 WARN 85979 A client (::ffff:192.168.100.201:57160) error [HPE_INVALID_METHOD] occurred: Parse Error
+2019-04-25 09:32:50,426 WARN 85979 A client (::ffff:192.168.100.201:57322) error [HPE_INVALID_METHOD] occurred: Parse Error
+2019-04-25 09:32:50,727 WARN 85979 A client (::ffff:192.168.100.201:57456) error [HPE_INVALID_METHOD] occurred: Parse Error
+2019-04-25 09:32:51,330 WARN 85979 A client (::ffff:192.168.100.201:57874) error [HPE_INVALID_METHOD] occurred: Parse Error
+2019-04-25 09:32:51,631 WARN 85979 A client (::ffff:192.168.100.201:58172) error [HPE_INVALID_METHOD] occurred: Parse Error
+2019-04-25 09:32:51,932 WARN 85979 A client (::ffff:192.168.100.201:58250) error [HPE_INVALID_METHOD] occurred: Parse Error
+2019-04-25 09:32:52,064 WARN 85979 A client (::ffff:192.168.100.201:40882) error [HPE_INVALID_METHOD] occurred: Parse Error
+2019-04-25 09:32:52,476 WARN 85979 A client (::ffff:192.168.100.201:41052) error [HPE_INVALID_METHOD] occurred: Parse Error
+2019-04-25 09:32:52,892 WARN 85979 A client (::ffff:192.168.100.201:41186) error [HPE_INVALID_METHOD] occurred: Parse Error
+2019-04-25 09:32:53,292 WARN 85979 A client (::ffff:192.168.100.201:41348) error [HPE_INVALID_METHOD] occurred: Parse Error
+2019-04-25 09:32:53,700 WARN 85979 A client (::ffff:192.168.100.201:41542) error [HPE_INVALID_METHOD] occurred: Parse Error
+2019-04-25 09:32:54,109 WARN 85979 A client (::ffff:192.168.100.201:41744) error [HPE_INVALID_METHOD] occurred: Parse Error
+2019-04-25 09:32:54,932 WARN 85979 A client (::ffff:192.168.100.201:41950) error [HPE_INVALID_METHOD] occurred: Parse Error
+2019-04-25 09:32:55,359 WARN 85979 A client (::ffff:192.168.100.201:42070) error [HPE_INVALID_METHOD] occurred: Parse Error
+2019-04-25 09:32:55,790 WARN 85979 A client (::ffff:192.168.100.201:42114) error [HPE_INVALID_METHOD] occurred: Parse Error

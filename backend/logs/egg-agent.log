@@ -1600,3 +1600,70 @@ hostname: SimondeMacBook-Pro-2.local
 2019-04-24 13:47:36,428 INFO 81362 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/admin/stmu/h5Editor/backend/config/manifest.json","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":8919900,"size":679,"blocks":8,"atimeMs":1556084856416.3574,"mtimeMs":1556084856416.4695,"ctimeMs":1556084856416.4695,"birthtimeMs":1556084798124.677,"atime":"2019-04-24T05:47:36.416Z","mtime":"2019-04-24T05:47:36.416Z","ctime":"2019-04-24T05:47:36.416Z","birthtime":"2019-04-24T05:46:38.125Z"},"remove":false,"isDirectory":false,"isFile":true}
 2019-04-24 13:47:44,242 INFO 81362 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/admin/stmu/h5Editor/backend/app/web/framework/layout.tsx","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":8828127,"size":550,"blocks":8,"atimeMs":1556084864231.175,"mtimeMs":1556084864231.4954,"ctimeMs":1556084864231.4954,"birthtimeMs":1556016406222.9548,"atime":"2019-04-24T05:47:44.231Z","mtime":"2019-04-24T05:47:44.231Z","ctime":"2019-04-24T05:47:44.231Z","birthtime":"2019-04-23T10:46:46.223Z"},"remove":false,"isDirectory":false,"isFile":true}
 2019-04-24 13:47:45,271 INFO 81362 [egg-watcher] Recieved a change event from eventSource: {"event":"change","path":"/Users/admin/stmu/h5Editor/backend/config/manifest.json","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":8919900,"size":679,"blocks":8,"atimeMs":1556084865258.2021,"mtimeMs":1556084865258.3555,"ctimeMs":1556084865258.3555,"birthtimeMs":1556084798124.677,"atime":"2019-04-24T05:47:45.258Z","mtime":"2019-04-24T05:47:45.258Z","ctime":"2019-04-24T05:47:45.258Z","birthtime":"2019-04-24T05:46:38.125Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-04-24 21:32:35,265 INFO 85978 [egg:logger] init all loggers with options: {"dir":"/Users/admin/stmu/h5Editor/backend/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"DEBUG","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-react-typescript-boilerplate-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2019-04-24 21:32:36,266 INFO 85978 [egg:core] dump config after load, 6ms
+2019-04-24 21:32:36,308 INFO 85978 [egg-watcher] Start watching: ["/Users/admin/stmu/h5Editor/backend/app","/Users/admin/stmu/h5Editor/backend/config","/Users/admin/stmu/h5Editor/backend/mocks","/Users/admin/stmu/h5Editor/backend/mocks_proxy","/Users/admin/stmu/h5Editor/backend/app.js","/Users/admin/stmu/h5Editor/backend/build"]
+2019-04-24 21:32:36,308 INFO 85978 [egg-watcher] Start watching: "/Users/admin/stmu/h5Editor/backend/app"
+2019-04-24 21:32:36,309 INFO 85978 [egg-watcher] Start watching: "/Users/admin/stmu/h5Editor/backend/config"
+2019-04-24 21:32:36,309 INFO 85978 [egg-watcher] Start watching: "/Users/admin/stmu/h5Editor/backend/mocks"
+2019-04-24 21:32:36,309 INFO 85978 [egg-watcher] Start watching: "/Users/admin/stmu/h5Editor/backend/mocks_proxy"
+2019-04-24 21:32:36,309 INFO 85978 [egg-watcher] Start watching: "/Users/admin/stmu/h5Editor/backend/app.js"
+2019-04-24 21:32:36,309 INFO 85978 [egg-watcher] Start watching: "/Users/admin/stmu/h5Editor/backend/build"
+2019-04-24 21:32:36,309 INFO 85978 [egg-watcher:agent] watcher start success
+2019-04-24 21:32:36,355 INFO 85978 [egg:core] dump config after ready, 8ms
+2019-04-24 21:32:36,358 INFO 85978 [egg-watcher] Recieved a change event from eventSource: {"event":"rename","path":"/Users/admin/stmu/h5Editor/backend/config/manifest.json","remove":true,"isDirectory":false,"isFile":false}
+2019-04-24 21:32:44,185 INFO 85978 [egg-watcher] Recieved a change event from eventSource: {"event":"rename","path":"/Users/admin/stmu/h5Editor/backend/config/manifest.json","stat":{"dev":16777220,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":9039143,"size":679,"blocks":8,"atimeMs":1556112764168.4211,"mtimeMs":1556112764168.5276,"ctimeMs":1556112764168.5276,"birthtimeMs":1556112764168.4211,"atime":"2019-04-24T13:32:44.168Z","mtime":"2019-04-24T13:32:44.169Z","ctime":"2019-04-24T13:32:44.169Z","birthtime":"2019-04-24T13:32:44.168Z"},"remove":false,"isDirectory":false,"isFile":true}
+2019-04-24 22:08:54,363 ERROR 85978 nodejs.ClusterClientNoResponseError: client no response in 1995888ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/admin/stmu/h5Editor/backend/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+name: "ClusterClientNoResponseError"
+pid: 85978
+hostname: SimondeMacBook-Pro-2.local
+
+2019-04-24 23:08:19,421 ERROR 85978 nodejs.ClusterClientNoResponseError: client no response in 3525026ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/admin/stmu/h5Editor/backend/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+name: "ClusterClientNoResponseError"
+pid: 85978
+hostname: SimondeMacBook-Pro-2.local
+
+2019-04-25 05:09:54,764 ERROR 85978 nodejs.ClusterClientNoResponseError: client no response in 21675322ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/admin/stmu/h5Editor/backend/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+name: "ClusterClientNoResponseError"
+pid: 85978
+hostname: SimondeMacBook-Pro-2.local
+
+2019-04-25 05:15:08,671 ERROR 85978 nodejs.ClusterClientNoResponseError: client no response in 272962ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/admin/stmu/h5Editor/backend/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+name: "ClusterClientNoResponseError"
+pid: 85978
+hostname: SimondeMacBook-Pro-2.local
+
+2019-04-25 08:10:27,926 ERROR 85978 nodejs.ClusterClientNoResponseError: client no response in 6938059ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/admin/stmu/h5Editor/backend/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+name: "ClusterClientNoResponseError"
+pid: 85978
+hostname: SimondeMacBook-Pro-2.local
+
+2019-04-25 09:15:25,991 ERROR 85978 nodejs.ClusterClientNoResponseError: client no response in 3858086ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout.Leader._heartbeatTimer.setInterval [as _onTimeout] (/Users/admin/stmu/h5Editor/backend/node_modules/cluster-client/lib/leader.js:77:23)
+    at ontimeout (timers.js:498:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:290:5)
+name: "ClusterClientNoResponseError"
+pid: 85978
+hostname: SimondeMacBook-Pro-2.local
+

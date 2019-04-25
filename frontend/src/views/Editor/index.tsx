@@ -37,13 +37,17 @@ export interface H5EditorProps {
   dispatch?: Function;
 }
 
-export interface H5EditorState {
-  formCollapse: Boolean;
-}
+// export interface H5EditorState {
+//   formCollapse: Boolean;
+// }
 class H5Editor extends React.Component<H5EditorProps, {}> {
 
   state = {
-    formCollapse: false
+    formCollapse: false,
+    preLoading: false,
+    pubLoading: false,
+    previewVisible: false,
+    qrValue: ''
   }
 
   componentWillMount () {
@@ -55,10 +59,17 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
     }
   }
 
-  handlePreview = (e: React.MouseEvent) => {
-    console.log(e);
+  handlePreview = () => {
+    const { pageList, uuid } = this.props;
+    request.post('/page_preview', { pageList, uuid })
+    .then((res: any) => {
+      console.log(res);
+    })
+    .catch((err: any) => {
+      console.log(err);
+    })
   }
-  handlePublish = (e: React.MouseEvent) => {
+  handlePublish = () => {
     const { pageList, uuid } = this.props;
     request.post('/page_add', { pageList, uuid })
     .then((res: any) => {
@@ -67,6 +78,10 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
     .catch((err: any) => {
       console.log(err);
     })
+  }
+
+  handleToggleVisbile = (visible: boolean) => {
+    this.setState({ previewVisible: visible });
   }
 
   handleCheckedElementChange = (e: React.MouseEvent) => {
@@ -104,15 +119,14 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
   }
   render () {
     const {
-      children,
       pageList,
       selectedPage,
       selectedElement
     } = this.props;
 
-    const { formCollapse }: any = this.state;
+    const { formCollapse, ...headerProps }: any = this.state;
     return <div className={styles.layoutWrap}>
-      <Header onPreview={this.handlePreview} onPublish={this.handlePublish} />
+      <Header onPreview={this.handlePreview} onPublish={this.handlePublish} togglePreviewVisible={this.handleToggleVisbile} {...headerProps} />
       <ToolsBar onElementTypeChange={this.handleCheckedElementChange} />
       <div className={styles.main}>
         <div className={styles.pagePanel}>

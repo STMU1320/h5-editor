@@ -1790,3 +1790,27 @@
 2019-04-24 13:46:31,846 INFO 81363 [egg-mongoose] instance[0] start successfully
 2019-04-24 13:46:31,848 INFO 81363 [egg-watcher:application] watcher start success
 2019-04-24 13:46:31,854 INFO 81363 [egg:core] dump config after ready, 4ms
+2019-04-24 21:32:37,743 INFO 85979 [egg:logger] init all loggers with options: {"dir":"/Users/admin/stmu/h5Editor/backend/logs","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"DEBUG","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"egg-react-typescript-boilerplate-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2019-04-24 21:32:37,794 INFO 85979 [egg-multipart] stream mode enable
+2019-04-24 21:32:38,267 INFO 85979 [egg-mongoose] connecting mongodb://127.0.0.1/pages
+2019-04-24 21:32:38,381 INFO 85979 [egg-static] starting static serve /public/ -> /Users/admin/stmu/h5Editor/backend/public
+2019-04-24 21:32:38,383 INFO 85979 [egg-security] use methodnoallow middleware
+2019-04-24 21:32:38,384 INFO 85979 [egg-security] use noopen middleware
+2019-04-24 21:32:38,384 INFO 85979 [egg-security] use nosniff middleware
+2019-04-24 21:32:38,385 INFO 85979 [egg-security] use xssProtection middleware
+2019-04-24 21:32:38,387 INFO 85979 [egg-security] use xframe middleware
+2019-04-24 21:32:38,387 INFO 85979 [egg-security] use dta middleware
+2019-04-24 21:32:38,387 INFO 85979 [egg-security] compose 6 middlewares into one security middleware
+2019-04-24 21:32:38,402 INFO 85979 [egg:core] dump config after load, 6ms
+2019-04-24 21:32:38,404 INFO 85979 [egg-mongoose] starting...
+2019-04-24 21:32:38,424 INFO 85979 [egg-mongoose] mongodb://127.0.0.1/pages connected successfully
+2019-04-24 21:32:38,425 INFO 85979 [egg-mongoose] instance[0] start successfully
+2019-04-24 21:32:38,427 INFO 85979 [egg-watcher:application] watcher start success
+2019-04-24 21:32:38,435 INFO 85979 [egg:core] dump config after ready, 5ms
+2019-04-24 22:08:54,358 WARN 85979 [ClusterClient:Watcher] follower closed, and try to init it again
+2019-04-24 23:08:19,416 WARN 85979 [ClusterClient:Watcher] follower closed, and try to init it again
+2019-04-25 05:09:54,763 WARN 85979 [ClusterClient:Watcher] follower closed, and try to init it again
+2019-04-25 05:15:08,671 WARN 85979 [TCPBase] socket is closed by other side while there were still unhandled data in the socket buffer
+2019-04-25 05:15:08,671 WARN 85979 [ClusterClient:Watcher] follower closed, and try to init it again
+2019-04-25 08:10:27,926 WARN 85979 [ClusterClient:Watcher] follower closed, and try to init it again
+2019-04-25 09:15:25,990 WARN 85979 [ClusterClient:Watcher] follower closed, and try to init it again
