@@ -14,14 +14,14 @@ export default class HomeController extends Controller {
     const { ctx } = this;
     const { query } = ctx.request;
     const { mode, aid, pid } = query;
-    let pages = [], pageData = {};
+    let pages = [], pageData = {}, res = null;
     if (mode === 'preview') {
-
+      res = await ctx.service.page.findPreview(aid);
     } else {
-      let res = await ctx.service.page.find(aid);
-      if (res.success) {
-        pages = res.data;
-      }
+      res = await ctx.service.page.findOne(aid);
+    }
+    if (res && res.success) {
+      pages = res.data;
     }
     if (!isEmpty(pages)) {
       if (pid) {
@@ -31,7 +31,7 @@ export default class HomeController extends Controller {
       }
     }
     if (isEmpty(pageData)) {
-      ctx.body = '404';
+      ctx.body = '页面不存在或者已失效';
     } else {
       await ctx.render('h5.js', pageData);
     }

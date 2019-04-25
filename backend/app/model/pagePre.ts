@@ -2,11 +2,11 @@ module.exports = app => {
   const mongoose = app.mongoose;
   const Schema = mongoose.Schema;
 
-  const PageSchema = new Schema({
+  const PagePreSchema = new Schema({
     createTime: { type: Date  },
     updateTime: { type: Date },
     pageList: { type: Array  },
   });
 
-  return mongoose.model('Page', PageSchema, 'publish');
+  return mongoose.model('PagePre', PagePreSchema, 'preview');
 }

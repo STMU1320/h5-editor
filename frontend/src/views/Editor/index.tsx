@@ -1,6 +1,9 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import classnames from 'classnames';
+import AntMessage from 'antd/lib/message';
+import Drawer from 'antd/lib/Drawer';
+import QRCode from 'qrcode.react';
 
 import Icon from 'components/Icon';
 import PhoneModel from 'components/PhoneModel';
@@ -16,22 +19,11 @@ import request from '../../utils/request';
 
 import * as styles from './style.less';
 
-function generateList (length: number) {
-  let out = [];
-  while (length > 0) {
-    length--;
-    out.push({
-      text: `row-${length}`
-    });
-  }
-  return out;
-}
-
+const h5Baseurl = require('../../../../common/config/domain.json').h5;
 export interface H5EditorProps {
   pageList?: Array<any>;
   selectedPage: any;
   selectedElement: any;
-  uuid: string;
   match: any;
   children: JSX.Element | string;
   dispatch?: Function;
@@ -47,36 +39,43 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
     preLoading: false,
     pubLoading: false,
     previewVisible: false,
-    qrValue: ''
+    previewId: '',
+    previewTime: '',
+    previewUrl: ''
   }
 
   componentWillMount () {
     const { dispatch, match } = this.props;
-    if (match.params.uuid) {
+    if (match.params.id) {
 
     } else {
-      dispatch({ type: 'editor/generateUUID', payload: {} });
+      // dispatch({ type: 'editor/generateUUID', payload: {} });
     }
   }
 
   handlePreview = () => {
-    const { pageList, uuid } = this.props;
-    request.post('/page_preview', { pageList, uuid })
+    const { pageList } = this.props;
+    const { previewId } = this.state;
+    this.setState({ preLoading: true });
+    request.post('/page/preview', { pageList, previewId })
     .then((res: any) => {
-      console.log(res);
+      const { id, updateTime } = res.data;
+      const previewUrl = `${h5Baseurl}h5?aid=${id}&mode=preview`;
+      this.setState({ preLoading: false, previewId: id, previewUrl, previewTime: updateTime, previewVisible: true });
     })
     .catch((err: any) => {
-      console.log(err);
+      AntMessage.error(err.msg || '预览失败，请稍后重试！');
+      this.setState({ preLoading: false });
     })
   }
   handlePublish = () => {
-    const { pageList, uuid } = this.props;
-    request.post('/page_add', { pageList, uuid })
+    const { pageList } = this.props;
+    request.post('/page/add', { pageList })
     .then((res: any) => {
       console.log(res);
     })
     .catch((err: any) => {
-      console.log(err);
+      AntMessage.error(err.msg || '发布失败，请稍后重试！');
     })
   }
 
@@ -124,9 +123,9 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
       selectedElement
     } = this.props;
 
-    const { formCollapse, ...headerProps }: any = this.state;
+    const { formCollapse, previewVisible, previewTime, previewId, previewUrl, ...headerProps }: any = this.state;
     return <div className={styles.layoutWrap}>
-      <Header onPreview={this.handlePreview} onPublish={this.handlePublish} togglePreviewVisible={this.handleToggleVisbile} {...headerProps} />
+      <Header onPreview={this.handlePreview} onPublish={this.handlePublish} {...headerProps} />
       <ToolsBar onElementTypeChange={this.handleCheckedElementChange} />
       <div className={styles.main}>
         <div className={styles.pagePanel}>
@@ -163,6 +162,20 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
           </div>
         </div>
       </div>
+      <Drawer
+        className={styles.previewWrap}
+        title="预览"
+        placement="right"
+        width="100%"
+        closable={true}
+        onClose={() => this.setState({ previewVisible: false })}
+        visible={previewVisible}
+      >
+        <p>扫描屏幕二维码预览<br/>有效时间10分钟<br/><small>上次更新时间: {previewTime}</small></p>
+        <div className={styles.qrWrap}>
+          { previewUrl &&  <QRCode value={previewUrl} size={180}></QRCode> }
+        </div>
+      </Drawer>
   </div>
   }
 }

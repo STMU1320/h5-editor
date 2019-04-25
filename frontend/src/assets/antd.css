@@ -58,3 +58,15 @@
   background-color: #7c7c7d;
 }
 
+.ant-drawer-content {
+  background-color: #616669;
+}
+
+.ant-drawer-content .ant-drawer-header {
+  background-color: #616669;
+  border-color: #3e4041;
+}
+
+.ant-drawer-title, .ant-drawer-close {
+  color: white;
+}
