@@ -143,7 +143,7 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
             </div>
         </div>
         <div className={styles.mainContent}>
-          <div className={styles.stage}>
+          <div className={classnames(styles.stage, { [styles.maxStage]: formCollapse })}>
             {
               selectedPage
               && <PhoneModel title={selectedPage.name} zoom={0.5} showHeader >
@@ -152,7 +152,7 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
             }
           </div>
           <div className={classnames(styles.elePanel, { [styles.collapse]: formCollapse })}>
-            <div className={styles.eleToolsBar}><i className={`fa ${formCollapse ? 'fa-angle-double-left' : 'fa-angle-double-right'}`} onClick={this.handleToggleFormVisible}></i></div>
+            <div className={styles.eleToolsBar}><Icon type={ formCollapse ? 'double-left' : 'double-right' } antd onClick={this.handleToggleFormVisible} /></div>
             <div className={styles.formContent}>
               <ElementForm data={selectedElement} onChange={this.handleElementDataChange}></ElementForm>
             </div>

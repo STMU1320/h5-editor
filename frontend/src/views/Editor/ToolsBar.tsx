@@ -7,17 +7,18 @@ import { ICON_BTNS } from 'utils/config';
 import * as styles from './style.less';
 
 interface IconBtnProps {
-  type: String;
-  value: String;
+  type: string;
+  value: string;
+  title: string;
   checked?: Boolean;
   onClick?: Function;
 }
 
-function IconBtn ({ type, checked, onClick, value }: IconBtnProps) {
+function IconBtn ({ type, checked, onClick, value, title }: IconBtnProps) {
   const handleClick = () => {
     onClick && onClick(value);
   }
-  return <div onClick={handleClick} className={classnames(styles.iconBtn, { [styles.checked]: checked })}>
+  return <div onClick={handleClick} title={title} className={classnames(styles.iconBtn, { [styles.checked]: checked })}>
     <Icon type={type}></Icon>
   </div>
 }
@@ -42,7 +43,7 @@ class Tools extends React.Component<ToolsBarProps, {}> {
           <div className={classnames(styles.toolsGroup, styles.eleGroup)}>
             {
               Object.keys(ICON_BTNS).map((item: 'img' | 'text' | 'btn') => (
-                <IconBtn type={ICON_BTNS[item]} onClick={this.handleIconClick} key={item} value={item} checked={checkedEleType === item} />
+                <IconBtn type={ICON_BTNS[item].icon} onClick={this.handleIconClick} title={ICON_BTNS[item].title} key={item} value={item} checked={checkedEleType === item} />
               ))
             }
           </div>
