@@ -124,6 +124,7 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
     } = this.props;
 
     const { formCollapse, previewVisible, previewTime, previewId, previewUrl, ...headerProps }: any = this.state;
+    const pageOptions = pageList.map((item) => ({ label: item.name, value: item.uuid }));
     return <div className={styles.layoutWrap}>
       <Header onPreview={this.handlePreview} onPublish={this.handlePublish} {...headerProps} />
       <ToolsBar onElementTypeChange={this.handleCheckedElementChange} />
@@ -154,7 +155,7 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
           <div className={classnames(styles.elePanel, { [styles.collapse]: formCollapse })}>
             <div className={styles.eleToolsBar}><Icon type={ formCollapse ? 'double-left' : 'double-right' } antd onClick={this.handleToggleFormVisible} /></div>
             <div className={styles.formContent}>
-              <ElementForm data={selectedElement} onChange={this.handleElementDataChange}></ElementForm>
+              <ElementForm pages={pageOptions} data={selectedElement} onChange={this.handleElementDataChange}></ElementForm>
             </div>
             <div className={styles.elePanelFooter}>
               <Icon type="delete-fill" disabled={!selectedElement} onClick={this.handleDeleteElement}></Icon>

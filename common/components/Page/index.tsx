@@ -3,8 +3,9 @@ import classnames from 'classnames';
 import * as styles from './style.less';
 import Img, { ImgProps } from '../Img';
 import Text, { TextProps } from '../Text';
+import Btn, { BtnProps } from '../Btn';
 
-export interface ElementProps extends TextProps, ImgProps {
+export interface ElementProps extends TextProps, ImgProps, BtnProps {
   type: string;
   uuid: string;
 };
@@ -34,6 +35,9 @@ export default class Page extends React.PureComponent<PageProps, {}> {
         break;
       case 'text':
         Ele = <Text key={eleData.uuid} {...eleData}></Text>
+        break;
+      case 'btn':
+        Ele = <Btn key={eleData.uuid} {...eleData}></Btn>
         break;
     }
     return Ele;

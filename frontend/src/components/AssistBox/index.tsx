@@ -135,7 +135,12 @@ class AssistBox extends React.PureComponent<AssistBoxProps, AssistBoxState> {
         position = 'relative';
         break;
     }
-    const style: React.CSSProperties = {...defaultStyle, position};
+    const style: any = {...defaultStyle, position};
+    for (let key in style) {
+      if (/^(margin|padding|background)/i.test(key)) {
+        delete style[key];
+      }
+    }
     const boxStyle = this.getDrawBoxStyle();
 
     const renderChildren = (children: React.ReactElement) => {

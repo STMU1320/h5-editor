@@ -3,6 +3,7 @@ import uuid from 'uuid/v4';
 const pageData = require('../../../../common/dataStructure/page.json');
 const imgData = require('../../../../common/dataStructure/img.json');
 const textData = require('../../../../common/dataStructure/text.json');
+const btnData = require('../../../../common/dataStructure/btn.json');
 
 interface editorState {
   checkedEleType: string;
@@ -84,6 +85,9 @@ export default {
           break;
         case 'text':
           eleData = {...textData, ...eleData}
+          break;
+        case 'btn':
+          eleData = {...btnData, ...eleData}
           break;
       }
       eleData.uuid = uuid();

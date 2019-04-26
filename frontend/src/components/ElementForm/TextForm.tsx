@@ -5,6 +5,7 @@ import Input from 'antd/lib/input';
 import InputNumber from 'antd/lib/input-number';
 import Form from 'antd/lib/form';
 import Select from 'antd/lib/select';
+import ColorInput from '../ColorInput';
 import Row from './Row';
 import Col from './Col';
 import { TextProps } from '../../../../common/components/Text';
@@ -53,7 +54,7 @@ export default function TextForm ({
       </Row>
       <Row>
         <Col label="字体颜色">
-          <Input placeholder="色值" onChange={handleFieldChange.bind(this, 'color')} value={data.color}></Input>
+          <ColorInput placeholder="色值" onChange={handleFieldChange.bind(this, 'color')} value={data.color} defaultValue="#666666"></ColorInput>
         </Col>
       </Row>
       <Row>
@@ -63,7 +64,7 @@ export default function TextForm ({
       </Row>
       <Row>
         <Col label="背景颜色">
-          <Input onChange={handleFieldChange.bind(this, 'backgroundColor')} value={data.backgroundColor} placeholder="色值"></Input>
+          <ColorInput onChange={handleFieldChange.bind(this, 'backgroundColor')} value={data.backgroundColor} placeholder="色值" ></ColorInput>
         </Col>
       </Row>
     </Item>

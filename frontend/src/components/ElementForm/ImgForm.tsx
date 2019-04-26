@@ -10,7 +10,6 @@ import Row from './Row';
 import Col from './Col';
 import { ImgProps } from '../../../../common/components/Img';
 const Item = Form.Item;
-const TextArea = Input.TextArea;
 const Option = Select.Option;
 
 export interface ImgFormProps {

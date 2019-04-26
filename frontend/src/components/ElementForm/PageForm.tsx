@@ -2,11 +2,10 @@ import * as React from 'react';
 import classnames from 'classnames';
 
 import Input from 'antd/lib/input';
-import InputNumber from 'antd/lib/input-number';
 import Form from 'antd/lib/form';
 import FileUploader from '../FileUploader';
 import Row from './Row';
-import Col from './Col';
+import ColorInput from '../ColorInput';
 import { PageProps } from '../../../../common/components/Page';
 
 const Item = Form.Item;
@@ -64,10 +63,10 @@ export default function PageForm ({
         <FileUploader accept="image" onSuccess={handleImgUpload} ></FileUploader>
       </Row>
       <Row>
-        <Input onChange={handleFieldChange.bind(this, 'backgroundColor')} value={data.backgroundColor} placeholder="背景颜色：默认白色"></Input>
+        <ColorInput onChange={handleFieldChange.bind(this, 'backgroundColor')} value={data.backgroundColor} placeholder="背景颜色：默认白色"></ColorInput>
       </Row>
       <Row>
-        <Input onChange={handleFieldChange.bind(this, 'color')} value={data.color} placeholder="文字颜色：默认#666" ></Input>
+        <ColorInput onChange={handleFieldChange.bind(this, 'color')} value={data.color} defaultValue="#666666" placeholder="文字颜色：默认#666666"></ColorInput>
       </Row>
     </Item>
   </Form>

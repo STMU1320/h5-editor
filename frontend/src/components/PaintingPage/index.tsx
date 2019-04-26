@@ -6,6 +6,7 @@ import classnames from 'classnames';
 import * as styles from './style.less';
 import Img from '../../../../common/components/Img';
 import Text from '../../../../common/components/Text';
+import Btn from '../../../../common/components/Btn';
 import Page, { PageProps, ElementProps } from '../../../../common/components/Page';
 import AssistBox from '../AssistBox';
 
@@ -108,6 +109,9 @@ export default class PaintingPage extends React.PureComponent<PaintingPageProps,
         break;
       case 'text':
         Ele = <Text key={eleData.uuid} {...eleData}></Text>
+        break;
+      case 'btn':
+        Ele = <Btn key={eleData.uuid} {...eleData}></Btn>
         break;
     }
   

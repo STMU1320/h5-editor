@@ -21,12 +21,12 @@ const common = {
       {
         test: /\.jsx?$/i,
         exclude: /node_modules/,
-        include: path.join(__dirname, '../src'),
+        include: [path.join(__dirname, '../src'), path.join(__dirname, '../../common/')],
         use: ['babel-loader?cacheDirectory=true'],
       },
       {
         test: /\.tsx?$/,
-        include: [path.join(__dirname, '../src'), path.join(__dirname, '../../common/components')],
+        include: [path.join(__dirname, '../src'), path.join(__dirname, '../../common/')],
         use: { loader: 'awesome-typescript-loader' }
       },
       {

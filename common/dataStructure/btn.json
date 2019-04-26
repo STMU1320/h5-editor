@@ -6,9 +6,12 @@
   "top": null,
   "width": null,
   "height": null,
+  "fontSize": null,
+  "lineHeight": null,
   "radius": 0,
   "bgImg": "",
   "backgroundColor": "",
+  "color": "#1890ff",
   "actionType": 0,
-  "action": ""
+  "action": null
 }
