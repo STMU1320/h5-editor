@@ -42,7 +42,7 @@ export default function TextForm ({
     <Item
       label="文本内容"
     >
-      <TextArea onChange={handleFieldChange.bind(this, 'content')} rows={5} value={data.content} placeholder="请输入文本框内容"></TextArea>
+      <TextArea autoFocus onChange={handleFieldChange.bind(this, 'content')} rows={5} value={data.content} placeholder="请输入文本框内容"></TextArea>
     </Item>
     <Item
       label="颜色字号"

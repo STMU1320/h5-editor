@@ -54,7 +54,7 @@ export default function ImgForm ({
       label="图片地址"
     >
       <Row>
-        <Input onChange={handleFieldChange.bind(this, 'src')} value={data.src} placeholder="图片地址"></Input>
+        <Input autoFocus onChange={handleFieldChange.bind(this, 'src')} value={data.src} placeholder="图片地址"></Input>
       </Row>
       <Row>
         <FileUploader accept="image" onSuccess={handleImgUpload} ></FileUploader>

@@ -50,7 +50,7 @@ export default function PageForm ({
       label="页面名称"
     >
       <Row>
-        <Input onChange={handleFieldChange.bind(this, 'name')} value={data.name} placeholder="不操过15个字符"></Input>
+        <Input autoFocus onChange={handleFieldChange.bind(this, 'name')} value={data.name} placeholder="不操过15个字符"></Input>
       </Row>
     </Item>
     <Item

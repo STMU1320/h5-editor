@@ -36,7 +36,7 @@ export default function BtnForm ({
       }
       const next = { ...data, [key]: value };
       if (key === 'actionType') {
-        next.action = null;
+        next.action = '';
       }
       onChange && onChange(next);
     };
@@ -55,6 +55,15 @@ export default function BtnForm ({
     }
 
     const positionDisabled = !data.position || data.position === 'static';
+    let actionLabel = '动作参数';
+    switch (data.actionType) {
+      case 0:
+        actionLabel = '页面名称'
+        break;
+      case 1:
+        actionLabel = '链接地址'
+        break;
+    }
 
   return <Form layout="vertical" className="element-editor-form">
     <Item
@@ -62,7 +71,7 @@ export default function BtnForm ({
     >
       <Row>
         <Col label="文字内容">
-          <Input onChange={handleFieldChange.bind(this, 'text')} value={data.text} placeholder="不操过15个字符"></Input>
+          <Input onChange={handleFieldChange.bind(this, 'text')} autoFocus value={data.text} placeholder="不操过15个字符"></Input>
         </Col>
       </Row>
       <Row>
@@ -91,7 +100,7 @@ export default function BtnForm ({
         </Col>
       </Row>
       <Row>
-        <Col label="动作参数">
+        <Col label={actionLabel}>
           {
             data.actionType === 0
             ? <Select dropdownClassName="editor-select" value={data.action} style={{ width: '100%' }} placeholder="选择跳转页面" onChange={handleFieldChange.bind(this, 'action')}>
