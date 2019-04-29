@@ -60,15 +60,18 @@ class PageService extends Service {
       return {success:false, msg:err, code: 1}
     })
   }
-  async create(pageList) {
+  async create(pageList, name, cover = '', immutable = false) {
     const { ctx } = this;
     const now = new Date();
     return ctx.model.Page.create({
       createTime: now,
       updateTime: now,
-      pageList
+      pageList,
+      name,
+      cover,
+      immutable
     }).then(res =>{
-      return { success:true,mag:'',code:0}
+      return { success: true, mag:'', code:0, data: res._id}
     }).catch(err =>{
       return {success:false, msg:err, code: 1}
     })

@@ -2,8 +2,8 @@ import { Controller } from 'egg';
 export default class PageController extends Controller {
   public async add() {
     const { ctx } = this;
-    const { pageList } = ctx.request.body;
-    ctx.body = await ctx.service.page.create(pageList);
+    const { pageList, name, cover, immutable } = ctx.request.body;
+    ctx.body = await ctx.service.page.create(pageList, name, cover, immutable);
   }
   public async preview() {
     const { ctx } = this;

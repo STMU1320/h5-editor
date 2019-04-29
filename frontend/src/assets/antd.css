@@ -50,7 +50,7 @@
   background-color: #7c7c7d;
 }
 
-.ant-drawer-content {
+.ant-drawer-content-wrapper .ant-drawer-content {
   background-color: #616669;
 }
 
@@ -61,5 +61,9 @@
 
 .ant-select-dropdown-menu-item.ant-select-dropdown-menu-item-active {
   background-color: #838386;
+}
+
+.ant-message-notice .ant-message-notice-content {
+  background: #606a71;
 }
 

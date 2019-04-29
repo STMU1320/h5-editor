@@ -7,6 +7,7 @@ import * as styles from './style.less';
 export interface FileUpladerProps {
   onSuccess?: Function;
   onError?: Function;
+  onChange?: Function;
   showImg?: boolean;
   accept?: string | RegExp;
   errorTip?: string;
@@ -20,6 +21,7 @@ export interface FileUpladerProps {
 export interface FileUploaderState {
   uploading: boolean;
   file?: File;
+  base64Src?: string;
 };
 export default class FileUploader extends React.Component<FileUpladerProps, FileUploaderState> {
   static defaultProps = {
@@ -28,6 +30,7 @@ export default class FileUploader extends React.Component<FileUpladerProps, File
   }
   state = {
     uploading: false,
+    base64Src: ''
   };
   fileInput: HTMLInputElement = null;
   checkFileType (file: File, accept: string | RegExp): boolean {
@@ -41,16 +44,26 @@ export default class FileUploader extends React.Component<FileUpladerProps, File
     }
     return pass;
   }
+  handleImgToBase64 = (file: File) => {
+    let reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = (e) => {
+      this.setState({ base64Src: reader.result as string });
+    }
+  }
   handleUploadChange = (e: React.ChangeEvent) => {
-    const { accept, errorTip, onSuccess, onError, onlySelect, action } = this.props;
+    const { accept, errorTip, onSuccess, onError, onlySelect, action, showImg, onChange } = this.props;
     let canUpload = true;
     const file = (e.target as HTMLInputElement).files[0];
     if (accept !== '*') {
       canUpload = this.checkFileType(file, accept);
     }
     if (canUpload) {
+      this.setState({ file });
       if (onlySelect || !action) {
         onSuccess && onSuccess({ data: file });
+        onChange && onChange(file);
+        showImg && this.handleImgToBase64(file);
       } else {
         this.handleUpload(file);
       }
@@ -61,13 +74,15 @@ export default class FileUploader extends React.Component<FileUpladerProps, File
   }
 
   handleUpload = (file: File) => {
-    const { onSuccess, onError, extraData, action, name } = this.props;
+    const { onSuccess, onError, extraData, action, name, showImg, onChange } = this.props;
     const params = { ...extraData, [name]: file, };
     this.setState({ uploading: true });
     request.post(action, params, { upload: true })
     .then((res: any) => {
       this.setState({ uploading: false });
       onSuccess && onSuccess(res);
+      onChange && onChange(res);
+      showImg && this.handleImgToBase64(file);
     })
     .catch((err: any) => {
       this.setState({ uploading: false });
@@ -80,19 +95,26 @@ export default class FileUploader extends React.Component<FileUpladerProps, File
     }
   }
   render () {
-    const { style } = this.props;
-    const { uploading, file }  = this.state as any;
+    const { style, showImg } = this.props;
+    const { uploading, file, base64Src }  = this.state as any;
+    const renderContent = () => {
+      if (uploading) return <Icon type="loading" />
+      if (file) {
+        if (showImg && base64Src) {
+          return <img className={styles.thumbnail} src={base64Src} />
+        }
+        return <span>{file.name}</span>
+      }
+
+      return <span>
+          <i className="fa fa-plus" ></i>
+         点击上传
+      </span>
+    }
     return <div className={styles.imgUploaderWrap} onClick={this.triggerInputClick} style={style}>
       <input ref={(input) => { this.fileInput = input; }} onChange={this.handleUploadChange} type="file" hidden />
       {
-        uploading
-        ? <Icon type="loading" />
-        : file
-        ? <span>{file.name}</span>
-        : <span>
-            <i className="fa fa-plus" ></i>
-            点击上传
-          </span>
+        renderContent()
       }
     </div>
   }

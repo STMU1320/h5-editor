@@ -32,6 +32,11 @@ export default {
         ...payload
       };
     },
+    reset(state: editorState, ) {
+      return {
+        ...defaultState
+      };
+    },
     selectPage (state: editorState, { payload }: any) {
       return {
         ...state,

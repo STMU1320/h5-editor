@@ -6,6 +6,9 @@ module.exports = app => {
     createTime: { type: Date  },
     updateTime: { type: Date },
     pageList: { type: Array  },
+    cover: { type: String  },
+    name: { type: String  },
+    immutable: { type: Boolean  },
   });
 
   return mongoose.model('Page', PageSchema, 'publish');

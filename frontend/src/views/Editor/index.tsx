@@ -2,6 +2,7 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import classnames from 'classnames';
 import { Drawer, Modal, message as AntMessage } from 'antd';
+import Button from 'components/Button';
 import QRCode from 'qrcode.react';
 
 import Icon from 'components/Icon';
@@ -9,12 +10,15 @@ import PhoneModel from 'components/PhoneModel';
 import Header from './Header';
 import ToolsBar from './ToolsBar';
 import PageThumbnail from './PageThumbnail';
+import InfoForm from './InfoForm';
 
 import Page, { ElementProps } from '../../../../common/components/Page';
 import PaintingPage from 'components/PaintingPage';
 import ElementForm from 'components/ElementForm';
 
 import request from '../../utils/request';
+import { isEmpty } from 'utils/func';
+import browserHistory from '../routeHistory';
 
 import * as styles from './style.less';
 
@@ -37,14 +41,18 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
     formCollapse: false,
     preLoading: false,
     pubLoading: false,
-    previewVisible: false,
+    drawerVisible: false,
+    drawerType: 1, // 1 预览 0 发布
     previewId: '',
     previewTime: '',
     previewUrl: '',
     modalVisible: false,
+    modalKey: Date.now(),
     sending: false,
-    formData: { name: '', cover: '' }
+    publishResult: { url: '', state: 'success' }
   }
+
+  infoForm: any = null;
 
   componentWillMount () {
     const { dispatch, match } = this.props;
@@ -57,13 +65,16 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
 
   handlePreview = () => {
     const { pageList } = this.props;
+    if (isEmpty(pageList)) {
+      return AntMessage.warning('h5页面数据为空，请编辑后再预览');
+    }
     const { previewId } = this.state;
     this.setState({ preLoading: true });
     request.post('/page/preview', { pageList, previewId })
     .then((res: any) => {
       const { id, updateTime } = res.data;
-      const previewUrl = `${h5Baseurl}h5?aid=${id}&mode=preview`;
-      this.setState({ preLoading: false, previewId: id, previewUrl, previewTime: updateTime, previewVisible: true });
+      const previewUrl = `${h5Baseurl}?aid=${id}&mode=preview`;
+      this.setState({ preLoading: false, previewId: id, previewUrl, previewTime: updateTime, drawerVisible: true, drawerType: 1 });
     })
     .catch((err: any) => {
       AntMessage.error(err.msg || '预览失败，请稍后重试！');
@@ -71,20 +82,50 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
     })
   }
   handleModalOk = () => {
-    this.setState({ sending: true });
-    const { pageList } = this.props;
-    request.post('/page/add', { ...this.state.formData, pageList })
-    .then((res: any) => {
-      console.log(res);
-      this.setState({ sending: false });
-    })
-    .catch((err: any) => {
-      AntMessage.error(err.msg || '发布失败，请稍后重试！');
-      this.setState({ sending: false });
-    })
+    if (this.infoForm) {
+      this.infoForm.validateFieldsAndScroll((err: boolean, values: any) => {
+        if (!err) {
+          const { cover, name } = values;
+          const getFormData = () => {
+            const formData = { name, cover: '' };
+            return new Promise((resolve) => {
+              if (cover instanceof File) {
+                let reader = new FileReader();
+                reader.readAsDataURL(cover);
+                reader.onload = (e) => {
+                  formData.cover = reader.result as string;
+                  resolve(formData)
+                }
+              } else {
+                formData.cover = cover;
+                resolve(formData);
+              }
+            })
+          }
+          getFormData()
+          .then(data => {
+            this.setState({ sending: true });
+            const { pageList } = this.props;
+            return request.post('/page/add', { ...data, pageList })
+          })
+          .then((res: any) => {
+            const url = `${h5Baseurl}?aid=${res.data}`;
+            this.setState({ sending: false, modalVisible: false, drawerType: 0, drawerVisible: true,  publishResult: { url, state: 'success' } });
+          })
+          .catch((err: any) => {
+            AntMessage.error(err.msg || '发布失败，请稍后重试！');
+            this.setState({ sending: false });
+          })
+        }
+      })
+    }
   }
   handlePublish = () => {
-    this.setState({ modalVisible: true });
+    const { pageList } = this.props;
+    if (isEmpty(pageList)) {
+      return AntMessage.warning('h5页面数据为空，请编辑后再发布');
+    }
+    this.setState({ modalVisible: true, modalKey: Date.now() });
   }
 
   handleModalCancel = () => {
@@ -92,12 +133,12 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
   }
 
   handleToggleVisbile = (visible: boolean) => {
-    this.setState({ previewVisible: visible });
+    this.setState({ drawerVisible: visible });
   }
 
-  handleCheckedElementChange = (e: React.MouseEvent) => {
-    console.log(e);
-  }
+  // handleCheckedElementChange = (e: React.MouseEvent) => {
+  //   console.log(e);
+  // }
   handleAddPage = () => {
     const { dispatch } = this.props;
     dispatch({type: 'editor/addPage'});
@@ -128,6 +169,13 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
       this.props.dispatch({ type: 'editor/eleAttrChange', payload: { eleData: data } });
     }
   }
+  handleContinue = () => {
+    this.props.dispatch({ type: 'editor/reset' });
+    this.setState({ drawerVisible: false });
+  }
+  handleGotoHomePage = () => {
+    browserHistory.push('/');
+  }
   render () {
     const {
       pageList,
@@ -136,12 +184,12 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
     } = this.props;
 
     const {
-      formCollapse, previewVisible, previewTime, previewId, previewUrl,
-      modalVisible, sending, formData, ...headerProps }: any = this.state;
+      formCollapse, drawerVisible, previewTime, previewId, previewUrl, drawerType, modalKey,
+      publishResult, modalVisible, sending, formData, ...headerProps }: any = this.state;
     const pageOptions = pageList.map((item) => ({ label: item.name, value: item.uuid }));
     return <div className={styles.layoutWrap}>
       <Header onPreview={this.handlePreview} onPublish={this.handlePublish} {...headerProps} />
-      <ToolsBar onElementTypeChange={this.handleCheckedElementChange} />
+      <ToolsBar />
       <div className={styles.main}>
         <div className={styles.pagePanel}>
             {
@@ -179,26 +227,46 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
       </div>
       <Drawer
         className={styles.previewWrap}
-        title="预览"
+        title={ drawerType ? '预览' : '发布' }
         placement="right"
         width="100%"
         closable={true}
-        onClose={() => this.setState({ previewVisible: false })}
-        visible={previewVisible}
+        onClose={() => this.setState({ drawerVisible: false })}
+        visible={drawerVisible}
       >
-        <p>扫描屏幕二维码预览<br/>有效时间10分钟<br/><small>上次更新时间: {previewTime}</small></p>
-        <div className={styles.qrWrap}>
-          { previewUrl &&  <QRCode value={previewUrl} size={180}></QRCode> }
-        </div>
+        {
+          drawerType ?
+          <>
+            <p>扫描屏幕二维码预览<br/>有效时间10分钟<br/><small>上次更新时间: {previewTime}</small></p>
+            <div className={styles.qrWrap}>
+              { previewUrl &&  <QRCode value={previewUrl} size={180}></QRCode> }
+            </div>
+          </>
+          : <>
+            <h2 className="color-success">发布成功</h2>
+            <div className={styles.qrWrap}>
+              { publishResult.url &&  <QRCode value={publishResult.url} size={180}></QRCode> }
+            </div>
+            <p className={styles.publishSuccessBtn}>
+              <Button onClick={this.handleContinue}>继续添加</Button>
+              <Button type="primary" onClick={this.handleGotoHomePage}>回首页</Button>
+            </p>
+            <p>
+              访问地址：
+              <a href={publishResult.url} target="_blank">{publishResult.url}</a>
+            </p>
+          </>
+        }
       </Drawer>
       <Modal
-          title="活动信息"
-          visible={modalVisible}
-          onOk={this.handleModalOk}
-          confirmLoading={sending}
-          onCancel={this.handleModalCancel}
+        width={480}
+        title="活动信息"
+        visible={modalVisible}
+        onOk={this.handleModalOk}
+        confirmLoading={sending}
+        onCancel={this.handleModalCancel}
         >
-          <p>1111</p>
+          <InfoForm key={modalKey} ref={(ele) => { this.infoForm = ele }}></InfoForm>
         </Modal>
   </div>
   }
