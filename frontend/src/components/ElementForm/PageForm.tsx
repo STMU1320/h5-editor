@@ -1,8 +1,8 @@
 import * as React from 'react';
 import classnames from 'classnames';
 
-import Input from 'antd/lib/input';
-import Form from 'antd/lib/form';
+import { Input, Form } from 'antd';
+
 import FileUploader from '../FileUploader';
 import Row from './Row';
 import ColorInput from '../ColorInput';

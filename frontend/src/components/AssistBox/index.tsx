@@ -8,7 +8,8 @@ import { ElementProps } from '../../../../common/components/Page';
 export interface AssistBoxProps {
   dispatch?: Function;
   eleData: ElementProps;
-  showBox?: boolean;
+  // showBox?: boolean;
+  selectedElement: ElementProps,
   zoom?: number;
   onEditElement?: Function;
   children: React.ReactElement;
@@ -23,7 +24,7 @@ interface AssistBoxState {
   boxWidth: number;
 }
 
-class AssistBox extends React.PureComponent<AssistBoxProps, AssistBoxState> {
+class AssistBox extends React.Component<AssistBoxProps, AssistBoxState> {
 
   state = {
     assistBoxVisible: false,
@@ -120,7 +121,8 @@ class AssistBox extends React.PureComponent<AssistBoxProps, AssistBoxState> {
 
   render () {
     const { assistBoxVisible } = this.state;
-    const { children, eleData, showBox } = this.props;
+    const { children, eleData, selectedElement } = this.props;
+    const showBox = selectedElement && selectedElement.uuid === eleData.uuid;
     let { position, ...defaultStyle }  = eleData;
     switch (position) {
       case 'static':
@@ -164,4 +166,4 @@ class AssistBox extends React.PureComponent<AssistBoxProps, AssistBoxState> {
   }
 }
 
-export default connect()(AssistBox);
+export default connect(({ editor }: any) => ({ selectedElement: editor.selectedElement }))(AssistBox);

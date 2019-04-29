@@ -1,7 +1,6 @@
 import  * as React from 'react';
 import classnames from 'classnames';
-import Icon from 'antd/lib/icon';
-import message from 'antd/lib/message';
+import { Icon, message } from 'antd';
 import request from '../../utils/request';
 import { isEmpty } from '../../utils/func';
 import * as styles from './style.less';

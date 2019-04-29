@@ -1,10 +1,12 @@
 import * as React from 'react';
+import { LocaleProvider } from 'antd';
+import zhCN from 'antd/lib/locale-provider/zh_CN';
 import { Provider } from 'react-redux';
 import { render } from 'react-dom';
 import App from './views';
 import '../src/assets/icons/iconfont.css';
-import '../src/assets/antd.css';
 import '../src/theme/base.less';
+import '../src/assets/antd.css';
 
 import configerStore from './store';
 
@@ -17,7 +19,9 @@ const renderToDOM = (AppContainer?: new () => React.Component<any, any>, AppComp
     render(
       <AppContainer>
         <Provider store={store}>
-          <AppComponent />
+          <LocaleProvider locale={zhCN}>
+            <AppComponent />
+          </LocaleProvider>
         </Provider>
       </AppContainer>,
       appRoot
@@ -25,7 +29,9 @@ const renderToDOM = (AppContainer?: new () => React.Component<any, any>, AppComp
   } else {
     render(
       <Provider store={store}>
-        <AppComponent />
+        <LocaleProvider locale={zhCN}>
+          <AppComponent />
+        </LocaleProvider>
       </Provider>
         , appRoot);
   }

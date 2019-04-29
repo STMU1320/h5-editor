@@ -1,6 +1,12 @@
 const path = require('path')
 const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const theme = require('../src/theme/lessToJs')()
+const postcssOptions = {
+  plugins: loader => [
+    require('autoprefixer')({ browsers: ['last 3 versions'] }),
+  ],
+}
 
 const common = {
   resolve: {
@@ -19,6 +25,19 @@ const common = {
         use: ['style-loader', 'css-loader'],
       },
       {
+        test: /\.less$/,
+        use: [
+          'style-loader',
+          'css-loader?importLoaders=1&-autoprefixer',
+          { loader: 'postcss-loader', options: postcssOptions },
+          { loader: 'less-loader', options: {
+            javascriptEnabled: true,
+            modifyVars: theme
+          } }
+        ],
+        include: path.resolve('node_modules')
+      },
+      {
         test: /\.jsx?$/i,
         exclude: /node_modules/,
         include: [path.join(__dirname, '../src'), path.join(__dirname, '../../common/')],
@@ -26,8 +45,8 @@ const common = {
       },
       {
         test: /\.tsx?$/,
-        include: [path.join(__dirname, '../src'), path.join(__dirname, '../../common/')],
-        use: { loader: 'awesome-typescript-loader' }
+        include: [path.join(__dirname, '../src'), path.join(__dirname, '../../common/'), path.join(__dirname, '../node_modules')],
+        use: ['babel-loader', 'awesome-typescript-loader']
       },
       {
         test: /\.(png|jpg|gif|JPG|GIF|PNG|BMP|bmp|JPEG|jpeg)$/i,

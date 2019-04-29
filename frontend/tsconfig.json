@@ -5,7 +5,7 @@
     "module": "esnext",
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "target": "es5",
+    "target": "es2015",
     "sourceMap": true,
     "moduleResolution": "node",
     "allowJs": true,

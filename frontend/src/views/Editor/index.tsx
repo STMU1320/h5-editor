@@ -1,8 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 import classnames from 'classnames';
-import AntMessage from 'antd/lib/message';
-import Drawer from 'antd/lib/Drawer';
+import { Drawer, Modal, message as AntMessage } from 'antd';
 import QRCode from 'qrcode.react';
 
 import Icon from 'components/Icon';
@@ -41,7 +40,10 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
     previewVisible: false,
     previewId: '',
     previewTime: '',
-    previewUrl: ''
+    previewUrl: '',
+    modalVisible: false,
+    sending: false,
+    formData: { name: '', cover: '' }
   }
 
   componentWillMount () {
@@ -68,15 +70,25 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
       this.setState({ preLoading: false });
     })
   }
-  handlePublish = () => {
+  handleModalOk = () => {
+    this.setState({ sending: true });
     const { pageList } = this.props;
-    request.post('/page/add', { pageList })
+    request.post('/page/add', { ...this.state.formData, pageList })
     .then((res: any) => {
       console.log(res);
+      this.setState({ sending: false });
     })
     .catch((err: any) => {
       AntMessage.error(err.msg || '发布失败，请稍后重试！');
+      this.setState({ sending: false });
     })
+  }
+  handlePublish = () => {
+    this.setState({ modalVisible: true });
+  }
+
+  handleModalCancel = () => {
+    this.setState({ modalVisible: false });
   }
 
   handleToggleVisbile = (visible: boolean) => {
@@ -123,7 +135,9 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
       selectedElement
     } = this.props;
 
-    const { formCollapse, previewVisible, previewTime, previewId, previewUrl, ...headerProps }: any = this.state;
+    const {
+      formCollapse, previewVisible, previewTime, previewId, previewUrl,
+      modalVisible, sending, formData, ...headerProps }: any = this.state;
     const pageOptions = pageList.map((item) => ({ label: item.name, value: item.uuid }));
     return <div className={styles.layoutWrap}>
       <Header onPreview={this.handlePreview} onPublish={this.handlePublish} {...headerProps} />
@@ -177,6 +191,15 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
           { previewUrl &&  <QRCode value={previewUrl} size={180}></QRCode> }
         </div>
       </Drawer>
+      <Modal
+          title="活动信息"
+          visible={modalVisible}
+          onOk={this.handleModalOk}
+          confirmLoading={sending}
+          onCancel={this.handleModalCancel}
+        >
+          <p>1111</p>
+        </Modal>
   </div>
   }
 }

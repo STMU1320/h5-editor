@@ -100,7 +100,7 @@ export default class PaintingPage extends React.PureComponent<PaintingPageProps,
   }
 
   renderElement = (eleData: ElementProps): React.ReactNode => {
-    const { selectedElement, zoom, onEditElement } = this.props;
+    const { zoom, onEditElement } = this.props;
     let type = eleData && eleData.type;
     let Ele: React.ReactElement = null;
     switch (type) {
@@ -114,15 +114,14 @@ export default class PaintingPage extends React.PureComponent<PaintingPageProps,
         Ele = <Btn key={eleData.uuid} {...eleData}></Btn>
         break;
     }
-  
-    return <AssistBox zoom={zoom} onEditElement={onEditElement} key={eleData.uuid} eleData={eleData} showBox={eleData.uuid === selectedElement}>
+
+    return <AssistBox zoom={zoom} onEditElement={onEditElement} key={eleData.uuid} eleData={eleData}>
       {Ele}
     </AssistBox>
   }
 
   render () {
     let {
-      selectedElement,
       onEditElement,
       zoom,
       ...pageProps

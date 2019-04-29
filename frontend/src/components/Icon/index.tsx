@@ -1,7 +1,7 @@
 import * as React from 'react';
 import classnames from 'classnames';
 import * as styles from './style.less';
-import AntIcon from 'antd/lib/icon';
+import { Icon as AntIcon } from 'antd';
 
 export interface IconProps {
   type: string;
@@ -20,6 +20,6 @@ export default function Icon ({ type, className, disabled, onClick, antd }: Icon
   // return <svg onClick={handleClick} className={classnames('h5-editor-icon', className, styles.icon, { [styles.disabled]: disabled })} aria-hidden="true">
   //   <use xlinkHref={`#h5-editor-icon${type}`}></use>
   // </svg>
-  return antd ? <AntIcon type={type} onClick={handleClick} />
+  return antd ? <AntIcon className={classnames(className, { [styles.disabled]: disabled })} type={type} onClick={handleClick} />
     : <i onClick={handleClick} className={classnames('iconfont',`h5-editor-icon${type}`, className, styles.icon, { [styles.disabled]: disabled })} aria-hidden="true"></i>
 }
