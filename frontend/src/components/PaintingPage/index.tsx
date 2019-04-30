@@ -54,7 +54,6 @@ export default class PaintingPage extends React.PureComponent<PaintingPageProps,
     const { draw } = this.state;
     e.persist();
     const target = e.target as HTMLDivElement;
-    console.log(target);
     const scrollTop = target.scrollTop;
     const pageBox = target.getBoundingClientRect();
     let point = {

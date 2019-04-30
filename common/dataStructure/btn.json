@@ -13,5 +13,9 @@
   "backgroundColor": "",
   "color": "#1890ff",
   "actionType": 0,
-  "action": ""
+  "action": "",
+  "marginLeft": null,
+  "marginTop": null,
+  "marginRight": null,
+  "marginBottom": null
 }

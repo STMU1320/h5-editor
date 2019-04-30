@@ -9,6 +9,7 @@ export interface FileUpladerProps {
   onError?: Function;
   onChange?: Function;
   showImg?: boolean;
+  showName?: boolean;
   accept?: string | RegExp;
   errorTip?: string;
   onlySelect?: boolean;
@@ -27,7 +28,8 @@ export interface FileUploaderState {
 export default class FileUploader extends React.Component<FileUpladerProps, FileUploaderState> {
   static defaultProps = {
     accept: '*',
-    name: 'file'
+    name: 'file',
+    showName: true
   }
   state = {
     uploading: false,
@@ -85,7 +87,7 @@ export default class FileUploader extends React.Component<FileUpladerProps, File
   }
 
   handleUpload = (file: File) => {
-    const { onSuccess, onError, extraData, action, name, showImg, onChange } = this.props;
+    const { onSuccess, onError, extraData, action, name, showImg, onChange, showName } = this.props;
     const params = { ...extraData, [name]: file, };
     this.setState({ uploading: true });
     request.post(action, params, { upload: true })
@@ -106,7 +108,7 @@ export default class FileUploader extends React.Component<FileUpladerProps, File
     }
   }
   render () {
-    const { style, showImg } = this.props;
+    const { style, showImg, showName } = this.props;
     const { uploading, file, base64Src }  = this.state as any;
     const renderContent = () => {
       if (uploading) return <Icon type="loading" />
@@ -114,7 +116,9 @@ export default class FileUploader extends React.Component<FileUpladerProps, File
         if (showImg && base64Src) {
           return <img className={styles.thumbnail} src={base64Src} />
         }
-        return <span>{file.name}</span>
+        if (showName) {
+          return <span>{file.name}</span>
+        }
       }
 
       return <span>

@@ -53,7 +53,7 @@ export default function ImgForm ({
         <Input autoFocus onChange={handleFieldChange.bind(this, 'src')} value={data.src} placeholder="图片地址"></Input>
       </Row>
       <Row>
-        <FileUploader accept="image" onSuccess={handleImgUpload} ></FileUploader>
+        <FileUploader accept="image" showName={false} onSuccess={handleImgUpload} ></FileUploader>
       </Row>
     </Item>
     <Item
@@ -88,6 +88,26 @@ export default function ImgForm ({
         </Col>
         <Col labelWidth={15} label="H">
           <InputNumber onChange={handleFieldChange.bind(this, 'height')} value={data.height} placeholder="px"></InputNumber>
+        </Col>
+      </Row>
+    </Item>
+    <Item
+      label="外边距"
+    >
+      <Row>
+        <Col labelWidth={15} label="L">
+          <InputNumber onChange={handleFieldChange.bind(this, 'marginLeft')} value={data.marginLeft} placeholder="px"></InputNumber>
+        </Col>
+        <Col labelWidth={15} label="T">
+          <InputNumber onChange={handleFieldChange.bind(this, 'marginTop')} value={data.marginTop} placeholder="px"></InputNumber>
+        </Col>
+      </Row>
+      <Row>
+        <Col labelWidth={15} label="R">
+          <InputNumber onChange={handleFieldChange.bind(this, 'marginRight')} value={data.marginRight} placeholder="px"></InputNumber>
+        </Col>
+        <Col labelWidth={15} label="B">
+          <InputNumber onChange={handleFieldChange.bind(this, 'marginBottom')} value={data.marginBottom} placeholder="px"></InputNumber>
         </Col>
       </Row>
     </Item>

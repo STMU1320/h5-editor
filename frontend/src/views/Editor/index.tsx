@@ -211,7 +211,8 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
     const { dispatch } = this.props;
     dispatch({type: 'editor/addPage'});
   }
-  handleSelectPage = (page: object) => {
+  handleSelectPage = (page: object, e: React.MouseEvent) => {
+    e.stopPropagation();
     this.props.dispatch({ type: 'editor/selectPage', payload: { page } });
   }
   handleAddElement = (pageId: string, eleData?: ElementProps) => {

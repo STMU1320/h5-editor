@@ -8,13 +8,22 @@
     color: white;
   }
   .thumbnail {
+    position: relative;
     width: 100%;
     height: 256px;
     border-radius: @size;
     background: white;
     overflow: hidden;
-    cursor: pointer;
     .ease-out;
+
+    .thumbnailMask {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      cursor: pointer;
+    }
   }
 
   &.checked, &:hover {

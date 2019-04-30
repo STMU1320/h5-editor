@@ -12,7 +12,11 @@ export interface TextProps {
   paddingLeft?: number;
   paddingTop?: number;
   paddingRight?: number;
-  paddingButtom?: number;
+  paddingBottom?: number;
+  marginLeft?: number;
+  marginTop?: number;
+  marginRight?: number;
+  marginBottom?: number;
   backgroundColor?: string;
   color?: string;
   fontSize?: number;

@@ -11,8 +11,12 @@
   "paddingLeft": null,
   "paddingTop": null,
   "paddingRight": null,
-  "paddingButtom": null,
+  "paddingBottom": null,
   "backgroundColor": "",
   "color": "",
-  "fontSize": 28
+  "fontSize": 28,
+  "marginLeft": null,
+  "marginTop": null,
+  "marginRight": null,
+  "marginBottom": null
 }

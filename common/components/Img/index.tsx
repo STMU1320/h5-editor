@@ -9,6 +9,10 @@ export interface ImgProps {
   width?: number;
   height?: number;
   zIndex?:number;
+  marginLeft?: number;
+  marginTop?: number;
+  marginRight?: number;
+  marginBottom?: number;
 }
 export default function Img (props: ImgProps) {
   let { src = '', ...style } = props;

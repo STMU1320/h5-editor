@@ -13,10 +13,11 @@ export interface OnePageProps {
 
 export default function OnePage (props: OnePageProps) {
   const { onClick, name, checked, className, children } = props;
-  return <div onClick={onClick} className={classnames(styles.pageBox, className, { [styles.checked]: checked })}>
+  return <div className={classnames(styles.pageBox, className, { [styles.checked]: checked })}>
     <h5 className={styles.pageName}>{name}</h5>
     <div className={styles.thumbnail}>
       {children}
+      <div onClick={onClick} className={styles.thumbnailMask} ></div>
     </div>
   </div>
 }

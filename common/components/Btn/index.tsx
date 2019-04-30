@@ -17,6 +17,10 @@ export interface BtnProps {
   width?: number;
   height?: number;
   zIndex?:number;
+  marginLeft?: number;
+  marginTop?: number;
+  marginRight?: number;
+  marginBottom?: number;
 }
 export default class Btn extends React.PureComponent<BtnProps, {}> {
   static defaultProps = {

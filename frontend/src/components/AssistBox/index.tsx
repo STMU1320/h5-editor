@@ -139,7 +139,7 @@ class AssistBox extends React.Component<AssistBoxProps, AssistBoxState> {
     }
     const style: any = {...defaultStyle, position};
     for (let key in style) {
-      if (/^(margin|padding|background)/i.test(key)) {
+      if (/^(padding|background)/i.test(key)) {
         delete style[key];
       }
     }

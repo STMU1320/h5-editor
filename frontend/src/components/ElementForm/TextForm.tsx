@@ -115,7 +115,27 @@ export default function TextForm ({
           <InputNumber onChange={handleFieldChange.bind(this, 'paddingRight')} value={data.paddingRight} placeholder="px"></InputNumber>
         </Col>
         <Col labelWidth={15} label="B">
-          <InputNumber onChange={handleFieldChange.bind(this, 'paddingButtom')} value={data.paddingButtom} placeholder="px"></InputNumber>
+          <InputNumber onChange={handleFieldChange.bind(this, 'paddingBottom')} value={data.paddingBottom} placeholder="px"></InputNumber>
+        </Col>
+      </Row>
+    </Item>
+    <Item
+      label="外边距"
+    >
+      <Row>
+        <Col labelWidth={15} label="L">
+          <InputNumber onChange={handleFieldChange.bind(this, 'marginLeft')} value={data.marginLeft} placeholder="px"></InputNumber>
+        </Col>
+        <Col labelWidth={15} label="T">
+          <InputNumber onChange={handleFieldChange.bind(this, 'marginTop')} value={data.marginTop} placeholder="px"></InputNumber>
+        </Col>
+      </Row>
+      <Row>
+        <Col labelWidth={15} label="R">
+          <InputNumber onChange={handleFieldChange.bind(this, 'marginRight')} value={data.marginRight} placeholder="px"></InputNumber>
+        </Col>
+        <Col labelWidth={15} label="B">
+          <InputNumber onChange={handleFieldChange.bind(this, 'marginBottom')} value={data.marginBottom} placeholder="px"></InputNumber>
         </Col>
       </Row>
     </Item>
