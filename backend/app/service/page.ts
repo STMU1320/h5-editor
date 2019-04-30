@@ -84,7 +84,6 @@ class PageService extends Service {
       {$set: { updateTime: now, pageList, name, cover}}
       ).then(res =>{
         const { nModified } = res;
-        console.log(res);
         if (!nModified) {
           return { success: false, msg: '记录不存在', code: 1 }
         }

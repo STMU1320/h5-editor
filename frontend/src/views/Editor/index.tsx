@@ -78,6 +78,8 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
       .catch((err: any) => {
         AntMessage.error(err.msg || '记录不存在');
       })
+    } else {
+      dispatch({ type: 'editor/reset' });
     }
   }
 

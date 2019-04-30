@@ -9,6 +9,7 @@ import Text from '../../../../common/components/Text';
 import Btn from '../../../../common/components/Btn';
 import Page, { PageProps, ElementProps } from '../../../../common/components/Page';
 import AssistBox from '../AssistBox';
+import { isEmpty } from 'utils/func';
 
 export interface PaintingPageProps extends PageProps {
   onAddElement: Function;
@@ -24,19 +25,22 @@ export default class PaintingPage extends React.PureComponent<PaintingPageProps,
     startPoint: { x: 0, y: 0 },
     currentPoint: { x: 0, y: 0 },
     pageX: 0,
-    pageY: 0
+    pageY: 0,
+    scrollTop: 0
   }
 
-  getDrawBoxStyle = () => {
+  getDrawBoxStyle = (isSave?: boolean) => {
     const { zoom = 1 } = this.props;
-    const { startPoint, currentPoint, pageX, pageY } = this.state;
+    const { startPoint, currentPoint, pageX, pageY, scrollTop } = this.state;
     const x1 = startPoint.x, x2 = currentPoint.x;
     const y1 = startPoint.y, y2 = currentPoint.y;
     const width = Math.abs(x1 - x2);
     const height = Math.abs(y1 - y2);
     const left = Math.min(x1, x2) - pageX;
-    const top = Math.min(y1, y2) - pageY;
-
+    let top = Math.min(y1, y2) - pageY;
+    if (isSave) {
+      top += (scrollTop * zoom);
+    }
     const translate = (num: number) => Math.round(num / zoom);
     return {
       width: translate(width),
@@ -48,7 +52,11 @@ export default class PaintingPage extends React.PureComponent<PaintingPageProps,
 
   handleMouseDown = (e: React.MouseEvent) => {
     const { draw } = this.state;
-    const pageBox = (e.target as HTMLDivElement).getBoundingClientRect();
+    e.persist();
+    const target = e.target as HTMLDivElement;
+    console.log(target);
+    const scrollTop = target.scrollTop;
+    const pageBox = target.getBoundingClientRect();
     let point = {
       x: e.clientX,
       y: e.clientY
@@ -63,13 +71,14 @@ export default class PaintingPage extends React.PureComponent<PaintingPageProps,
           ...point
         },
         pageX: pageBox.left,
-        pageY: pageBox.top
+        pageY: pageBox.top,
+        scrollTop
       })
     }
   }
 
   handleMouseMove = (e: React.MouseEvent) => {
-    const { draw, startPoint } = this.state;
+    const { draw } = this.state;
     if (draw) {
       this.setState({
         currentPoint: {
@@ -87,7 +96,7 @@ export default class PaintingPage extends React.PureComponent<PaintingPageProps,
       this.setState({ 
         draw: false,
       });
-      const style = {  ...this.getDrawBoxStyle(), position: 'absolute' };
+      const style = {  ...this.getDrawBoxStyle(true), position: 'absolute' };
       if (style.width && style.height) {
         onAddElement && onAddElement(uuid, style);
       }
@@ -142,6 +151,11 @@ export default class PaintingPage extends React.PureComponent<PaintingPageProps,
       >
         {
           draw && drawBoxStyle.width && drawBoxStyle.height ? <div className={styles.drawBox} style={drawBoxStyle}></div> : ''
+        }
+        {
+          isEmpty(pageProps.elements) && <p className={styles.tip}>
+            在页面空白处，按住并滑动鼠标或者双击即可添加元素
+          </p>
         }
         <Page {...pageProps} renderElement={this.renderElement}></Page>
     </div>

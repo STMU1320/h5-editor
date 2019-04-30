@@ -35,7 +35,7 @@ export default function ({ pageList = [], name, cover, immutable, _id, updateTim
     <dt className={styles.itemCover} onClick={handleClick}>
       {
         cover
-        ? <img src={cover} alt={name}/>
+        ? <img className={styles.coverImg} src={cover} alt={name}/>
         : <PhoneModel zoom={200 / 750}>
           <Page {...indexPage} ></Page>
         </PhoneModel>

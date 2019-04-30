@@ -17,6 +17,7 @@ export interface PageProps {
   color?: string;
   name?: string;
   renderElement?: Function;
+  children?: React.ReactElement
 }
 
 export default class Page extends React.PureComponent<PageProps, {}> {

@@ -12,7 +12,7 @@ export default function ({ list = [], onItemClick }: ListProps) {
     {
       list.length
       ? list.map((item: any) => <Item key={item._id} {...item } onClick={onItemClick}></Item>)
-      : <p style={{ textAlign: 'center' }}>无数据</p>
+      : <p style={{ textAlign: 'center', width: '100%' }}>无数据</p>
     }
   </div>
 }

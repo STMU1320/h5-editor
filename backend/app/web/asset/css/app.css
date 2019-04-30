@@ -13,11 +13,15 @@ body {
     font-size: 28px;
     overflow-x: hidden;
     overflow-y: auto;
+    background: #eaeaea;
+    color: #666;
 }
 
 #app {
     position: relative;
     width: 750px;
     height: 100%;
+    margin: 0 auto;
+    background: white;
     transform-origin: top left;
 }
