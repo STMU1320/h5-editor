@@ -55,7 +55,7 @@ class PageService extends Service {
     return ctx.model.PagePre.findOne({
       _id: aid
     }).then(res =>{
-      return { success:true, mag:'', code:0, data: res.pageList}
+      return { success:true, mag:'', code:0, data: res}
     }).catch(err =>{
       return {success:false, msg:err, code: 1}
     })
@@ -76,12 +76,44 @@ class PageService extends Service {
       return {success:false, msg:err, code: 1}
     })
   }
+  async update(pageList, name, cover, id) {
+    const { ctx } = this;
+    const now = new Date();
+    return ctx.model.Page.updateOne(
+      {_id: id},
+      {$set: { updateTime: now, pageList, name, cover}}
+      ).then(res =>{
+        const { nModified } = res;
+        console.log(res);
+        if (!nModified) {
+          return { success: false, msg: '记录不存在', code: 1 }
+        }
+        let data = id;
+        return { success:true, msg:'', code:0, data }
+    }).catch(err =>{
+      return { success:false, msg: err, code:1 }
+    })
+  }
   async findOne(aid) {
     const { ctx } = this;
+    if (!aid) {
+      return { success:false, msg: 'id不存在', code: 1}
+    }
     return ctx.model.Page.findOne({
       _id: aid
     }).then(res =>{
-      return { success:true, mag:'', code:0, data: res.pageList}
+      return { success:true, mag:'', code:0, data: res}
+    }).catch(err =>{
+      return {success:false, msg:err, code: 1}
+    })
+  }
+  async find(page, pageSize, name) {
+    const { ctx } = this;
+    let params = name ? { name } : {};
+    const skip = (page - 1) * pageSize;
+    return Promise.all([ctx.model.Page.find(params).skip(skip).limit(pageSize), ctx.model.Page.find().count()])
+    .then(([list, count]) =>{
+      return { success:true, mag:'', code:0, data: { list, total: count }}
     }).catch(err =>{
       return {success:false, msg:err, code: 1}
     })

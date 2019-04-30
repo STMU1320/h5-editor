@@ -23,6 +23,7 @@ const dev = {
   },
   output: {
     path: path.join(__dirname, '../dist'),
+    publicPath: '/',
     filename: '[name].[hash:5].js',
     chunkFilename: "[name].[chunkHash:5].js",
   },

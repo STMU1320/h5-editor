@@ -6,13 +6,14 @@ export interface route {
 
 const routes: Array<route> = [
   {
-    path: '/editor/:id?',
-    name: 'Editor',
+    path: '/',
+    name: 'Home',
     exact: true
   },
   {
-    path: '/preview/',
-    name: 'Preview'
+    path: '/editor/:id?',
+    name: 'Editor',
+    exact: true
   }
 ]
 

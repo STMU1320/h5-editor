@@ -16,11 +16,12 @@ export interface FileUpladerProps {
   style?: React.CSSProperties;
   action?: string;
   name?: string;
+  value?: string;
 }
 
 export interface FileUploaderState {
   uploading: boolean;
-  file?: File;
+  file?: File | { name: string };
   base64Src?: string;
 };
 export default class FileUploader extends React.Component<FileUpladerProps, FileUploaderState> {
@@ -33,6 +34,16 @@ export default class FileUploader extends React.Component<FileUpladerProps, File
     base64Src: ''
   };
   fileInput: HTMLInputElement = null;
+  componentDidMount () {
+    const { showImg, value } = this.props;
+    if (value) {
+      if (showImg) {
+        this.setState({ base64Src: value, file: { name: '图片', defaultValue: value } });
+      } else {
+        this.setState({ file: { name: '文件', defaultValue: value } });
+      }
+    }
+  }
   checkFileType (file: File, accept: string | RegExp): boolean {
     let reg = accept;
     let pass = true;

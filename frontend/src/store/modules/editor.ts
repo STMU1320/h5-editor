@@ -11,6 +11,8 @@ interface editorState {
   pageList: Array<any>;
   selectedElement: any;
   selectedPage: any;
+  cover: string;
+  name: string;
 }
 
 const defaultState: editorState = {
@@ -18,7 +20,9 @@ const defaultState: editorState = {
   editHistory: [],
   pageList: [],
   selectedElement: null,
-  selectedPage: null
+  selectedPage: null,
+  cover: '',
+  name: ''
 }
 
 export default {

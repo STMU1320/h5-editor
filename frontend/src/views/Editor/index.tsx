@@ -16,8 +16,8 @@ import Page, { ElementProps } from '../../../../common/components/Page';
 import PaintingPage from 'components/PaintingPage';
 import ElementForm from 'components/ElementForm';
 
-import request from '../../utils/request';
-import { isEmpty } from 'utils/func';
+import request from 'utils/request';
+import { isEmpty, parseUrlParams } from 'utils/func';
 import browserHistory from '../routeHistory';
 
 import * as styles from './style.less';
@@ -27,6 +27,8 @@ export interface H5EditorProps {
   pageList?: Array<any>;
   selectedPage: any;
   selectedElement: any;
+  cover: string;
+  name: string;
   match: any;
   children: JSX.Element | string;
   dispatch?: Function;
@@ -35,6 +37,11 @@ export interface H5EditorProps {
 // export interface H5EditorState {
 //   formCollapse: Boolean;
 // }
+
+interface h5Info {
+  cover: string;
+  name: string;
+}
 class H5Editor extends React.Component<H5EditorProps, {}> {
 
   state = {
@@ -49,7 +56,8 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
     modalVisible: false,
     modalKey: Date.now(),
     sending: false,
-    publishResult: { url: '', state: 'success' }
+    publishResult: { url: '', state: 'success' },
+    isEdit: false
   }
 
   infoForm: any = null;
@@ -57,10 +65,49 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
   componentWillMount () {
     const { dispatch, match } = this.props;
     if (match.params.id) {
-
-    } else {
-      // dispatch({ type: 'editor/generateUUID', payload: {} });
+      const params = parseUrlParams(location.href);
+      if (params.mode && (params.mode === 'edit')) {
+        this.setState({ isEdit: true });
+      }
+      request.get('/page/detail', { id: match.params.id })
+      .then((res: any) => {
+        const { data } = res;
+        const { pageList, cover, name } = data;
+        dispatch({ type: 'editor/save', payload: { pageList, selectedElement: pageList[0], selectedPage: pageList[0], cover, name } });
+      })
+      .catch((err: any) => {
+        AntMessage.error(err.msg || '记录不存在');
+      })
     }
+  }
+
+  updateH5 = (newInfoData?: h5Info) => {
+    this.setState({ pubLoading: true });
+    const { pageList, match, cover, name } = this.props;
+    const infoData = { cover, name };
+    request.post('/page/update', { ...infoData, ...newInfoData, pageList, id: match.params.id })
+    .then((res: any) => {
+      const url = `${h5Baseurl}?aid=${res.data}`;
+      this.setState({ pubLoading: false, modalVisible: false, drawerType: 0, drawerVisible: true,  publishResult: { url, state: 'success' } });
+    })
+    .catch((err: any) => {
+      AntMessage.error(err.msg || '发布失败，请稍后重试！');
+      this.setState({ pubLoading: false });
+    })
+  }
+
+  addH5 = (infoData: h5Info) => {
+    this.setState({ sending: true });
+    const { pageList } = this.props;
+    request.post('/page/add', { ...infoData, pageList })
+    .then((res: any) => {
+      const url = `${h5Baseurl}?aid=${res.data}`;
+      this.setState({ sending: false, modalVisible: false, drawerType: 0, drawerVisible: true,  publishResult: { url, state: 'success' } });
+    })
+    .catch((err: any) => {
+      AntMessage.error(err.msg || '发布失败，请稍后重试！');
+      this.setState({ sending: false });
+    })
   }
 
   handlePreview = () => {
@@ -103,28 +150,47 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
             })
           }
           getFormData()
-          .then(data => {
-            this.setState({ sending: true });
-            const { pageList } = this.props;
-            return request.post('/page/add', { ...data, pageList })
+          .then((data: h5Info) => {
+            if (this.state.isEdit) {
+              this.updateH5(data);
+            } else {
+              this.addH5(data);
+            }
           })
-          .then((res: any) => {
-            const url = `${h5Baseurl}?aid=${res.data}`;
-            this.setState({ sending: false, modalVisible: false, drawerType: 0, drawerVisible: true,  publishResult: { url, state: 'success' } });
-          })
-          .catch((err: any) => {
-            AntMessage.error(err.msg || '发布失败，请稍后重试！');
-            this.setState({ sending: false });
-          })
+          
         }
       })
     }
   }
   handlePublish = () => {
     const { pageList } = this.props;
+    const { isEdit } = this.state;
     if (isEmpty(pageList)) {
       return AntMessage.warning('h5页面数据为空，请编辑后再发布');
     }
+    if (isEdit) {
+      this.openConfirm();
+    } else {
+      this.openModal();
+    }
+  }
+
+  openConfirm = () => {
+    let _this = this;
+    Modal.confirm({
+      title: '您需要编辑此H5的名称和封面吗?',
+      okText: '去编辑',
+      cancelText: '直接发布',
+      onOk() {
+        _this.openModal();
+      },
+      onCancel() {
+        _this.updateH5();
+      },
+    });
+  }
+
+  openModal = () => {
     this.setState({ modalVisible: true, modalKey: Date.now() });
   }
 
@@ -170,8 +236,12 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
     }
   }
   handleContinue = () => {
+    const { match } = this.props;
     this.props.dispatch({ type: 'editor/reset' });
-    this.setState({ drawerVisible: false });
+    this.setState({ drawerVisible: false, isEdit: false });
+    if (match.params.id) {
+      browserHistory.push('/editor');
+    }
   }
   handleGotoHomePage = () => {
     browserHistory.push('/');
@@ -180,7 +250,9 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
     const {
       pageList,
       selectedPage,
-      selectedElement
+      selectedElement,
+      cover,
+      name
     } = this.props;
 
     const {
@@ -243,7 +315,7 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
             </div>
           </>
           : <>
-            <h2 className="color-success">发布成功</h2>
+            <h2>发布成功</h2>
             <div className={styles.qrWrap}>
               { publishResult.url &&  <QRCode value={publishResult.url} size={180}></QRCode> }
             </div>
@@ -266,7 +338,7 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
         confirmLoading={sending}
         onCancel={this.handleModalCancel}
         >
-          <InfoForm key={modalKey} ref={(ele) => { this.infoForm = ele }}></InfoForm>
+          <InfoForm key={modalKey} defaultData={{ cover, name }} ref={(ele: React.Component) => { this.infoForm = ele }}></InfoForm>
         </Modal>
   </div>
   }

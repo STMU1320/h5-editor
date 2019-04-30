@@ -1,9 +1,10 @@
 import { objToString } from './func';
 import {isUrl } from './reg';
+const domainConfig = require('../../../common/config/domain.json');
 
 export function getApiOrigin (path: string): string {
   // to do
-  let origin = 'http://127.0.0.1:7001';
+  let origin = domainConfig.api;
   return `${origin}${path}`
 }
 

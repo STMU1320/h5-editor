@@ -21,7 +21,7 @@ export default class HomeController extends Controller {
       res = await ctx.service.page.findOne(aid);
     }
     if (res && res.success) {
-      pages = res.data;
+      pages = res.data.pageList;
     }
     if (!isEmpty(pages)) {
       if (pid) {
