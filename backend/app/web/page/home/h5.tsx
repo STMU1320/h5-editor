@@ -8,7 +8,7 @@ import '../../asset/css/app.css';
 class App extends Component<any, any> {
   render() {
     const data: any = {...this.props};
-    return <Layout title={this.props.name}>
+    return <Layout title={this.props.name} backgroundColor={this.props.backgroundColor || 'white'}>
       <Page {...data}></Page>    
     </Layout>;
   }

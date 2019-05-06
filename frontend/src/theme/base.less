@@ -2,63 +2,67 @@
 // @import './custom.less';
 :global {
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  &:after, &:before {
+  * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    &:after, &:before {
+      box-sizing: border-box;
+    }
   }
-}
 
-html {
-  font-size: 12px;
-  -webkit-text-size-adjust: none;
-}
+  html {
+    font-size: 12px;
+    -webkit-text-size-adjust: none;
+  }
 
-body {
-  font-family: "Microsoft YaHei", "Open Sans", sans-serif, "Hiragino Sans GB", Arial, "Lantinghei SC", "STHeiti", "WenQuanYi Micro Hei", "SimSun";
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  -moz-osx-font-smoothing: grayscale;
-  color: @text-primary;
-  background-color: @base-bg;
-}
+  body {
+    font-family: "Microsoft YaHei", "Open Sans", sans-serif, "Hiragino Sans GB", Arial, "Lantinghei SC", "STHeiti", "WenQuanYi Micro Hei", "SimSun";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    color: @text-primary;
+    background-color: @base-bg;
+  }
 
-::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, .1) !important;
-  border-radius: 2px;
-}
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .1) !important;
+    border-radius: 2px;
+  }
 
-::-webkit-scrollbar {
-  width: 4px;
-  height: 8px;
-}
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 8px;
+  }
 
-input,select,textarea{outline:none;border:none;background:none;box-shadow: none;border-radius: none;}
-button{outline:none; background:  none;}
-a{outline:0;cursor:pointer;}
+  input,select,textarea{outline:none;border:none;background:none;box-shadow: none;border-radius: none;}
+  button{outline:none; background:  none;}
+  a{outline:0;cursor:pointer;}
 
-a{
-  outline:0;
-  cursor:pointer;
-  text-decoration:none;
-  &:link, &:active, &:visited, &:hover{
+  a{
+    outline:0;
+    cursor:pointer;
     text-decoration:none;
+    &:link, &:active, &:visited, &:hover{
+      text-decoration:none;
+    }
+    &:hover {
+      color: @primary;
+    }
   }
-  &:hover {
-    color: @primary;
+  ul {
+    li {
+      list-style: none;
+    }
   }
-}
-ul {
-  li {
-    list-style: none;
-  }
-}
 
-.color-success {
-  color: @green;
-}
+  .color-success {
+    color: @green;
+  }
+
+  .width100 {
+    width: 100% !important;
+  }
 
 }
 

@@ -16,6 +16,11 @@ export interface PageProps {
   bgImg?: string;
   color?: string;
   name?: string;
+  height?: number;
+  paddingLeft?: number;
+  paddingTop?: number;
+  paddingRight?: number;
+  paddingBottom?: number;
   renderElement?: Function;
   children?: React.ReactElement
 }
@@ -50,9 +55,10 @@ export default class Page extends React.PureComponent<PageProps, {}> {
       color,
       bgImg,
       elements,
-      renderElement
+      renderElement,
+      ...otherStyle
     } = this.props;
-    let style: React.CSSProperties = { backgroundColor, color };
+    let style: React.CSSProperties = { ...otherStyle, backgroundColor, color };
     if (bgImg) {
       style.backgroundImage = `url(${bgImg})`;
     }

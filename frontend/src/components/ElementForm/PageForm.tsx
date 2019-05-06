@@ -1,13 +1,13 @@
 import * as React from 'react';
 import classnames from 'classnames';
 
-import { Input, Form } from 'antd';
+import { Input, Form, InputNumber } from 'antd';
 
 import FileUploader from '../FileUploader';
-import Row from './Row';
 import ColorInput from '../ColorInput';
 import { PageProps } from '../../../../common/components/Page';
-
+import Row from './Row';
+import Col from './Col';
 const Item = Form.Item;
 
 export interface PageFormProps {
@@ -67,6 +67,33 @@ export default function PageForm ({
       </Row>
       <Row>
         <ColorInput onChange={handleFieldChange.bind(this, 'color')} value={data.color} defaultValue="#666666" placeholder="文字颜色：默认#666666"></ColorInput>
+      </Row>
+    </Item>
+    <Item
+      label="页面高度"
+    >
+      <Row>
+        <InputNumber className="width100" onChange={handleFieldChange.bind(this, 'height')} value={data.paddingLeft} placeholder="不设置为内容高度"></InputNumber>
+      </Row>
+    </Item>
+    <Item
+      label="页面内边距"
+    >
+      <Row>
+        <Col labelWidth={15} label="L">
+          <InputNumber onChange={handleFieldChange.bind(this, 'paddingLeft')} value={data.paddingLeft} placeholder="px"></InputNumber>
+        </Col>
+        <Col labelWidth={15} label="T">
+          <InputNumber onChange={handleFieldChange.bind(this, 'paddingTop')} value={data.paddingTop} placeholder="px"></InputNumber>
+        </Col>
+      </Row>
+      <Row>
+        <Col labelWidth={15} label="R">
+          <InputNumber onChange={handleFieldChange.bind(this, 'paddingRight')} value={data.paddingRight} placeholder="px"></InputNumber>
+        </Col>
+        <Col labelWidth={15} label="B">
+          <InputNumber onChange={handleFieldChange.bind(this, 'paddingBottom')} value={data.paddingBottom} placeholder="px"></InputNumber>
+        </Col>
       </Row>
     </Item>
   </Form>
