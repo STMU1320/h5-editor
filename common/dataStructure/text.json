@@ -1,6 +1,8 @@
 {
   "type": "text",
   "uuid":"",
+  "visible": true,
+  "name": "",
   "content": "",
   "position": "static",
   "left": null,

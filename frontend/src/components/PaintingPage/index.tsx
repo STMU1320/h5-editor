@@ -29,7 +29,7 @@ export default class PaintingPage extends React.PureComponent<PaintingPageProps,
     scrollTop: 0
   }
 
-  getDrawBoxStyle = (isSave?: boolean) => {
+  getDrawBoxStyle = () => {
     const { zoom = 1 } = this.props;
     const { startPoint, currentPoint, pageX, pageY, scrollTop } = this.state;
     const x1 = startPoint.x, x2 = currentPoint.x;
@@ -38,9 +38,7 @@ export default class PaintingPage extends React.PureComponent<PaintingPageProps,
     const height = Math.abs(y1 - y2);
     const left = Math.min(x1, x2) - pageX;
     let top = Math.min(y1, y2) - pageY;
-    if (isSave) {
-      top += (scrollTop * zoom);
-    }
+    top += (scrollTop * zoom);
     const translate = (num: number) => Math.round(num / zoom);
     return {
       width: translate(width),
@@ -53,7 +51,7 @@ export default class PaintingPage extends React.PureComponent<PaintingPageProps,
   handleMouseDown = (e: React.MouseEvent) => {
     const { draw } = this.state;
     e.persist();
-    const target = e.target as HTMLDivElement;
+    const target = e.currentTarget as HTMLDivElement;
     const scrollTop = target.scrollTop;
     const pageBox = target.getBoundingClientRect();
     let point = {
@@ -95,7 +93,7 @@ export default class PaintingPage extends React.PureComponent<PaintingPageProps,
       this.setState({ 
         draw: false,
       });
-      const style = {  ...this.getDrawBoxStyle(true), position: 'absolute' };
+      const style = {  ...this.getDrawBoxStyle(), position: 'absolute' };
       if (style.width && style.height) {
         onAddElement && onAddElement(uuid, style);
       }

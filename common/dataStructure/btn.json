@@ -1,6 +1,8 @@
 {
   "type": "btn",
   "uuid":"",
+  "visible": true,
+  "name": "",
   "position": "static",
   "left": null,
   "top": null,
