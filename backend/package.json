@@ -1,7 +1,7 @@
 {
-  "name": "egg-react-typescript-boilerplate",
+  "name": "h5-editor-react-render",
   "version": "3.0.1",
-  "description": "基于 egg + react + typescript + webpack 服务端渲染工程骨架项目",
+  "description": "h5数据存储管理和渲染器",
   "scripts": {
     "start": "egg-scripts start",
     "dev": "egg-bin dev --open false egg-ts-helper/register",
