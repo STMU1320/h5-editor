@@ -88,6 +88,7 @@ export default {
       const type = state.checkedEleType;
       const pageIndex = state.pageList.findIndex((item) => item.uuid === pageId);
       const page = cloneDeep(state.pageList[pageIndex]);
+      page.elements = page.elements || [];
       switch (type) {
         case 'img':
           eleData = {...imgData, ...eleData}
@@ -101,11 +102,8 @@ export default {
       }
       eleData.uuid = uuid();
       eleData.pid = pageId;
-      if (page.elements) {
-        page.elements.push(eleData);
-      } else {
-        page.elements = [eleData];
-      }
+      eleData.name = `元素${page.elements.length + 1}`
+      page.elements.push(eleData);
       const newPageList = [...state.pageList];
       newPageList[pageIndex] = page;
       return {

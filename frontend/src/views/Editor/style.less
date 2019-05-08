@@ -110,20 +110,29 @@
   position: relative;
   overflow: hidden;
 
-  .pagePanel {
+  .rightPanel {
     position: absolute;
     top: 0;
     left: 0;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 200px;
+    width: 320px;
     height: 100%;
-    padding-top: @spacing-large;
-    overflow-y: auto;
-    background-color: darken(@box-bg, 3%);
-    border-right: @border-1px;
+    // overflow: hidden;
     z-index: 2;
+    .pageLayer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding-top: @spacing-large;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+      width: 200px;
+      overflow-y: auto;
+      border-right: @border-1px;
+      background-color: darken(@box-bg, 3%);
+      z-index: 3;
+    }
     .pageItem {
       margin-bottom: @spacing-large;
     }
@@ -139,14 +148,58 @@
         background: @box-bg;
       }
     }
+
+    .eleLayer {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 120px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      border-right: @border-1px;
+      overflow: hidden;
+      font-size: 12px;
+      background-color: darken(@box-bg, 3%);
+      // padding-bottom: @spacing-base;
+      transition: transform 0.3s ease-in;
+      &.minEleLayer {
+        transform: translateX(-100px);
+      }
+
+      .eleToolsBar {
+        height: 20px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+        padding:0 4px;
+        justify-content: space-between;
+        border-bottom: @border-1px;
+        z-index: 2;
+        i {
+          cursor: pointer;
+        }
+      }
+      .eleItems {
+        flex: 1;
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
   }
 
   .mainContent {
     position: relative;
     height: 100%;
-    margin-left: 200px;
+    margin-left: 320px;
     box-sizing: border-box;
     padding: @spacing-large;
+    transition: margin 0.3s ease-in;
+    &.maxContent {
+      margin-left: 220px;
+    }
   }
 
   .stage {

@@ -1,0 +1,32 @@
+@import '../../../theme/var.less';
+
+.eleItemBox {
+  display: flex;
+  align-items: center;
+  padding: 5px 20px 5px 5px;
+  height: 40px;
+  width: 120px;
+  border-bottom: @border-1px;
+  overflow: hidden;
+  cursor: pointer;
+
+  &.checked {
+    background-color: lighten(@box-bg, 10%);
+  }
+
+  .eyeDisabled {
+    opacity: 0.3;
+  }
+
+  .eleName {
+    margin: 0;
+    margin-left: 5px;
+    width: 80px;
+    height: 20px;
+    font-size: 12px;
+    .ellipsis;
+    &.inputMode {
+      background: darken(@box-bg, 10%);
+    }
+  }
+}

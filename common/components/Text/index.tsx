@@ -3,6 +3,8 @@ import classnames from 'classnames';
 import * as styles from './style.less';
 export interface TextProps {
   content: string;
+  visible?: boolean;
+  name?: string;
   position?: 'absolute' | 'relative' | 'fixed' | 'static';
   left?: number;
   top?: number;

@@ -46,7 +46,7 @@ export default class Page extends React.PureComponent<PageProps, {}> {
         Ele = <Btn key={eleData.uuid} {...eleData}></Btn>
         break;
     }
-    return Ele;
+    return eleData.visible ? Ele : null;
   }
 
   render () {

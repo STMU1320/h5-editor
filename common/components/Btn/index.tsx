@@ -5,6 +5,8 @@ import { parseUrlParams, objToQueryString } from '../../utils'
 export interface BtnProps {
   text?: string;
   backgroundColor?: string;
+  visible?: boolean;
+  name?: string;
   bgImg?: string;
   color?: string;
   fontSize?: number;

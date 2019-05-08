@@ -10,6 +10,7 @@ import PhoneModel from 'components/PhoneModel';
 import Header from './Header';
 import ToolsBar from './ToolsBar';
 import PageThumbnail from './PageThumbnail';
+import EleThumbnail from './EleThumbnail';
 import InfoForm from './InfoForm';
 
 import Page, { ElementProps } from '../../../../common/components/Page';
@@ -46,6 +47,7 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
 
   state = {
     formCollapse: false,
+    eleCollapse: false,
     preLoading: false,
     pubLoading: false,
     drawerVisible: false,
@@ -215,6 +217,9 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
     e.stopPropagation();
     this.props.dispatch({ type: 'editor/selectPage', payload: { page } });
   }
+  handleSelectElement = (element: object) => {
+    this.props.dispatch({ type: 'editor/selectElement', payload: { element } });
+  }
   handleAddElement = (pageId: string, eleData?: ElementProps) => {
     this.props.dispatch({ type: 'editor/addElement', payload: { pageId, eleData } });
   };
@@ -229,6 +234,11 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
   handleToggleFormVisible =  () => {
     this.setState({
       formCollapse: !this.state.formCollapse
+    });
+  }
+  handleToggleEleLayerVisible =  () => {
+    this.setState({
+      eleCollapse: !this.state.eleCollapse
     });
   }
   handleElementDataChange = (data: any) => {
@@ -259,14 +269,15 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
     } = this.props;
 
     const {
-      formCollapse, drawerVisible, previewTime, previewId, previewUrl, drawerType, modalKey,
+      formCollapse, eleCollapse, drawerVisible, previewTime, previewId, previewUrl, drawerType, modalKey,
       publishResult, modalVisible, sending, formData, ...headerProps }: any = this.state;
     const pageOptions = pageList.map((item) => ({ label: item.name, value: item.uuid }));
     return <div className={styles.layoutWrap}>
       <Header onPreview={this.handlePreview} onPublish={this.handlePublish} {...headerProps} />
       <ToolsBar />
       <div className={styles.main}>
-        <div className={styles.pagePanel}>
+        <div className={styles.rightPanel}>
+          <div className={styles.pageLayer}>
             {
               pageList.map((page: any, index: number) => <PageThumbnail name={page.name} onClick={this.handleSelectPage.bind(this, page)} checked={selectedPage && selectedPage.uuid === page.uuid} className={styles.pageItem} key={page.name || `${index}`}>
                 <PhoneModel title={page.name} zoom={160 / 750}>
@@ -279,8 +290,21 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
                 <Icon type="plus"></Icon>
               </button>
             </div>
+          </div>
+          <div className={classnames(styles.eleLayer, { [styles.minEleLayer]: eleCollapse })}>
+            <div className={styles.eleToolsBar}>
+              页面元素
+              <Icon type={ eleCollapse ? 'double-right' : 'double-left' } antd onClick={this.handleToggleEleLayerVisible} />
+            </div>
+            <div className={styles.eleItems}>
+            {
+              selectedPage && selectedPage.elements && selectedPage.elements.map(
+                (eleItem: any) => <EleThumbnail onClick={this.handleSelectElement} onChange={this.handleElementDataChange} key={eleItem.uuid} checked={eleItem.uuid === selectedElement.uuid} eleData={eleItem}></EleThumbnail>)
+            }
+            </div>
+          </div>
         </div>
-        <div className={styles.mainContent}>
+        <div className={classnames(styles.mainContent, { [styles.maxContent]: eleCollapse })}>
           <div className={classnames(styles.stage, { [styles.maxStage]: formCollapse })}>
             {
               selectedPage
@@ -305,7 +329,7 @@ class H5Editor extends React.Component<H5EditorProps, {}> {
         title={ drawerType ? '预览' : '发布' }
         placement="right"
         width="100%"
-        closable={true}
+        closable={drawerType ? true : false}
         onClose={() => this.setState({ drawerVisible: false })}
         visible={drawerVisible}
       >

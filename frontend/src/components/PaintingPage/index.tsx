@@ -121,9 +121,11 @@ export default class PaintingPage extends React.PureComponent<PaintingPageProps,
         break;
     }
 
-    return <AssistBox zoom={zoom} onEditElement={onEditElement} key={eleData.uuid} eleData={eleData}>
-      {Ele}
-    </AssistBox>
+    return eleData.visible
+    ? <AssistBox zoom={zoom} onEditElement={onEditElement} key={eleData.uuid} eleData={eleData}>
+        {Ele}
+      </AssistBox>
+    : null;
   }
 
   render () {
