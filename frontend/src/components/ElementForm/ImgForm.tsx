@@ -29,7 +29,7 @@ export default function ImgForm ({
     };
 
     const handleImgUpload = function (res: any) {
-      let data = res.data;
+      let data = res.url || res.data;
       if (data instanceof File) {
         let reader = new FileReader();
         reader.readAsDataURL(data);
@@ -51,7 +51,7 @@ export default function ImgForm ({
         <Input autoFocus onChange={handleFieldChange.bind(this, 'src')} value={data.src} placeholder="图片地址"></Input>
       </Row>
       <Row>
-        <FileUploader accept="image" showName={false} onSuccess={handleImgUpload} ></FileUploader>
+        <FileUploader action="/upload/img" name="img" accept="image" showName={false} onSuccess={handleImgUpload} ></FileUploader>
       </Row>
     </Item>
     <CommonForm data={data} handleFieldChange={handleFieldChange}></CommonForm>

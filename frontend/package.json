@@ -1,5 +1,5 @@
 {
-  "name": "h5编辑器",
+  "name": "h5-editor",
   "version": "1.0.0",
   "description": "h5编辑器数据展示和编辑端",
   "main": "src/main.js",

@@ -8,4 +8,5 @@ export default (app: Application) => {
   app.post('/api/page/add', app.controller.page.add);
   app.post('/api/page/update', app.controller.page.update);
   app.post('/api/page/preview', app.controller.page.preview);
+  app.post('/api/upload/img', app.controller.upload.img);
 };

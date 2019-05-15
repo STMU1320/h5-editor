@@ -20,6 +20,7 @@ export default function(app: EggAppConfig) {
   };
 
   exports.bodyParser = {
+    enable: false,
     jsonLimit: '5mb',
     formLimit: '6mb',
   };
@@ -27,8 +28,15 @@ export default function(app: EggAppConfig) {
   exports.keys = 'stmu-h5-editor-ayo';
 
   exports.middleware = [
-    // 'access'
+    // 'access',
+    'koabody'
   ];
+
+  exports.koabody = {
+    jsonLimit: '5mb',
+    formLimit: '6mb',
+    multipart: true
+  }
 
   exports.reactssr = {
     layout: path.join(app.baseDir, 'app/web/view/layout.html')
