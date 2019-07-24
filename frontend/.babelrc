@@ -3,5 +3,6 @@
   "plugins": [
     "@babel/plugin-syntax-dynamic-import",
     ["import", { "libraryName": "antd", "libraryDirectory": "es",  "style": true }],
-    "react-hot-loader/babel"]
+    "react-hot-loader/babel"
+  ]
 }

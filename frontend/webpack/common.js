@@ -40,13 +40,21 @@ const common = {
       {
         test: /\.jsx?$/i,
         exclude: /node_modules/,
-        include: [path.join(__dirname, '../src'), path.join(__dirname, '../../common/')],
+        include: [path.join(__dirname, '../src'), path.join(__dirname, '../../common')],
         use: ['babel-loader?cacheDirectory=true'],
       },
       {
-        test: /\.tsx?$/,
-        include: [path.join(__dirname, '../src'), path.join(__dirname, '../../common/'), path.join(__dirname, '../node_modules')],
-        use: ['babel-loader', 'awesome-typescript-loader']
+        test: /\.tsx?$/i,
+        include: [path.join(__dirname, '../src'), path.join(__dirname, '../../common'), path.join(__dirname, '../node_modules')],
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ["@babel/preset-env", "@babel/preset-react"],
+            }
+          },
+          'awesome-typescript-loader'
+        ]
       },
       {
         test: /\.(png|jpg|gif|JPG|GIF|PNG|BMP|bmp|JPEG|jpeg)$/i,
@@ -61,7 +69,7 @@ const common = {
         ],
       },
       {
-        test: /\.(eot|woff|ttf|woff2|svg)$/i,
+        test: /\.(eot|woff|ttf|woff2|svg)(\?[=a-z0-9]+)?$/i,
         use: 'url-loader',
       },
     ],
