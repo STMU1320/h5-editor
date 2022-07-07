@@ -64,7 +64,7 @@
     "babel-plugin-import": "^1.11.0",
     "classnames": "^2.2.6",
     "lodash-es": "^4.17.11",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "qrcode.react": "^0.9.3",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
